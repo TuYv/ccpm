@@ -1,0 +1,25 @@
+{
+  "id": "unbrowse-ai-unbrowse-webmcp-gen",
+  "name": "webmcp-gen",
+  "description": "Build and validate experimental WebMCP tools for an existing web page. Use when an agent needs to expose a site's real workflows as page tools, create webmcp.init.js, define deterministic checks, or compare WebMCP with accessibility-tree automation.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "unbrowse-ai",
+  "install_path": ".claude/skills/webmcp-gen/SKILL.md",
+  "source": {
+    "repo": "unbrowse-ai/unbrowse",
+    "url": "https://github.com/unbrowse-ai/unbrowse/blob/main/unbrowse-browser/skill-data/webmcp-gen/SKILL.md",
+    "path": "unbrowse-browser/skill-data/webmcp-gen/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-17T13:39:53.391Z",
+    "stars": 934,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-17T12:46:48Z",
+    "license": "Apache-2.0"
+  }
+}

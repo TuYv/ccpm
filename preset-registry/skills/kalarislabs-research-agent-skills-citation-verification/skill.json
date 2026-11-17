@@ -1,7 +1,7 @@
 {
   "id": "kalarislabs-research-agent-skills-citation-verification",
   "name": "citation-verification",
-  "description": "Verify that every reference in a manuscript really exists and matches its metadata, catching hallucinated, corrupted or mismatched citations before submission. Use when checking a .bib file or reference list, after an AI assistant drafted citations, when a DOI may point to the wrong paper, when adding missing DOIs, or before camera-ready. Queries Crossref, OpenAlex and arXiv; zero dependencies.",
+  "description": "Verify that every reference in a manuscript really exists and matches its metadata, catching hallucinated, corrupted, mismatched or retracted citations before submission. Use when checking a .bib file or reference list, after an AI assistant drafted citations, when a DOI may point to the wrong paper, when a paper may have been retracted, when a dataset or software DOI (Zenodo, DataCite) will not resolve, when adding missing DOIs, marking unverifiable references, checking whether one DOI is real,",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/KalarisLabs/research-agent-skills/blob/main/skills/citation-verification/SKILL.md",
     "path": "skills/citation-verification/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-17T04:10:05.927Z",
-    "stars": 155,
+    "discovered_at": "2026-11-17T13:40:30.627Z",
+    "stars": 157,
     "language": "Python",
-    "pushed_at": "2026-11-16T17:59:56Z",
+    "pushed_at": "2026-11-17T08:35:51Z",
     "license": null
   }
 }

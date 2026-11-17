@@ -1,0 +1,25 @@
+{
+  "id": "unbrowse-ai-unbrowse-core",
+  "name": "core",
+  "description": "Core agent-browser usage guide. Read this before running any agent-browser commands. Covers the snapshot-and-ref workflow, navigating pages, interacting with elements (click, fill, type, select), extracting text and data, taking screenshots, managing tabs, handling forms and auth, waiting for content, running multiple browser sessions in parallel, and troubleshooting common failures. Use when the user asks to interact with a website, fill a form, click something, extract data, take a screenshot,",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "unbrowse-ai",
+  "install_path": ".claude/skills/core/SKILL.md",
+  "source": {
+    "repo": "unbrowse-ai/unbrowse",
+    "url": "https://github.com/unbrowse-ai/unbrowse/blob/main/unbrowse-browser/skill-data/core/SKILL.md",
+    "path": "unbrowse-browser/skill-data/core/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-17T13:39:51.908Z",
+    "stars": 934,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-17T12:46:48Z",
+    "license": "Apache-2.0"
+  }
+}

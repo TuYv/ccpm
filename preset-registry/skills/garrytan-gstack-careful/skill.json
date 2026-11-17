@@ -1,7 +1,7 @@
 {
   "id": "garrytan-gstack-careful",
   "name": "careful",
-  "description": "Safety guardrails for destructive commands. (gstack)",
+  "description": "Safety guardrails for destructive commands. Use for: be careful, warn before destructive, safety mode. (gstack)",
   "category": "浏览器自动化",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/garrytan/gstack/blob/main/careful/SKILL.md",
     "path": "careful/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-17T04:10:59.957Z",
-    "stars": 141829,
+    "discovered_at": "2026-11-17T13:41:32.276Z",
+    "stars": 141872,
     "language": "TypeScript",
-    "pushed_at": "2026-11-16T19:18:46Z",
+    "pushed_at": "2026-11-17T13:36:58Z",
     "license": "MIT"
-  },
-  "summary_zh": "为高风险命令提供安全防护，避免误执行删除、覆盖等破坏性操作，适合终端和自动化任务。"
+  }
 }

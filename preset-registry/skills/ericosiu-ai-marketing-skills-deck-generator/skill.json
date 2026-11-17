@@ -1,8 +1,8 @@
 {
   "id": "ericosiu-ai-marketing-skills-deck-generator",
   "name": "deck-generator",
-  "description": "Generate professional presentations with AI-generated images. Use when asked to create a deck, presentation, pitch deck, or slides. Supports style presets (whiteboard, corporate, minimalist, etc). Uses Imagen 4.0 API for image generation and Google Slides API for assembly. Produces full decks from markdown content specs in minutes.",
-  "category": "测试调试",
+  "description": "Generate AI-powered slide decks with consistent visual styles in minutes. Image generation and Google Slides builder.",
+  "category": "文档写作",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,11 +16,10 @@
     "url": "https://github.com/ericosiu/ai-marketing-skills/blob/main/deck-generator/SKILL.md",
     "path": "deck-generator/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-17T04:52:29.533Z",
-    "stars": 3837,
+    "discovered_at": "2026-11-17T14:22:19.945Z",
+    "stars": 3839,
     "language": "Python",
-    "pushed_at": "2026-11-16T06:55:39Z",
+    "pushed_at": "2026-11-17T09:13:01Z",
     "license": "MIT"
-  },
-  "summary_zh": "这是一个用AI自动配图生成专业PPT的工具。当你需要快速制作路演或演示幻灯片时，只需提供Markdown大纲，它就能在几分钟内输出带插图的完整文档，轻松搞定各种风格。"
+  }
 }

@@ -1,8 +1,8 @@
 {
   "id": "ericosiu-ai-marketing-skills-sidebar-prioritizer",
   "name": "sidebar-prioritizer",
-  "description": "Reset and prioritize the Codex task sidebar with work categories, P0–P4 priorities, and B7 labels for tasks inactive beyond seven days. Use for sidebar cleanup, confusing task lists, or refreshing follow-up priorities.",
-  "category": "测试调试",
+  "description": "Reset Codex sidebar priorities and label tasks by work category and inactivity. P0-P4 priorities, B7 age markers.",
+  "category": "开发编程",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,11 +16,10 @@
     "url": "https://github.com/ericosiu/ai-marketing-skills/blob/main/sidebar-prioritizer/SKILL.md",
     "path": "sidebar-prioritizer/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-17T04:52:33.840Z",
-    "stars": 3837,
+    "discovered_at": "2026-11-17T14:22:25.490Z",
+    "stars": 3839,
     "language": "Python",
-    "pushed_at": "2026-11-16T06:55:39Z",
+    "pushed_at": "2026-11-17T09:13:01Z",
     "license": "MIT"
-  },
-  "summary_zh": "用于整理和重置 Codex 任务侧栏，按工作类别和优先级梳理任务，并标记超过七天未活动的事项，适合清理混乱列表和刷新跟进重点。"
+  }
 }

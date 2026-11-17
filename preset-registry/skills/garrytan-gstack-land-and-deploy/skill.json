@@ -1,7 +1,7 @@
 {
   "id": "garrytan-gstack-land-and-deploy",
   "name": "land-and-deploy",
-  "description": "Land and deploy workflow. (gstack)",
+  "description": "Land and deploy workflow. Use for: merge and deploy, land the pr, ship to production. (gstack)",
   "category": "浏览器自动化",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/garrytan/gstack/blob/main/land-and-deploy/SKILL.md",
     "path": "land-and-deploy/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-17T04:11:03.916Z",
-    "stars": 141829,
+    "discovered_at": "2026-11-17T13:41:38.162Z",
+    "stars": 141872,
     "language": "TypeScript",
-    "pushed_at": "2026-11-16T19:18:46Z",
+    "pushed_at": "2026-11-17T13:36:58Z",
     "license": "MIT"
-  },
-  "summary_zh": "一套用于合并代码并完成部署的工作流，适合需要规范发布流程的开发团队。"
+  }
 }

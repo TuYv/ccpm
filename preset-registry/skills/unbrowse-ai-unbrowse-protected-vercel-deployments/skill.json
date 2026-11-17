@@ -1,0 +1,25 @@
+{
+  "id": "unbrowse-ai-unbrowse-protected-vercel-deployments",
+  "name": "protected-vercel-deployments",
+  "description": "Access and test Vercel deployments protected by Vercel Authentication, SSO, or Deployment Protection with agent-browser. Use when a preview or production URL redirects to a Vercel login page, returns a protection 401 or 403, or needs short-lived Trusted Sources OIDC authentication instead of a static bypass secret or public exception.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "unbrowse-ai",
+  "install_path": ".claude/skills/protected-vercel-deployments/SKILL.md",
+  "source": {
+    "repo": "unbrowse-ai/unbrowse",
+    "url": "https://github.com/unbrowse-ai/unbrowse/blob/main/unbrowse-browser/skill-data/protected-vercel-deployments/SKILL.md",
+    "path": "unbrowse-browser/skill-data/protected-vercel-deployments/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-17T13:39:52.728Z",
+    "stars": 934,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-17T12:46:48Z",
+    "license": "Apache-2.0"
+  }
+}

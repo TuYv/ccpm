@@ -1,7 +1,7 @@
 {
   "id": "garrytan-gstack-context-restore",
   "name": "context-restore",
-  "description": "Restore working context saved earlier by /context-save. (gstack)",
+  "description": "Restore working context saved earlier by /context-save. Use for: resume where i left off, restore context, where was i. (gstack)",
   "category": "浏览器自动化",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/garrytan/gstack/blob/main/context-restore/SKILL.md",
     "path": "context-restore/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-17T04:11:00.413Z",
-    "stars": 141829,
+    "discovered_at": "2026-11-17T13:41:32.924Z",
+    "stars": 141872,
     "language": "TypeScript",
-    "pushed_at": "2026-11-16T19:18:46Z",
+    "pushed_at": "2026-11-17T13:36:58Z",
     "license": "MIT"
-  },
-  "summary_zh": "用于恢复先前保存的工作上下文，适合中断后快速接续任务，减少重复梳理信息。"
+  }
 }

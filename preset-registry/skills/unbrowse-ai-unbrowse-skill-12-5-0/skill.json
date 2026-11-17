@@ -1,0 +1,25 @@
+{
+  "id": "unbrowse-ai-unbrowse-skill-12-5-0",
+  "name": "unbrowse",
+  "description": "Search and call websites through Unbrowse's hosted API or remote MCP, reuse indexed site tools, read pages, and learn missing routes in its cloud browser. Use for structured website tasks, and authenticated site access with Unbrowse.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "unbrowse-ai",
+  "install_path": ".claude/skills/skill-12.5.0/SKILL.md",
+  "source": {
+    "repo": "unbrowse-ai/unbrowse",
+    "url": "https://github.com/unbrowse-ai/unbrowse/blob/main/unbrowse-sdk/typescript/test/fixtures/skill-12.5.0/SKILL.md",
+    "path": "unbrowse-sdk/typescript/test/fixtures/skill-12.5.0/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-17T13:39:53.835Z",
+    "stars": 934,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-17T12:46:48Z",
+    "license": "Apache-2.0"
+  }
+}

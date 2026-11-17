@@ -1,0 +1,25 @@
+{
+  "id": "unbrowse-ai-unbrowse-unbrowse-map",
+  "name": "unbrowse-map",
+  "description": "Learn a website's API route by browsing it, then replay it browserless. Use when the user asks to \"learn this site\", \"find the API behind this page\", \"turn this flow into an API call\", \"map while browsing\", or to test whether a site's flow can run without a browser. Works on anti-bot-protected sites by seeding the session from the node's own browsing.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "unbrowse-ai",
+  "install_path": ".claude/skills/unbrowse-map/SKILL.md",
+  "source": {
+    "repo": "unbrowse-ai/unbrowse",
+    "url": "https://github.com/unbrowse-ai/unbrowse/blob/main/skills/unbrowse-map/SKILL.md",
+    "path": "skills/unbrowse-map/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-17T13:39:51.336Z",
+    "stars": 934,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-17T12:46:48Z",
+    "license": "Apache-2.0"
+  }
+}

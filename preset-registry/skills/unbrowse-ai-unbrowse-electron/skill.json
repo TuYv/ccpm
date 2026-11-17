@@ -1,0 +1,25 @@
+{
+  "id": "unbrowse-ai-unbrowse-electron",
+  "name": "electron",
+  "description": "Automate Electron desktop apps (VS Code, Slack, Discord, Figma, Notion, Spotify, etc.) using agent-browser via Chrome DevTools Protocol. Use when the user needs to interact with an Electron app, automate a desktop app, connect to a running app, control a native app, or test an Electron application. Triggers include \"automate Slack app\", \"control VS Code\", \"interact with Discord app\", \"test this Electron app\", \"connect to desktop app\", or any task requiring automation of a native Electron applica",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "unbrowse-ai",
+  "install_path": ".claude/skills/electron/SKILL.md",
+  "source": {
+    "repo": "unbrowse-ai/unbrowse",
+    "url": "https://github.com/unbrowse-ai/unbrowse/blob/main/unbrowse-browser/skill-data/electron/SKILL.md",
+    "path": "unbrowse-browser/skill-data/electron/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-17T13:39:52.513Z",
+    "stars": 934,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-17T12:46:48Z",
+    "license": "Apache-2.0"
+  }
+}

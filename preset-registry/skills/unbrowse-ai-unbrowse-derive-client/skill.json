@@ -1,0 +1,25 @@
+{
+  "id": "unbrowse-ai-unbrowse-derive-client",
+  "name": "derive-client",
+  "description": "Reverse-engineer a website's internal API by recording browser traffic into a HAR file, then generate a standalone client or CLI that calls the endpoints directly, with no browser needed after the first recording. Use when asked to \"derive a client\", \"build a CLI for <site>\", \"reverse engineer this site's API\", \"record network requests\", \"turn this site into an API\", or when the same site will be automated repeatedly and direct HTTP calls would beat driving the browser every time.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "unbrowse-ai",
+  "install_path": ".claude/skills/derive-client/SKILL.md",
+  "source": {
+    "repo": "unbrowse-ai/unbrowse",
+    "url": "https://github.com/unbrowse-ai/unbrowse/blob/main/unbrowse-browser/skill-data/derive-client/SKILL.md",
+    "path": "unbrowse-browser/skill-data/derive-client/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-17T13:39:52.120Z",
+    "stars": 934,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-17T12:46:48Z",
+    "license": "Apache-2.0"
+  }
+}

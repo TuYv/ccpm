@@ -1,7 +1,7 @@
 {
   "id": "garrytan-gstack-guard",
   "name": "guard",
-  "description": "Full safety mode: destructive command warnings + directory-scoped edits. (gstack)",
+  "description": "Full safety mode: destructive command warnings + directory-scoped edits. Use for: full safety mode, guard against mistakes. (gstack)",
   "category": "浏览器自动化",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/garrytan/gstack/blob/main/guard/SKILL.md",
     "path": "guard/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-17T04:11:02.907Z",
-    "stars": 141829,
+    "discovered_at": "2026-11-17T13:41:36.564Z",
+    "stars": 141872,
     "language": "TypeScript",
-    "pushed_at": "2026-11-16T19:18:46Z",
+    "pushed_at": "2026-11-17T13:36:58Z",
     "license": "MIT"
-  },
-  "summary_zh": "一个命令行安全防护工具，可预警破坏性命令并限制编辑范围，适合降低误操作风险。"
+  }
 }

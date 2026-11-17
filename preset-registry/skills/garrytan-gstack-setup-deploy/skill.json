@@ -1,7 +1,7 @@
 {
   "id": "garrytan-gstack-setup-deploy",
   "name": "setup-deploy",
-  "description": "Configure deployment settings for /land-and-deploy.",
+  "description": "Configure deployment settings for /land-and-deploy. Use for: configure deploy, setup deployment.",
   "category": "浏览器自动化",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/garrytan/gstack/blob/main/setup-deploy/SKILL.md",
     "path": "setup-deploy/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-17T04:11:07.656Z",
-    "stars": 141829,
+    "discovered_at": "2026-11-17T13:41:42.767Z",
+    "stars": 141872,
     "language": "TypeScript",
-    "pushed_at": "2026-11-16T19:18:46Z",
+    "pushed_at": "2026-11-17T13:36:58Z",
     "license": "MIT"
-  },
-  "summary_zh": "一个为 /land-and-deploy 配置部署参数的工具，适合统一并简化项目上线前的设置。"
+  }
 }

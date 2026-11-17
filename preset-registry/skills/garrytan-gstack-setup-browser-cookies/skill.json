@@ -1,7 +1,7 @@
 {
   "id": "garrytan-gstack-setup-browser-cookies",
   "name": "setup-browser-cookies",
-  "description": "Import cookies from your real Chromium browser into the headless browse session. (gstack)",
+  "description": "Import cookies from your real Chromium browser into the headless browse session. Use for: import browser cookies, login to test site. (gstack)",
   "category": "浏览器自动化",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/garrytan/gstack/blob/main/setup-browser-cookies/SKILL.md",
     "path": "setup-browser-cookies/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-17T04:11:07.521Z",
-    "stars": 141829,
+    "discovered_at": "2026-11-17T13:41:42.563Z",
+    "stars": 141872,
     "language": "TypeScript",
-    "pushed_at": "2026-11-16T19:18:46Z",
+    "pushed_at": "2026-11-17T13:36:58Z",
     "license": "MIT"
-  },
-  "summary_zh": "将真实 Chromium 浏览器的 Cookie 导入无头浏览会话，适合复用登录状态进行自动化测试或网页操作。"
+  }
 }

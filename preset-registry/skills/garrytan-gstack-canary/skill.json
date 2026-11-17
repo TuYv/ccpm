@@ -1,7 +1,7 @@
 {
   "id": "garrytan-gstack-canary",
   "name": "canary",
-  "description": "Post-deploy canary monitoring. (gstack)",
+  "description": "Post-deploy canary monitoring. Use for: monitor after deploy, canary check. (gstack)",
   "category": "浏览器自动化",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/garrytan/gstack/blob/main/canary/SKILL.md",
     "path": "canary/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-17T04:10:59.496Z",
-    "stars": 141829,
+    "discovered_at": "2026-11-17T13:41:31.484Z",
+    "stars": 141872,
     "language": "TypeScript",
-    "pushed_at": "2026-11-16T19:18:46Z",
+    "pushed_at": "2026-11-17T13:36:58Z",
     "license": "MIT"
-  },
-  "summary_zh": "用于部署后进行金丝雀监控，帮助团队及时发现新版本上线后的异常与回归问题。"
+  }
 }

@@ -1,0 +1,25 @@
+{
+  "id": "unbrowse-ai-unbrowse-slack",
+  "name": "slack",
+  "description": "Interact with Slack workspaces using browser automation. Use when the user needs to check unread channels, navigate Slack, send messages, extract data, find information, search conversations, or automate any Slack task. Triggers include \"check my Slack\", \"what channels have unreads\", \"send a message to\", \"search Slack for\", \"extract from Slack\", \"find who said\", or any task requiring programmatic Slack interaction.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "unbrowse-ai",
+  "install_path": ".claude/skills/slack/SKILL.md",
+  "source": {
+    "repo": "unbrowse-ai/unbrowse",
+    "url": "https://github.com/unbrowse-ai/unbrowse/blob/main/unbrowse-browser/skill-data/slack/SKILL.md",
+    "path": "unbrowse-browser/skill-data/slack/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-17T13:39:52.972Z",
+    "stars": 934,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-17T12:46:48Z",
+    "license": "Apache-2.0"
+  }
+}

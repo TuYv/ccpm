@@ -1,0 +1,25 @@
+{
+  "id": "unbrowse-ai-unbrowse-agentcore",
+  "name": "agentcore",
+  "description": "Run agent-browser on AWS Bedrock AgentCore cloud browsers. Use when the user wants to use AgentCore, run browser automation on AWS, use a cloud browser with AWS credentials, or needs a managed browser session backed by AWS infrastructure. Triggers include \"use agentcore\", \"run on AWS\", \"cloud browser with AWS\", \"bedrock browser\", \"agentcore session\", or any task requiring AWS-hosted browser automation.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "unbrowse-ai",
+  "install_path": ".claude/skills/agentcore/SKILL.md",
+  "source": {
+    "repo": "unbrowse-ai/unbrowse",
+    "url": "https://github.com/unbrowse-ai/unbrowse/blob/main/unbrowse-browser/skill-data/agentcore/SKILL.md",
+    "path": "unbrowse-browser/skill-data/agentcore/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-17T13:39:51.705Z",
+    "stars": 934,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-17T12:46:48Z",
+    "license": "Apache-2.0"
+  }
+}

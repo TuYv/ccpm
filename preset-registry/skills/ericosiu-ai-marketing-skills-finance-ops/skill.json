@@ -1,8 +1,8 @@
 {
   "id": "ericosiu-ai-marketing-skills-finance-ops",
   "name": "finance-ops",
-  "description": "AI-powered financial analysis suite. Generates executive CFO briefings from QuickBooks exports (P&L, Balance Sheet, General Ledger, Cash Flow, etc.) with anomaly detection, burn rate, runway analysis, and scenario modeling. Also estimates codebase development costs with organizational overhead and AI ROI analysis. Triggers on: 'CFO briefing', 'financial analysis', 'cost briefing', 'expense review', 'runway analysis', 'burn rate', 'cost estimate', 'how much would this cost to build', 'development",
-  "category": "测试调试",
+  "description": "Use when you need financial analysis, cost estimation, or scenario modeling from QuickBooks data. CFO briefing generator and cost estimator.",
+  "category": "数据分析",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,11 +16,10 @@
     "url": "https://github.com/ericosiu/ai-marketing-skills/blob/main/finance-ops/SKILL.md",
     "path": "finance-ops/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-17T04:52:29.877Z",
-    "stars": 3837,
+    "discovered_at": "2026-11-17T14:22:20.475Z",
+    "stars": 3839,
     "language": "Python",
-    "pushed_at": "2026-11-16T06:55:39Z",
+    "pushed_at": "2026-11-17T09:13:01Z",
     "license": "MIT"
-  },
-  "summary_zh": "这是一款AI财务分析工具，能基于财务报表自动生成CFO简报，帮你掌握烧钱率、现金流和异常情况，还能估算研发成本与AI回报，适合管理者快速摸清公司财务家底或评估项目成本。"
+  }
 }

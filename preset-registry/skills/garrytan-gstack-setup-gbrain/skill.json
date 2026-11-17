@@ -1,7 +1,7 @@
 {
   "id": "garrytan-gstack-setup-gbrain",
   "name": "setup-gbrain",
-  "description": "Set up gbrain for this coding agent: install the CLI, initialize a local PGLite or Supabase brain, register MCP, capture per-remote trust policy. (gstack)",
+  "description": "Set up gbrain for this coding agent: install the CLI, initialize a local PGLite or Supabase brain, register MCP, capture per-remote trust policy. Use for: setup gbrain, install gbrain, connect gbrain. (gstack)",
   "category": "浏览器自动化",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/garrytan/gstack/blob/main/setup-gbrain/SKILL.md",
     "path": "setup-gbrain/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-17T04:11:07.851Z",
-    "stars": 141829,
+    "discovered_at": "2026-11-17T13:41:42.934Z",
+    "stars": 141872,
     "language": "TypeScript",
-    "pushed_at": "2026-11-16T19:18:46Z",
+    "pushed_at": "2026-11-17T13:36:58Z",
     "license": "MIT"
-  },
-  "summary_zh": "一款为编程智能体配置记忆与工具接入的初始化工具，适合搭建本地或云端知识库并管理远程仓库信任策略。"
+  }
 }

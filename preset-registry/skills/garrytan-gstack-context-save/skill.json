@@ -1,7 +1,7 @@
 {
   "id": "garrytan-gstack-context-save",
   "name": "context-save",
-  "description": "Save working context. (gstack)",
+  "description": "Save working context. Use for: save progress, save state, save my work, context save. (gstack)",
   "category": "浏览器自动化",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/garrytan/gstack/blob/main/context-save/SKILL.md",
     "path": "context-save/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-17T04:11:00.566Z",
-    "stars": 141829,
+    "discovered_at": "2026-11-17T13:41:33.120Z",
+    "stars": 141872,
     "language": "TypeScript",
-    "pushed_at": "2026-11-16T19:18:46Z",
+    "pushed_at": "2026-11-17T13:36:58Z",
     "license": "MIT"
-  },
-  "summary_zh": "用于保存当前工作上下文，方便中断后快速恢复进度，适合频繁切换任务的场景。"
+  }
 }

@@ -1,7 +1,7 @@
 {
   "id": "garrytan-gstack-ios-sync",
   "name": "ios-sync",
-  "description": "Regenerate the iOS debug bridge against the latest upstream gstack templates. (gstack)",
+  "description": "Regenerate the iOS debug bridge against the latest upstream gstack templates. Use for: resync the ios debug bridge, regenerate ios accessors. (gstack)",
   "category": "浏览器自动化",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/garrytan/gstack/blob/main/ios-sync/SKILL.md",
     "path": "ios-sync/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-17T04:11:03.770Z",
-    "stars": 141829,
+    "discovered_at": "2026-11-17T13:41:37.963Z",
+    "stars": 141872,
     "language": "TypeScript",
-    "pushed_at": "2026-11-16T19:18:46Z",
+    "pushed_at": "2026-11-17T13:36:58Z",
     "license": "MIT"
-  },
-  "summary_zh": "用于根据最新上游 gstack 模板重新生成 iOS 调试桥，适合保持调试工具同步与兼容。"
+  }
 }
