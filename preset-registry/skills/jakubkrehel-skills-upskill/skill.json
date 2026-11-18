@@ -1,0 +1,25 @@
+{
+  "id": "jakubkrehel-skills-upskill",
+  "name": "upskill",
+  "description": "Studies your past agent sessions on a project and proposes the skills, hooks and automations that would have saved you the most time, then builds the ones you pick.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "jakubkrehel",
+  "install_path": ".claude/skills/upskill/SKILL.md",
+  "source": {
+    "repo": "jakubkrehel/skills",
+    "url": "https://github.com/jakubkrehel/skills/blob/main/skills/upskill/SKILL.md",
+    "path": "skills/upskill/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-18T04:51:20.955Z",
+    "stars": 12332,
+    "language": "Markdown",
+    "pushed_at": "2026-11-18T01:42:36Z",
+    "license": "MIT"
+  }
+}
