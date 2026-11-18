@@ -1,0 +1,25 @@
+{
+  "id": "addyosmani-agent-skills-accessibility-engineering",
+  "name": "accessibility-engineering",
+  "description": "Audits existing interfaces for WCAG 2.2 AA conformance and remediates the violations found. Use when auditing a page or component for accessibility, running axe-core or pa11y, triaging a11y violations, or checking screen reader and contrast issues before shipping.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "addyosmani",
+  "install_path": ".claude/skills/accessibility-engineering/SKILL.md",
+  "source": {
+    "repo": "addyosmani/agent-skills",
+    "url": "https://github.com/addyosmani/agent-skills/blob/main/skills/accessibility-engineering/SKILL.md",
+    "path": "skills/accessibility-engineering/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-18T22:25:27.192Z",
+    "stars": 118926,
+    "language": "JavaScript",
+    "pushed_at": "2026-11-18T20:06:38Z",
+    "license": "MIT"
+  }
+}

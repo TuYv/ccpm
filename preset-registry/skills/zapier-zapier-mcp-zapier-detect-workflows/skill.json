@@ -1,0 +1,25 @@
+{
+  "id": "zapier-zapier-mcp-zapier-detect-workflows",
+  "name": "zapier-detect-workflows",
+  "description": ">- Use when the user repeats a request (even a single read) or describes habits, schedules, reuse, or manual work. Users rarely say \"workflow.\" Suggests a Zap workflow once, with evidence, and routes the choice to build or save. Explicit build or save requests go straight to those skills; one-time reminders use available scheduling tools.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "zapier",
+  "install_path": ".claude/skills/zapier-detect-workflows/SKILL.md",
+  "source": {
+    "repo": "zapier/zapier-mcp",
+    "url": "https://github.com/zapier/zapier-mcp/blob/main/plugins/zapier/skills/zapier-detect-workflows/SKILL.md",
+    "path": "plugins/zapier/skills/zapier-detect-workflows/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-18T22:37:35.386Z",
+    "stars": 460,
+    "language": null,
+    "pushed_at": "2026-11-18T19:17:04Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "google-skills-data-manager-api-troubleshooting",
+  "name": "data-manager-api-troubleshooting",
+  "description": ">- Diagnoses and fixes errors, warnings, and missing data for Data Manager API event and audience ingestion requests. Use when an IngestEvents, IngestAudienceMembers, RemoveAudienceMembers, RemoveAllAudienceMembers, or RetrieveRequestStatus call fails (INVALID_ARGUMENT, REQUIRED_FIELD_MISSING, INVALID_HEX_ENCODING, PERMISSION_DENIED, UNAUTHENTICATED, RESOURCE_EXHAUSTED, INVALID_REQUEST_ID), when a response has fieldWarnings, when checking request status or diagnostics, when request status shows ",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "google",
+  "install_path": ".claude/skills/data-manager-api-troubleshooting/SKILL.md",
+  "source": {
+    "repo": "google/skills",
+    "url": "https://github.com/google/skills/blob/main/skills/ads/data-manager-api-troubleshooting/SKILL.md",
+    "path": "skills/ads/data-manager-api-troubleshooting/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-18T21:44:25.657Z",
+    "stars": 24431,
+    "language": "Python",
+    "pushed_at": "2026-11-18T21:20:34Z",
+    "license": "Apache-2.0"
+  }
+}

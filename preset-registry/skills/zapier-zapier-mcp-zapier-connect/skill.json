@@ -1,0 +1,25 @@
+{
+  "id": "zapier-zapier-mcp-zapier-connect",
+  "name": "zapier-connect",
+  "description": "Connect or reconnect the Zapier MCP server when no Zapier tools are available or authentication has failed. Use when Zapier is not connected, there are no Zapier tools, the user asks to connect or reconnect Zapier, a Zapier call fails with an authentication or 401 error, or an action does not appear after the user enabled it. Once connected, hands off to zapier-quickstart.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "zapier",
+  "install_path": ".claude/skills/zapier-connect/SKILL.md",
+  "source": {
+    "repo": "zapier/zapier-mcp",
+    "url": "https://github.com/zapier/zapier-mcp/blob/main/plugins/zapier/skills/zapier-connect/SKILL.md",
+    "path": "plugins/zapier/skills/zapier-connect/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-18T22:37:35.020Z",
+    "stars": 460,
+    "language": null,
+    "pushed_at": "2026-11-18T19:17:04Z",
+    "license": "MIT"
+  }
+}

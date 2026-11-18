@@ -1,0 +1,25 @@
+{
+  "id": "zapier-zapier-mcp-zapier-quickstart",
+  "name": "zapier-quickstart",
+  "description": ">- Zapier MCP onboarding for new users. Help the user find something they would want handled again. Show it working once, for real. Then offer to keep it running.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "zapier",
+  "install_path": ".claude/skills/zapier-quickstart/SKILL.md",
+  "source": {
+    "repo": "zapier/zapier-mcp",
+    "url": "https://github.com/zapier/zapier-mcp/blob/main/plugins/zapier/skills/zapier-quickstart/SKILL.md",
+    "path": "plugins/zapier/skills/zapier-quickstart/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-18T22:37:35.672Z",
+    "stars": 460,
+    "language": null,
+    "pushed_at": "2026-11-18T19:17:04Z",
+    "license": "MIT"
+  }
+}

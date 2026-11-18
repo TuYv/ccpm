@@ -1,0 +1,25 @@
+{
+  "id": "zapier-zapier-mcp-sync-plugin-description",
+  "name": "sync-plugin-description",
+  "description": "Keep the Zapier MCP one-line description identical across every plugin manifest in this repo, using the official MCP registry entry as the source of truth. Use when the user changes, rewords, or asks about the plugin description, the app count (e.g. \"9,000+\" → \"10,000+\"), pastes MCP registry JSON, edits any plugin.json / marketplace.json / gemini-extension.json / POWER.md description, or resolves a merge conflict on a description field.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "zapier",
+  "install_path": ".claude/skills/sync-plugin-description/SKILL.md",
+  "source": {
+    "repo": "zapier/zapier-mcp",
+    "url": "https://github.com/zapier/zapier-mcp/blob/main/.claude/skills/sync-plugin-description/SKILL.md",
+    "path": ".claude/skills/sync-plugin-description/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-18T22:37:34.535Z",
+    "stars": 460,
+    "language": null,
+    "pushed_at": "2026-11-18T19:17:04Z",
+    "license": "MIT"
+  }
+}
