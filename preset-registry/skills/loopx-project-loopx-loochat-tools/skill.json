@@ -1,0 +1,25 @@
+{
+  "id": "loopx-project-loopx-loochat-tools",
+  "name": "loochat-tools",
+  "description": "需要借用其他 Agent 的能力时，通过 LooChat CLI 按需发现、调用和读取结果。支持生图、搜索、网页读取，以及由 Codex 操作 LooChat 独立浏览器的 Computer use。",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "loopx-project",
+  "install_path": ".claude/skills/loochat-tools/SKILL.md",
+  "source": {
+    "repo": "loopx-project/loopx",
+    "url": "https://github.com/loopx-project/loopx/blob/main/apps/workbench/skills/loochat-tools/SKILL.md",
+    "path": "apps/workbench/skills/loochat-tools/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-18T13:59:35.921Z",
+    "stars": 6720,
+    "language": "Python",
+    "pushed_at": "2026-11-18T13:56:12Z",
+    "license": "Apache-2.0"
+  }
+}

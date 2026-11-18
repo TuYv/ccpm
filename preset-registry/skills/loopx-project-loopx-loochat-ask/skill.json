@@ -1,0 +1,25 @@
+{
+  "id": "loopx-project-loopx-loochat-ask",
+  "name": "loochat-ask",
+  "description": "把飞书里转来的消息或问题交给 LooChat 助手（私人事项 Router），由它找到相关事项和会话，直接给答案或交给 agent 推进，再把它的回复原样发回。用户转发一条飞书消息、引用别人的 @、说「交给 loochat」「问问助手」「跟进下」时使用。",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "loopx-project",
+  "install_path": ".claude/skills/loochat-ask/SKILL.md",
+  "source": {
+    "repo": "loopx-project/loopx",
+    "url": "https://github.com/loopx-project/loopx/blob/main/apps/workbench/skills/loochat-ask/SKILL.md",
+    "path": "apps/workbench/skills/loochat-ask/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-18T13:59:35.720Z",
+    "stars": 6720,
+    "language": "Python",
+    "pushed_at": "2026-11-18T13:56:12Z",
+    "license": "Apache-2.0"
+  }
+}
