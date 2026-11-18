@@ -1,7 +1,7 @@
 {
   "id": "khazp-vibe-coding-prompt-template-vibe-agents",
   "name": "vibe-agents",
-  "description": "Create project agent instructions and tool configuration from agreed product and technical decisions.",
+  "description": "Create project agent instructions and tool configuration from agreed product and technical decisions. Not for ordinary incremental feature changes.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/KhazP/vibe-coding-prompt-template/blob/main/workflow/skills/vibe-agents/SKILL.md",
     "path": "workflow/skills/vibe-agents/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-17T14:34:11.972Z",
-    "stars": 3260,
+    "discovered_at": "2026-11-17T23:30:17.783Z",
+    "stars": 3262,
     "language": "TypeScript",
-    "pushed_at": "2026-11-17T14:31:27Z",
+    "pushed_at": "2026-11-17T15:52:43Z",
     "license": "MIT"
-  },
-  "summary_zh": "根据已确定的产品和技术决策生成项目代理指令与工具配置，适合规范 AI 编程助手的协作方式。"
+  }
 }

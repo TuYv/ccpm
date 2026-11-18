@@ -1,7 +1,7 @@
 {
   "id": "thedotmack-claude-mem-mem-search",
   "name": "mem-search",
-  "description": "Smart search (default). Search claude-mem's persistent cross-session memory database in three steps: search, timeline, then selected get_observations. Use when user asks \"did we already solve this?\", \"how did we do X last time?\", or needs work from previous sessions.",
+  "description": "Smart search (default). Search claude-mem's persistent cross-session memory database in three steps — search, timeline, then selected get_observations. Use when user asks \"did we already solve this?\", \"how did we do X last time?\", or needs work from previous sessions.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/thedotmack/claude-mem/blob/main/plugin/skills/mem-search/SKILL.md",
     "path": "plugin/skills/mem-search/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-17T13:38:59.944Z",
-    "stars": 117860,
+    "discovered_at": "2026-11-17T22:37:05.755Z",
+    "stars": 117982,
     "language": "TypeScript",
-    "pushed_at": "2026-11-17T12:28:31Z",
+    "pushed_at": "2026-11-17T22:34:14Z",
     "license": "Apache-2.0"
   }
 }

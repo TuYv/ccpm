@@ -1,7 +1,7 @@
 {
   "id": "khazp-vibe-coding-prompt-template-vibe-workflow",
   "name": "vibe-workflow",
-  "description": "Select the appropriate planning, implementation, or debugging workflow for an app project.",
+  "description": "Select the appropriate planning, implementation, or debugging workflow for an app project: starting something new, continuing an existing project, or fixing something broken.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/KhazP/vibe-coding-prompt-template/blob/main/workflow/skills/vibe-workflow/SKILL.md",
     "path": "workflow/skills/vibe-workflow/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-17T14:34:13.840Z",
-    "stars": 3260,
+    "discovered_at": "2026-11-17T23:30:19.423Z",
+    "stars": 3262,
     "language": "TypeScript",
-    "pushed_at": "2026-11-17T14:31:27Z",
+    "pushed_at": "2026-11-17T15:52:43Z",
     "license": "MIT"
-  },
-  "summary_zh": "根据项目需求为应用开发选择合适的规划、实现或调试工作流，帮助团队更高效地推进项目。"
+  }
 }

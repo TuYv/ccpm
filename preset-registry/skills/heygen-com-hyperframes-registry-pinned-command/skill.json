@@ -1,0 +1,25 @@
+{
+  "id": "heygen-com-hyperframes-registry-pinned-command",
+  "name": "registry-pinned-command",
+  "description": "Write HTML. Render video. Built for agents.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "heygen-com",
+  "install_path": ".claude/skills/registry-pinned-command/SKILL.md",
+  "source": {
+    "repo": "heygen-com/hyperframes",
+    "url": "https://github.com/heygen-com/hyperframes/blob/main/scripts/fixtures/registry-pinned-command/SKILL.md",
+    "path": "scripts/fixtures/registry-pinned-command/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-17T22:35:50.571Z",
+    "stars": 85949,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-17T22:34:41Z",
+    "license": "Apache-2.0"
+  }
+}
