@@ -1,7 +1,7 @@
 {
   "id": "expo-skills-eas-update",
   "name": "eas-update",
-  "description": "Configure and use EAS Update for over-the-air JavaScript and asset updates with expo-updates and EAS CLI. Use when setting up OTA updates, running eas update:configure or eas update, publishing to preview/staging/production channels, explaining branches/channels/runtime versions, testing updates, or debugging why an installed build still shows old code. Load for TestFlight, preview, or production updates that do not appear, including questions about cold launches or reopening the app. Not for up",
+  "description": "Configure and use EAS Update for over-the-air JavaScript and asset updates with expo-updates and EAS CLI. Use when setting up OTA updates, configuring branches/channels/runtime versions, publishing to preview/staging/production, testing updates, or debugging why an installed build still shows old code. Load for TestFlight, preview, or production updates that do not appear, including questions about cold launches or reopening the app. Not for update health metrics; use eas-update-insights for ado",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/expo/skills/blob/main/plugins/expo/skills/eas-update/SKILL.md",
     "path": "plugins/expo/skills/eas-update/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-19T13:17:32.824Z",
-    "stars": 4190,
-    "language": "Shell",
-    "pushed_at": "2026-11-19T13:11:51Z",
+    "discovered_at": "2026-11-19T21:47:44.246Z",
+    "stars": 4193,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-19T18:22:49Z",
     "license": "MIT"
   }
 }

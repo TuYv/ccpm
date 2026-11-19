@@ -1,7 +1,7 @@
 {
   "id": "getsentry-sentry-verify-sentry",
   "name": "verify-sentry",
-  "description": "Verify the Sentry web app (getsentry/sentry) as a real user, against a disposable local devserver driven with agent-browser, with stored state checked through the API. One skill for the whole app; `features/` holds one file per system. Mapped today: new-org onboarding, project creation in an existing org, the coding-agent handoff, the manual \"Configure <Platform> SDK\" setup docs, and onboarding navigation state, for owner and member. Use when asked to verify, battle-test, or re-prove Sentry prod",
+  "description": ">- Verify the Sentry web app (getsentry/sentry) as a real user, against a disposable local devserver driven with agent-browser, with stored state checked through the API. One skill for the whole app; `features/` holds one file per system. Mapped today: new-org onboarding, project creation in an existing org, the coding-agent handoff, the manual \"Configure <Platform> SDK\" setup docs, and onboarding navigation state, for owner and member. Use when asked to verify, battle-test, or re-prove Sentry p",
   "category": "浏览器自动化",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/getsentry/sentry/blob/master/.agents/skills/verify-sentry/SKILL.md",
     "path": ".agents/skills/verify-sentry/SKILL.md",
     "branch": "master",
-    "discovered_at": "2026-11-19T13:19:56.910Z",
+    "discovered_at": "2026-11-19T21:49:48.828Z",
     "stars": 45799,
     "language": "Python",
-    "pushed_at": "2026-11-19T13:18:05Z",
+    "pushed_at": "2026-11-19T21:49:14Z",
     "license": null
   }
 }
