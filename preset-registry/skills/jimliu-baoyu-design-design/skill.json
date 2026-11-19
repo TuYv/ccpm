@@ -1,0 +1,25 @@
+{
+  "id": "jimliu-baoyu-design-design",
+  "name": "design",
+  "description": ">- Make and revise designs in the Design (canvas) format as local files: project/canvas.json places artboards on an infinite canvas, and each artboard is one live .dc.html Design Component file. A local page shows the artboards side by side and lets people move them, retype copy, adjust tweaks and send requests back to the agent. Use when someone asks for UI screens, a landing page or web page design, app mockups, component explorations, diagrams, print pieces or a clickable prototype as an edit",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "JimLiu",
+  "install_path": ".claude/skills/design/SKILL.md",
+  "source": {
+    "repo": "JimLiu/baoyu-design",
+    "url": "https://github.com/JimLiu/baoyu-design/blob/main/artifact-types/design/SKILL.md",
+    "path": "artifact-types/design/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-19T04:26:54.906Z",
+    "stars": 55,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-19T03:01:41Z",
+    "license": "Apache-2.0"
+  }
+}

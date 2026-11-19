@@ -1,0 +1,25 @@
+{
+  "id": "jimliu-baoyu-design-whiteboard",
+  "name": "whiteboard",
+  "description": ">- Make and change a Whiteboard: a shared, infinite board where people and the agent lay out thinking together with sticky notes, shapes, sections, text, arrows, pen lines, pictures, tables, stickers, link cards and small working embeds. Its content is the board's own document store (small JSON documents under db/), written through ArtifactData under a host or `open-artifact write-db` locally, never as free-form files. Use when someone asks for a whiteboard, a brainstorm, a flowchart or architec",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "JimLiu",
+  "install_path": ".claude/skills/whiteboard/SKILL.md",
+  "source": {
+    "repo": "JimLiu/baoyu-design",
+    "url": "https://github.com/JimLiu/baoyu-design/blob/main/artifact-types/whiteboard/SKILL.md",
+    "path": "artifact-types/whiteboard/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-19T04:26:55.772Z",
+    "stars": 55,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-19T03:01:41Z",
+    "license": "Apache-2.0"
+  }
+}

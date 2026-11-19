@@ -1,42 +1,23 @@
 ---
 name: flow-define
-disable-model-invocation: true
-aliases:
-  - define
-  - define-workflow
-  - grasp
-  - grasp-workflow
 description: "Multi-AI requirements scoping using available external providers (Double Diamond Define phase). Priority triggers: octo define, octo scope, co-define, co-scope. DO NOT use for implementation, research, review/validation, or built-in commands."
-
-# Claude Code v2.1.12+ Integration
-task_management: true
-task_dependencies:
-  - flow-discover
-execution_mode: enforced
-pre_execution_contract:
-  - visual_indicators_displayed
-validation_gates:
-  - orchestrate_sh_executed
-  - synthesis_file_exists
-trigger: |
-  EXPLICITLY USE when user requests clarification or scoping:
-  - "define the requirements for X"
-  - "clarify the scope of Y"
-  - "what exactly does X need to do"
-  - "help me understand the problem with Y"
-  - "scope out the Z feature"
-  - "what are the specific requirements for X"
-
-  DO NOT activate for:
-  - Implementation tasks (use tangle-workflow)
-  - Research tasks (use probe-workflow)
-  - Review tasks (use ink-workflow)
-  - Built-in commands (/plugin, /help, etc.)
+disable-model-invocation: true
 ---
+
+> **Host: Codex CLI** — This skill was designed for Claude Code and adapted for Codex.
+> Invoke installed skills by their `$skill-name`. Known Octopus commands are mapped below. A remaining `/octo:*` reference is a Claude Code command; do not execute it in Codex or invent an equivalent.
+> Before the first helper call, derive the absolute plugin root from this loaded skill's path by finding its ancestor containing `.codex-plugin/plugin.json`. Verify that root, bind `OCTO_ROOT`, `CODEX_PLUGIN_ROOT`, and `CLAUDE_PLUGIN_ROOT` to the same root, and export all three in each fresh shell before launching child processes. Use the verified absolute helper path when needed. Do not infer the root from the user's project or assume exports survive tool calls. Stop and report a missing installation if the root cannot be verified.
+> Use the active Codex shell and subagent tools. Do not claim a provider, model, or host subagent is available until the current session exposes it.
+> Claude-native tool calls in examples are prompt templates to adapt, not Codex call signatures. If a mandatory verification agent or tool is unavailable or unauthorized, report that verification did not run and stop the affected completion step. Never claim a skipped check passed.
+> Attribute commits only to actual contributors; do not copy fixed model attribution trailers from examples.
+> For host tool equivalents, see `codex-skills/blocks/codex-host-adapter.md`.
+
+> Invoke this entry as `$flow-define` in Codex. Code-fenced Claude command examples are reference text, not Codex shell commands.
+
 
 {{PREAMBLE}}
 
-Load `skills/blocks/engineering-method-selection.md` from the installed plugin
+Load `codex-skills/blocks/engineering-method-selection.md` from the installed plugin
 and apply only the methods relevant to this task. Preserve this entry point's
 execution contract and output format. Read referenced skills as instructions;
 do not invoke the current command recursively or add provider calls from a seat.
@@ -44,7 +25,7 @@ do not invoke the current command recursively or add provider calls from a seat.
 ## Shared definitions
 
 Load the project's existing glossary and decisions when they apply. If none
-exists, use `skills/blocks/domain-modeling.md` and add a short definitions section
+exists, use `codex-skills/blocks/domain-modeling.md` and add a short definitions section
 to the current design artifact. Do not create a parallel context or memory file.
 Keep installation, authentication, entitlement, readiness, billing, quota, seat,
 contribution, and vote distinct.
@@ -74,7 +55,6 @@ fi
   --status "in_progress"
 ```
 
----
 
 ## Execution Contract
 
@@ -82,7 +62,7 @@ This skill uses **ENFORCED execution mode**. You MUST follow this exact sequence
 
 ### STEP 1: Display Visual Indicators
 
-**MANDATORY: You MUST use the Bash tool to run this provider check BEFORE displaying the banner. Do NOT skip it. Do NOT assume availability.**
+**MANDATORY: You MUST use the native shell command tool to run this provider check BEFORE displaying the banner. Do NOT skip it. Do NOT assume availability.**
 
 ```bash
 # Runs under bash even when the host shell is zsh.
@@ -156,7 +136,6 @@ ${provider_availability}
 
 **DO NOT PROCEED TO STEP 2 until banner displayed.** The banner shows users which providers will run and what costs they'll incur — starting API calls without this visibility violates cost transparency.
 
----
 
 ### STEP 2: Read Prior State
 
@@ -195,7 +174,6 @@ fi
 
 **DO NOT PROCEED TO STEP 3 until state read.**
 
----
 
 ### STEP 3: Phase Discussion — Capture User Vision
 
@@ -250,7 +228,7 @@ Use AskUserQuestion tool to ask:
 **If user selected "Multi-LLM debate (Claude + available providers)" for approach:**
 Before proceeding with orchestrate.sh, run a Multi-LLM debate to determine the technical approach:
 ```
-/octo:debate --rounds 2 --debate-style collaborative "What is the best technical approach for [feature]? Consider: speed to market, maintainability, performance, and the existing codebase patterns."
+$skill-debate --rounds 2 --debate-style collaborative "What is the best technical approach for [feature]? Consider: speed to market, maintainability, performance, and the existing codebase patterns."
 ```
 Use the debate synthesis to set the approach context for the Define phase.
 
@@ -293,11 +271,10 @@ OCTO_BASH
 
 **DO NOT PROCEED TO STEP 4 until context captured.** User vision (UX approach, priorities, out-of-scope items) scopes the multi-AI research — without it, providers research too broadly and the definition misses the user's actual intent.
 
----
 
 ### STEP 4: Execute orchestrate.sh define
 
-**You MUST execute this command via the Bash tool:**
+**You MUST execute this command via the native shell command tool:**
 
 Use the installation that loaded this skill for both execution and validation.
 If `CLAUDE_PLUGIN_ROOT` is absent, replace the `OCTO_ROOT` fallback below with
@@ -358,7 +335,7 @@ project documents, decisions and provider settings.
 - ❌ Claiming you're "simulating" the workflow
 - ❌ Proceeding to Step 5 without running this command
 
-**You MUST use the Bash tool to invoke orchestrate.sh.**
+**You MUST use the native shell command tool to invoke orchestrate.sh.**
 
 #### What Users See During Execution (v7.16.0+)
 
@@ -375,7 +352,6 @@ These spinner verb updates happen automatically - orchestrate.sh calls `update_t
 
 **If NOT running in Claude Code v2.1.16+:** Progress indicators are silently skipped, no errors shown.
 
----
 
 ### STEP 5: Verify Execution
 
@@ -396,7 +372,6 @@ or rerun the workflow to recover a shell variable.
 3. DO NOT proceed with presenting results
 4. DO NOT substitute with direct analysis — fallback to single-model analysis defeats the purpose of multi-provider consensus and produces narrower requirements
 
----
 
 ### STEP 6: Update State
 
@@ -433,7 +408,6 @@ repairing the cause. Do not repeat successful decision or context writes. An
 oversized context may need shortening before retrying. Do not increment completion
 or present the definition as saved while a required write is still failing.
 
----
 
 ### STEP 7: Present Problem Definition (Only After Steps 1-6 Complete)
 
@@ -449,13 +423,11 @@ Read the synthesis file and present:
 
 **Include attribution:**
 ```
----
 *Multi-AI Problem Definition powered by Claude Octopus*
 *Providers: available external providers + 🔵 Claude*
 *Full problem definition: $SYNTHESIS_FILE*
 ```
 
----
 
 # Define Workflow - Define Phase 🎯
 
@@ -472,7 +444,6 @@ The **define** phase clarifies and scopes problems using external CLI providers:
 
 This is the **convergent** phase after discovery - we narrow down from broad research to specific problem definition.
 
----
 
 ## When to Use Define
 
@@ -490,7 +461,6 @@ Use define when you need:
 - Code review and validation (use ink-workflow)
 - Simple questions Claude can answer
 
----
 
 ## Visual Indicators
 
@@ -509,7 +479,6 @@ Provider Availability:
 🔵 Claude: Available ✓ - Consensus building and synthesis
 ```
 
----
 
 ## How It Works
 
@@ -525,7 +494,7 @@ The orchestrate.sh script will:
 1. Call **Codex CLI** for technical requirement analysis
 2. Call **Antigravity CLI** for business/user need analysis
 3. Call **Antigravity CLI** for additional external-model challenge
-4. You (Claude) synthesize into clear problem definition
+4. You (the host model) synthesize into clear problem definition
 5. Identify gaps and missing requirements
 
 ### Stage C: Read Results
@@ -540,7 +509,6 @@ Results are saved to:
 
 Read the synthesis and present clear, actionable requirements to the user.
 
----
 
 ## Implementation Instructions
 
@@ -549,7 +517,7 @@ When this skill is invoked, follow the EXECUTION CONTRACT above exactly. The con
 1. **Blocking Step 1**: Check providers and display live visual indicators
 2. **Blocking Step 2**: Read prior workflow state
 3. **Blocking Step 3**: Capture and persist the user's vision
-4. **Blocking Step 4**: Execute orchestrate.sh define via Bash tool
+4. **Blocking Step 4**: Execute orchestrate.sh define via native shell command tool
 5. **Blocking Step 5**: Verify the synthesis file exists
 6. **Blocking Step 6**: Update workflow state
 7. **Step 7**: Present the formatted problem definition
@@ -578,7 +546,7 @@ TaskUpdate({taskId: "...", status: "completed"})
 ### Error Handling
 
 If any step fails:
-- **Step 1 (Providers)**: If all external providers are unavailable, suggest `/octo:setup` and STOP
+- **Step 1 (Providers)**: If all external providers are unavailable, suggest `$sys-configure` and STOP
 - **Step 4 (orchestrate.sh)**: Show bash error, check logs, report to user
 - **Step 5 (Validation)**: If synthesis is missing, show orchestrate.sh logs and do not substitute direct analysis
 
@@ -630,7 +598,6 @@ After successful execution, present problem definition with:
    Full problem definition saved to: <synthesis file path>
    ```
 
----
 
 ## Example Usage
 
@@ -764,7 +731,6 @@ Claude:
 Ready to build once requirements are confirmed.
 ```
 
----
 
 ## Integration with Other Workflows
 
@@ -782,7 +748,6 @@ PROBE (Discover) → GRASP (Define) → TANGLE (Develop) → INK (Deliver)
 
 Or use grasp standalone when requirements are unclear.
 
----
 
 ## Quality Checklist
 
@@ -797,7 +762,6 @@ Before completing grasp workflow, ensure:
 - [ ] Next steps recommended to user
 - [ ] Full problem definition shared
 
----
 
 ## Cost Awareness
 
@@ -809,7 +773,6 @@ Before completing grasp workflow, ensure:
 
 Grasp workflows typically cost 0.01-0.05 USD per task depending on complexity.
 
----
 
 ## Post-Definition: State Update
 
@@ -831,7 +794,6 @@ if [[ -f "$SYNTHESIS_FILE" ]]; then
 fi
 ```
 
----
 
 ## Terminal State
 

@@ -1,0 +1,25 @@
+{
+  "id": "jimliu-baoyu-design-docs",
+  "name": "docs",
+  "description": ">- Make and revise a living doc in the Docs format as a local folder: doc/doc.json names the doc, its tabs and its dropdown lists, and each tab is a tree of blocks (headings, paragraphs, lists and checklists, tables, code, quotes, pictures) whose characters carry ids, with chips for dates, @-mentions, links to tabs and dropdowns. This skill's script creates the doc (from markdown or a skeleton), imports a Markdown, Word (.docx) or PDF file as a new doc or a new tab, reads it, edits it in place b",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "JimLiu",
+  "install_path": ".claude/skills/docs/SKILL.md",
+  "source": {
+    "repo": "JimLiu/baoyu-design",
+    "url": "https://github.com/JimLiu/baoyu-design/blob/main/artifact-types/docs/SKILL.md",
+    "path": "artifact-types/docs/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-19T04:26:55.111Z",
+    "stars": 55,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-19T03:01:41Z",
+    "license": "Apache-2.0"
+  }
+}

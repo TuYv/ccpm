@@ -1,0 +1,25 @@
+{
+  "id": "jimliu-baoyu-design-slides",
+  "name": "slides",
+  "description": ">- Make and revise presentation decks in the Slides format as local files: project/deck.json holds the title, slide order, outline and typefaces, and each slide is one HTML file (project/slides/<id>.html) on a fixed 1920×1080 canvas (1440×1080 at 4:3), written as HTML with classes sharing project/deck.css or, in older decks, a closed subset of HTML and inline CSS. A local page shows the deck with a slide rail and an overview, lets people retype, move and restyle things, write speaker notes, add ",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "JimLiu",
+  "install_path": ".claude/skills/slides/SKILL.md",
+  "source": {
+    "repo": "JimLiu/baoyu-design",
+    "url": "https://github.com/JimLiu/baoyu-design/blob/main/artifact-types/slides/SKILL.md",
+    "path": "artifact-types/slides/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-19T04:26:55.542Z",
+    "stars": 55,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-19T03:01:41Z",
+    "license": "Apache-2.0"
+  }
+}

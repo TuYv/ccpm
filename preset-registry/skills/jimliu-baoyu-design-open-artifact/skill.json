@@ -1,0 +1,25 @@
+{
+  "id": "jimliu-baoyu-design-open-artifact",
+  "name": "open-artifact",
+  "description": "Make an Open Artifact (a slide deck, a design canvas, a whiteboard, a data dashboard, a doc, …) as a folder of files that opens as a live local page where the person views, edits, comments and exports, with their comments coming back to you. Use when the person types `/open-artifact <type> <what to make>`, or asks for something they will look at closely, keep, change, comment on or present - a presentation, pitch or talk deck; app screens, a mockup, a landing page, a poster, flyer or graphic, or",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "JimLiu",
+  "install_path": ".claude/skills/open-artifact/SKILL.md",
+  "source": {
+    "repo": "JimLiu/baoyu-design",
+    "url": "https://github.com/JimLiu/baoyu-design/blob/main/skills/open-artifact/SKILL.md",
+    "path": "skills/open-artifact/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-19T04:26:56.197Z",
+    "stars": 55,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-19T03:01:41Z",
+    "license": "Apache-2.0"
+  }
+}

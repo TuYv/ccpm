@@ -1,0 +1,25 @@
+{
+  "id": "jimliu-baoyu-design-sheets",
+  "name": "sheets",
+  "description": ">- Make, read and change a Sheet: a shared spreadsheet (cells, formulas, several sheets, formats, tables, dropdowns, conditional formats and charts) that people fill in by hand in its page and that you read and fill in too, through this type's read and update calls. Use when someone asks for a spreadsheet, a workbook, a tracker, a budget, a list of records or a financial model they can edit, or when they send a request from a Sheet's page. Not for a CSV or .xlsx file you are asked to produce, a ",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "JimLiu",
+  "install_path": ".claude/skills/sheets/SKILL.md",
+  "source": {
+    "repo": "JimLiu/baoyu-design",
+    "url": "https://github.com/JimLiu/baoyu-design/blob/main/artifact-types/sheets/SKILL.md",
+    "path": "artifact-types/sheets/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-19T04:26:55.323Z",
+    "stars": 55,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-19T03:01:41Z",
+    "license": "Apache-2.0"
+  }
+}

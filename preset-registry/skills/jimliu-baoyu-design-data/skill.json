@@ -1,0 +1,25 @@
+{
+  "id": "jimliu-baoyu-design-data",
+  "name": "data",
+  "description": ">- Make and change a Data artifact: a dashboard, metrics page, KPI tracker, scorecard, data visualization or recurring report, as a page or scroll story of charts, numbers and tables that works itself out again each time someone opens it, from live queries on the person's MCP connectors, uploaded files and calculations. Its content is the artifact's own document store (small JSON documents under db/), written through ArtifactData under a host or `open-artifact write-db` locally, never as free-fo",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "JimLiu",
+  "install_path": ".claude/skills/data/SKILL.md",
+  "source": {
+    "repo": "JimLiu/baoyu-design",
+    "url": "https://github.com/JimLiu/baoyu-design/blob/main/artifact-types/data/SKILL.md",
+    "path": "artifact-types/data/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-19T04:26:54.436Z",
+    "stars": 55,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-19T03:01:41Z",
+    "license": "Apache-2.0"
+  }
+}
