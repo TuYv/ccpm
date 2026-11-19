@@ -1,0 +1,25 @@
+{
+  "id": "atoll92-agent-standup-timesheet",
+  "name": "timesheet",
+  "description": "Fill a Claude Sheet on claude.ai with the timesheet of the Claude Code, Codex, Mistral Vibe and Cowork sessions on this computer for a day or a few days, one row per session (start, end, project, time worked, time it waited for the user, turns, commands, edits, files changed), with totals. Use when the user asks for a timesheet, or for a Sheet or spreadsheet of what their agents did. For a plain question about how long they worked, answer from `agent-standup report` in the conversation instead, ",
+  "category": "数据分析",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Atoll92",
+  "install_path": ".claude/skills/timesheet/SKILL.md",
+  "source": {
+    "repo": "Atoll92/agent-standup",
+    "url": "https://github.com/Atoll92/agent-standup/blob/main/plugin/skills/timesheet/SKILL.md",
+    "path": "plugin/skills/timesheet/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-19T14:09:18.946Z",
+    "stars": 382,
+    "language": "HTML",
+    "pushed_at": "2026-11-17T12:54:07Z",
+    "license": "MIT"
+  }
+}

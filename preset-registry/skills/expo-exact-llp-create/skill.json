@@ -2,7 +2,7 @@
   "id": "expo-exact-llp-create",
   "name": "llp-create",
   "description": "Create a new LLP document with the next available number (top-level NNNN or a dotted sub-LLP under a parent), the NNNN-slug.type.md filename convention, and a scaffolded metadata header, linked into llp/current/ — or extend an existing LLP when one already covers the topic.",
-  "category": "浏览器自动化",
+  "category": "数据分析",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/expo/exact/blob/main/.claude/skills/llp-create/SKILL.md",
     "path": ".claude/skills/llp-create/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-19T04:30:18.481Z",
-    "stars": 4686,
+    "discovered_at": "2026-11-19T14:09:20.204Z",
+    "stars": 4708,
     "language": "Rust",
-    "pushed_at": "2026-11-19T04:27:27Z",
+    "pushed_at": "2026-11-19T14:01:47Z",
     "license": "MIT"
   }
 }

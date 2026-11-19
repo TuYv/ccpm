@@ -1,0 +1,25 @@
+{
+  "id": "el4cteo-blender-skills-blender-workflow-recipes",
+  "name": "blender-workflow-recipes",
+  "description": "End-to-end Blender 5.3 playbooks chaining the blender-* skills with QA gates - game props (mid-poly, high-to-low), game characters (sculpt/AI mesh to rigged, animated export), Roblox props/accessories/avatars, AI or downloaded asset cleanup, procedural environments, web/AR assets, product turntables, mood/weather shots (night, rain, snow, fog). Use for complete multi-stage asset requests.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "EL4CTEO",
+  "install_path": ".claude/skills/blender-workflow-recipes/SKILL.md",
+  "source": {
+    "repo": "EL4CTEO/blender-skills",
+    "url": "https://github.com/EL4CTEO/blender-skills/blob/main/skills/blender-workflow-recipes/SKILL.md",
+    "path": "skills/blender-workflow-recipes/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-19T14:02:46.664Z",
+    "stars": 2364,
+    "language": "Python",
+    "pushed_at": "2026-11-17T15:20:14Z",
+    "license": "MIT"
+  }
+}

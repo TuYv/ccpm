@@ -1,0 +1,25 @@
+{
+  "id": "atoll92-agent-standup-whiteboard",
+  "name": "whiteboard",
+  "description": "Draw the day's standup of the Claude Code, Codex, Mistral Vibe and Cowork sessions on this computer as a Claude Whiteboard on claude.ai, one section per session (what it was asked, what it did, what it waits on) and what needs the user standing out. Use when the user asks to put the standup on a whiteboard, to draw or map what their agents did today, or for a board of their sessions.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Atoll92",
+  "install_path": ".claude/skills/whiteboard/SKILL.md",
+  "source": {
+    "repo": "Atoll92/agent-standup",
+    "url": "https://github.com/Atoll92/agent-standup/blob/main/plugin/skills/whiteboard/SKILL.md",
+    "path": "plugin/skills/whiteboard/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-19T14:09:19.123Z",
+    "stars": 382,
+    "language": "HTML",
+    "pushed_at": "2026-11-17T12:54:07Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "atoll92-agent-standup-credits",
+  "name": "credits",
+  "description": "Add a small credits line to a pull request (or a commit message) saying which agents of this Claude Code session worked on it, named as Agent Standup's call names them (the lead and its sub-agents), with the time worked, the commands and the edits. Use only when the user asks to credit their agents, to add Agent Standup credits, or to say on the PR who built it; never add it on your own.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Atoll92",
+  "install_path": ".claude/skills/credits/SKILL.md",
+  "source": {
+    "repo": "Atoll92/agent-standup",
+    "url": "https://github.com/Atoll92/agent-standup/blob/main/plugin/skills/credits/SKILL.md",
+    "path": "plugin/skills/credits/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-19T14:09:18.431Z",
+    "stars": 382,
+    "language": "HTML",
+    "pushed_at": "2026-11-17T12:54:07Z",
+    "license": "MIT"
+  }
+}

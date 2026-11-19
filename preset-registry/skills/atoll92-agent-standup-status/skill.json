@@ -1,0 +1,25 @@
+{
+  "id": "atoll92-agent-standup-status",
+  "name": "status",
+  "description": "Report in one line what the Claude Code, Codex, Mistral Vibe and Cowork sessions on this computer are doing right now (how many are working, how many need the user, whether it is the user's turn). Use when the user asks what their agents or sessions are doing, or whether anything is waiting for them.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Atoll92",
+  "install_path": ".claude/skills/status/SKILL.md",
+  "source": {
+    "repo": "Atoll92/agent-standup",
+    "url": "https://github.com/Atoll92/agent-standup/blob/main/plugin/skills/status/SKILL.md",
+    "path": "plugin/skills/status/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-19T14:09:18.802Z",
+    "stars": 382,
+    "language": "HTML",
+    "pushed_at": "2026-11-17T12:54:07Z",
+    "license": "MIT"
+  }
+}

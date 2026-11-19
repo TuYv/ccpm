@@ -1,7 +1,7 @@
 {
   "id": "virgiliojr94-book-to-skill",
   "name": "book-to-skill",
-  "description": "Converts books and documents (PDF, EPUB, DOCX, HTML, Markdown, plain text, RTF, MOBI/AZW with Calibre) into structured agent skills, extracting frameworks, mental models, principles, techniques, and anti-patterns. Use when the user wants to study a document through GitHub Copilot CLI, Amp, Claude Code, Hermes Agent, OpenCode, or OpenClaw, apply an author's frameworks while working, or build a reusable knowledge base from a file.",
+  "description": "Converts books and documents into structured agent skills from local files (PDF, EPUB, DOCX, HTML, Markdown, TXT, RTF, MOBI/AZW) or remote MCP book search (`/book-to-skill search <query>`), extracting frameworks, mental models, principles, techniques, and anti-patterns. Use via GitHub Copilot CLI, Amp, Claude Code, Hermes Agent, OpenCode, or OpenClaw to study a document or apply an author's frameworks.",
   "category": "文档写作",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/virgiliojr94/book-to-skill/blob/master/SKILL.md",
     "path": "SKILL.md",
     "branch": "master",
-    "discovered_at": "2026-11-19T04:23:38.454Z",
-    "stars": 38422,
+    "discovered_at": "2026-11-19T14:01:26.524Z",
+    "stars": 38455,
     "language": "Python",
-    "pushed_at": "2026-11-18T22:28:06Z",
+    "pushed_at": "2026-11-19T13:36:13Z",
     "license": "MIT"
   }
 }

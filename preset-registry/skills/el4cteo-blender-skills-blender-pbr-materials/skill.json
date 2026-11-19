@@ -1,0 +1,25 @@
+{
+  "id": "el4cteo-blender-skills-blender-pbr-materials",
+  "name": "blender-pbr-materials",
+  "description": "Physically based materials in Blender 5.3 - metal/roughness rules, Principled BSDF inputs, color spaces (sRGB vs Non-Color), measured albedo/F0 values, texture-set auto-wiring, ORM channel packing, DirectX vs OpenGL normals, alpha modes, displacement, view transforms (AgX, Khronos PBR Neutral), engine-ready material rules. Use when creating, fixing, or exporting materials and textures.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "EL4CTEO",
+  "install_path": ".claude/skills/blender-pbr-materials/SKILL.md",
+  "source": {
+    "repo": "EL4CTEO/blender-skills",
+    "url": "https://github.com/EL4CTEO/blender-skills/blob/main/skills/blender-pbr-materials/SKILL.md",
+    "path": "skills/blender-pbr-materials/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-19T14:02:44.822Z",
+    "stars": 2364,
+    "language": "Python",
+    "pushed_at": "2026-11-17T15:20:14Z",
+    "license": "MIT"
+  }
+}

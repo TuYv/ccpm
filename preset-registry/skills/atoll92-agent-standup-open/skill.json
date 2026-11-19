@@ -1,0 +1,25 @@
+{
+  "id": "atoll92-agent-standup-open",
+  "name": "open",
+  "description": "Open Agent Standup, a local page that shows the Claude Code, Codex, Mistral Vibe and Cowork sessions on this computer as a live team call (who is working, who waits on whom, who needs the user). Use when the user asks to watch, see or follow their agents, sub-agents or sessions, or asks for the standup or the call.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Atoll92",
+  "install_path": ".claude/skills/open/SKILL.md",
+  "source": {
+    "repo": "Atoll92/agent-standup",
+    "url": "https://github.com/Atoll92/agent-standup/blob/main/plugin/skills/open/SKILL.md",
+    "path": "plugin/skills/open/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-19T14:09:18.584Z",
+    "stars": 382,
+    "language": "HTML",
+    "pushed_at": "2026-11-17T12:54:07Z",
+    "license": "MIT"
+  }
+}

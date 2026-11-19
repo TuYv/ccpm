@@ -1,0 +1,25 @@
+{
+  "id": "el4cteo-blender-skills-blender-asset-qa",
+  "name": "blender-asset-qa",
+  "description": "Mandatory review gate for any mesh or asset created or edited in Blender. Detects z-fighting, floating/detached parts, inverted or inconsistent normals, non-manifold/open geometry, degenerate faces, duplicate verts, n-gons, unapplied scale, UV problems, bad skin weights, material/texture errors, and renders multi-angle review sheets. Use before calling any modeling, export or delivery task done.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "EL4CTEO",
+  "install_path": ".claude/skills/blender-asset-qa/SKILL.md",
+  "source": {
+    "repo": "EL4CTEO/blender-skills",
+    "url": "https://github.com/EL4CTEO/blender-skills/blob/main/skills/blender-asset-qa/SKILL.md",
+    "path": "skills/blender-asset-qa/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-19T14:02:43.117Z",
+    "stars": 2364,
+    "language": "Python",
+    "pushed_at": "2026-11-17T15:20:14Z",
+    "license": "MIT"
+  }
+}

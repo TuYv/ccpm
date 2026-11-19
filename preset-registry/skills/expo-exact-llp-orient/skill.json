@@ -2,7 +2,7 @@
   "id": "expo-exact-llp-orient",
   "name": "llp-orient",
   "description": "Before editing a subsystem, file, or starting a task, assemble the governing LLP context — read the root LLP, follow the @ref annotations on the code in scope, and find the LLPs covering the relevant systems. Produces a compact context pack of the constraints a change must respect. Read-only.",
-  "category": "浏览器自动化",
+  "category": "数据分析",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/expo/exact/blob/main/.claude/skills/llp-orient/SKILL.md",
     "path": ".claude/skills/llp-orient/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-19T04:30:18.841Z",
-    "stars": 4686,
+    "discovered_at": "2026-11-19T14:09:20.594Z",
+    "stars": 4708,
     "language": "Rust",
-    "pushed_at": "2026-11-19T04:27:27Z",
+    "pushed_at": "2026-11-19T14:01:47Z",
     "license": "MIT"
   }
 }

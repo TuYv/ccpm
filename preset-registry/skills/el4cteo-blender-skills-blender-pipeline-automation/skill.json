@@ -1,0 +1,25 @@
+{
+  "id": "el4cteo-blender-skills-blender-pipeline-automation",
+  "name": "blender-pipeline-automation",
+  "description": "Automate Blender 5.3 at scale - headless CLI flags, batch convert/inventory/run-any-skill-script over folders of .blend/.fbx/.glb/.obj/.usd, sharding, bpy pip module, library linking, path management, render-farm and CI patterns. Use for batch jobs, format conversion, library maintenance and pipeline tooling.",
+  "category": "自动化集成",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "EL4CTEO",
+  "install_path": ".claude/skills/blender-pipeline-automation/SKILL.md",
+  "source": {
+    "repo": "EL4CTEO/blender-skills",
+    "url": "https://github.com/EL4CTEO/blender-skills/blob/main/skills/blender-pipeline-automation/SKILL.md",
+    "path": "skills/blender-pipeline-automation/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-19T14:02:44.986Z",
+    "stars": 2364,
+    "language": "Python",
+    "pushed_at": "2026-11-17T15:20:14Z",
+    "license": "MIT"
+  }
+}

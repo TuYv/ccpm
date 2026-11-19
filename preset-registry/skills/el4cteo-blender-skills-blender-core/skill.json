@@ -1,0 +1,25 @@
+{
+  "id": "el4cteo-blender-skills-blender-core",
+  "name": "blender-core",
+  "description": "Foundation for any Blender 5.2+ task an agent drives - running bpy via MCP (live) or headless CLI, context overrides, locale-safe node lookup, enum discovery, 5.x API changes, verification. Use first for any Blender, bpy, .blend or 3D-asset request; routes to the specialized blender-* skills.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "EL4CTEO",
+  "install_path": ".claude/skills/blender-core/SKILL.md",
+  "source": {
+    "repo": "EL4CTEO/blender-skills",
+    "url": "https://github.com/EL4CTEO/blender-skills/blob/main/skills/blender-core/SKILL.md",
+    "path": "skills/blender-core/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-19T14:02:43.575Z",
+    "stars": 2364,
+    "language": "Python",
+    "pushed_at": "2026-11-17T15:20:14Z",
+    "license": "MIT"
+  }
+}
