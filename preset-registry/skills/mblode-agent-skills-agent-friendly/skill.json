@@ -1,0 +1,25 @@
+{
+  "id": "mblode-agent-skills-agent-friendly",
+  "name": "agent-friendly",
+  "description": ">- Makes a codebase agent-friendly: builds the guardrails, instructions and verification agents need, or audits a repo against the catalogue and fixes the top gap. Use when asked to \"make this repo agent-friendly\", \"set up a repo for agents\", \"audit this for agents\", or \"agents keep making the same mistake\".",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mblode",
+  "install_path": ".claude/skills/agent-friendly/SKILL.md",
+  "source": {
+    "repo": "mblode/agent-skills",
+    "url": "https://github.com/mblode/agent-skills/blob/main/skills/agent-friendly/SKILL.md",
+    "path": "skills/agent-friendly/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-20T05:08:55.374Z",
+    "stars": 211,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-19T22:40:49Z",
+    "license": "MIT"
+  }
+}

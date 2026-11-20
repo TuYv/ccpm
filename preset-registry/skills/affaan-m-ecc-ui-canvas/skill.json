@@ -1,0 +1,25 @@
+{
+  "id": "affaan-m-ecc-ui-canvas",
+  "name": "ui-canvas",
+  "description": "Preview a UI component mockup in a local browser canvas where the human directly edits it (move, resize, edit text, delete, restyle), switches mobile/desktop/custom viewports, tests it, chats with you, and clicks Save and Finish. You then turn the exported edited markup into the production component. Use before committing or rebuilding a feature just to check a visual change.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "affaan-m",
+  "install_path": ".claude/skills/ui-canvas/SKILL.md",
+  "source": {
+    "repo": "affaan-m/ECC",
+    "url": "https://github.com/affaan-m/ECC/blob/main/.agents/skills/ui-canvas/SKILL.md",
+    "path": ".agents/skills/ui-canvas/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-20T04:09:09.321Z",
+    "stars": 307357,
+    "language": "JavaScript",
+    "pushed_at": "2026-11-20T01:13:45Z",
+    "license": "MIT"
+  }
+}
