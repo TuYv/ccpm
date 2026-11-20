@@ -1,0 +1,25 @@
+{
+  "id": "jimliu-baoyu-skills-baoyu-podcast-summary",
+  "name": "baoyu-podcast-summary",
+  "description": "Summarizes podcasts, interviews, panels, and other conversation transcripts into an objective, reader-first summary written in the user's preferred language. Leads with the few takeaways worth keeping, retells them faithfully with clear speaker attribution, and adds no opinions of its own. Accepts a pasted transcript, a transcript file, or a YouTube URL (transcript fetched through baoyu-youtube-transcript), infers unnamed speakers from context, and uses web search to verify names and supply back",
+  "category": "文档写作",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "2.5.2",
+  "author": "JimLiu",
+  "install_path": ".claude/skills/baoyu-podcast-summary/SKILL.md",
+  "source": {
+    "repo": "JimLiu/baoyu-skills",
+    "url": "https://github.com/JimLiu/baoyu-skills/blob/main/skills/baoyu-podcast-summary/SKILL.md",
+    "path": "skills/baoyu-podcast-summary/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-20T12:32:12.323Z",
+    "stars": 27742,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-20T05:47:41Z",
+    "license": "MIT"
+  }
+}

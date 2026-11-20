@@ -1,7 +1,7 @@
 {
   "id": "daymade-claude-code-skills-read-claude-code-history",
   "name": "read-claude-code-history",
-  "description": ">- Reads, searches and exports local Claude Code and Kimi CLI history without resuming work: timelines, verbatim user input, keyword or fuzzy recall, file recovery from transcripts, and which session ran a given command in a known time window. Use when the user asks what was said, wants a session ID or original context, needs proof of what a session contained, or needs past-session runtime evidence about commands, tool calls and hook runs — query this index instead of raw-scanning transcript fil",
+  "description": ">- Reads, searches and exports local Claude Code, Kimi CLI, and Antigravity (agy) history without resuming work: timelines, verbatim user input, keyword or fuzzy recall, file recovery from transcripts, and which session ran a given command in a known time window. Use when the user asks what was said, wants a session ID or original context, needs proof of what a session contained, or needs past-session runtime evidence about commands, tool calls and hook runs — query this index instead of raw-sca",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/daymade/claude-code-skills/blob/main/daymade-claude-code/read-claude-code-history/SKILL.md",
     "path": "daymade-claude-code/read-claude-code-history/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-20T04:14:11.268Z",
+    "discovered_at": "2026-11-20T12:36:46.374Z",
     "stars": 1539,
     "language": "Python",
-    "pushed_at": "2026-11-20T03:22:15Z",
+    "pushed_at": "2026-11-20T12:15:04Z",
     "license": "MIT"
   }
 }
