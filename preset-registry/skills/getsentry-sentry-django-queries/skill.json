@@ -1,0 +1,25 @@
+{
+  "id": "getsentry-sentry-django-queries",
+  "name": "django-queries",
+  "description": "Write Django ORM queries, raw SQL, and transactions that work on Sentry's production databases. Use when writing or reviewing database access code in Sentry. Not for migration files (use generate-migration) or model design (use django-models).",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "getsentry",
+  "install_path": ".claude/skills/django-queries/SKILL.md",
+  "source": {
+    "repo": "getsentry/sentry",
+    "url": "https://github.com/getsentry/sentry/blob/master/.agents/skills/django-queries/SKILL.md",
+    "path": ".agents/skills/django-queries/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-11-20T20:31:02.291Z",
+    "stars": 45807,
+    "language": "Python",
+    "pushed_at": "2026-11-20T20:29:04Z",
+    "license": null
+  }
+}

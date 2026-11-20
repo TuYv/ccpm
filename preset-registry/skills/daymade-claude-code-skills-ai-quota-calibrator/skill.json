@@ -1,0 +1,25 @@
+{
+  "id": "daymade-claude-code-skills-ai-quota-calibrator",
+  "name": "ai-quota-calibrator",
+  "description": ">- Calibrates black-box AI subscription quotas into API dollars, runway, and top burning sessions by reconciling tokscale spend against live provider fractions (Antigravity, Codex, custom caps). Use when asked how big a 5h/weekly quota is, why a pool hit rate limit, or 额度相当于多少钱/反推配额/谁烧光了额度. Not for ccusage audits (claude-usage-analyst) or Codex reset news (tibo-reset-codex).",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "daymade",
+  "install_path": ".claude/skills/ai-quota-calibrator/SKILL.md",
+  "source": {
+    "repo": "daymade/claude-code-skills",
+    "url": "https://github.com/daymade/claude-code-skills/blob/main/ai-quota-calibrator/SKILL.md",
+    "path": "ai-quota-calibrator/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-20T21:15:24.007Z",
+    "stars": 1540,
+    "language": "Python",
+    "pushed_at": "2026-11-20T21:12:25Z",
+    "license": "MIT"
+  }
+}

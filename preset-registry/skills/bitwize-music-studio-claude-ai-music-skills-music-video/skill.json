@@ -1,0 +1,25 @@
+{
+  "id": "bitwize-music-studio-claude-ai-music-skills-music-video",
+  "name": "music-video",
+  "description": "Makes a music video for a track through Suno's Sequences - shots laid out on the song's sections, a keyframe for each, a free animatic to judge the pacing, then generated clips for the shots the user chooses - and saves the animatic and the finished video beside the album's audio. Laying out and exporting are free; keyframes and clips spend Visuals credits, priced and approved step by step. Use when the user asks for a music video, a storyboard or an animatic for a track.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "bitwize-music-studio",
+  "install_path": ".claude/skills/music-video/SKILL.md",
+  "source": {
+    "repo": "bitwize-music-studio/claude-ai-music-skills",
+    "url": "https://github.com/bitwize-music-studio/claude-ai-music-skills/blob/main/skills/music-video/SKILL.md",
+    "path": "skills/music-video/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-20T20:30:07.964Z",
+    "stars": 684,
+    "language": "Python",
+    "pushed_at": "2026-11-20T18:43:32Z",
+    "license": "CC0-1.0"
+  }
+}

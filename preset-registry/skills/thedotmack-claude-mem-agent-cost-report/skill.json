@@ -1,6 +1,6 @@
 {
   "id": "thedotmack-claude-mem-agent-cost-report",
-  "name": "Agent Cost Report",
+  "name": "agent-cost-report",
   "description": ">- Believable agent cost report for any period, default the last 7 full days PT, not counting today. Measured tokens from Claude Code transcripts priced at OpenRouter list prices (ESTIMATED), measured provider spend when a sanctioned source exists, note-taker cost separate, Timing-style HTML/PDF plus report.json, line-items.csv, evidence.json.",
   "category": "设计创意",
   "compatible_tools": [
@@ -16,10 +16,10 @@
     "url": "https://github.com/thedotmack/claude-mem/blob/main/plugin/skills/agent-cost-report/SKILL.md",
     "path": "plugin/skills/agent-cost-report/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-20T11:51:06.940Z",
-    "stars": 118548,
+    "discovered_at": "2026-11-20T20:29:02.073Z",
+    "stars": 118609,
     "language": "TypeScript",
-    "pushed_at": "2026-11-19T18:36:00Z",
+    "pushed_at": "2026-11-20T19:20:08Z",
     "license": "Apache-2.0"
   }
 }
