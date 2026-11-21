@@ -1,0 +1,25 @@
+{
+  "id": "callstack-react-native-testing-library-factory",
+  "name": "factory",
+  "description": "Use when the user asks to run factory on a feature idea or an owner-labeled GitHub issue. Takes the work through spec or diagnosis approval, a draft PR, automated review and fix rounds, and a final handoff before marking the PR ready for human review.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "callstack",
+  "install_path": ".claude/skills/factory/SKILL.md",
+  "source": {
+    "repo": "callstack/react-native-testing-library",
+    "url": "https://github.com/callstack/react-native-testing-library/blob/main/.claude/skills/factory/SKILL.md",
+    "path": ".claude/skills/factory/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-21T17:46:50.496Z",
+    "stars": 3430,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-21T16:13:25Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "callstack-react-native-testing-library-fix-issues",
+  "name": "fix-issues",
+  "description": "Use when the user gives a list of issues, review findings, bug reports, or TODOs and asks to fix them, work through them, or \"fix these issues\" one by one. Also use when the user asks to \"fix the PR comments\", \"address review comments/feedback\", \"fix comments on my PR\", or \"resolve the review\"; the target is the PR given by number or URL, else the PR for the current branch. Triages and orders the list, then verifies and fixes each issue sequentially, with one commit per fixed issue on the curren",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "callstack",
+  "install_path": ".claude/skills/fix-issues/SKILL.md",
+  "source": {
+    "repo": "callstack/react-native-testing-library",
+    "url": "https://github.com/callstack/react-native-testing-library/blob/main/.claude/skills/fix-issues/SKILL.md",
+    "path": ".claude/skills/fix-issues/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-21T17:46:50.771Z",
+    "stars": 3430,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-21T16:13:25Z",
+    "license": "MIT"
+  }
+}

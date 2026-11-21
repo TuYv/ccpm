@@ -1,0 +1,25 @@
+{
+  "id": "callstack-react-native-testing-library-summarize-changes",
+  "name": "summarize-changes",
+  "description": "Use when the user asks to summarize, explain, or get an overview of a PR, branch, or their current changes — \"what does this PR do\", \"summarize my branch\", \"big picture of these changes\", \"is this the right approach\" — before or instead of a detailed code review. Defaults to the current branch against the default branch, including uncommitted changes; also takes a PR number or URL, or a branch name. Not for line-level code review.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "callstack",
+  "install_path": ".claude/skills/summarize-changes/SKILL.md",
+  "source": {
+    "repo": "callstack/react-native-testing-library",
+    "url": "https://github.com/callstack/react-native-testing-library/blob/main/.claude/skills/summarize-changes/SKILL.md",
+    "path": ".claude/skills/summarize-changes/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-21T17:46:51.043Z",
+    "stars": 3430,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-21T16:13:25Z",
+    "license": "MIT"
+  }
+}

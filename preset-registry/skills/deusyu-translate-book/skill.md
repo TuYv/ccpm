@@ -36,6 +36,11 @@ If the user provided `temp_root`, add `--temp-root "<temp_root>"`. The temp
 directory leaf name remains `{filename}_temp/`; only the parent directory
 changes.
 
+The conversion needs Calibre (`ebook-convert`) and the `pandoc` binary;
+`pypandoc` is used when installed but is not required. If `convert.py` stops
+on a missing tool, install it and re-run the same command: the temp dir is
+reused, and the book's title and author are kept in `config.txt`.
+
 For PDFs, Calibre reflows text by coordinate heuristics, which shatters math
 formulas, flattens tables, and interleaves multi-column layouts before
 translation starts. If the PDF is an academic or technical document and a
@@ -159,6 +164,17 @@ Launch chunks in batches to respect API rate limits:
 - Each batch: up to `concurrency` sub-agents in parallel (default: 8)
 - Wait for the current batch to complete before launching the next
 
+On some runtimes the spawn call returns as soon as the sub-agent starts and
+the agent keeps running in the background. "Complete" means the files exist,
+not that the spawn call returned: before launching the next batch, check that
+every chunk in the batch has a non-empty `output_chunk<NNNN>.md` **and** its
+`output_chunk<NNNN>.meta.json` (the meta file is written last). Poll for them
+instead of assuming. Also read each spawn call's result: a refused spawn (for
+example a runtime limit on concurrent sub-agents) returns an error instead of
+an agent. Count it as not started, keep the chunk queued, and wait for running
+agents to finish before launching more. Never launch a chunk that already
+has an agent running, or two agents will write the same output file.
+
 **Spawn each sub-agent with the following task.** Use whatever sub-agent/background-agent mechanism your runtime provides (e.g. the Agent tool, sessions_spawn, or equivalent).
 
 The output file is `output_` prefixed to the source filename: `chunk0001.md` → `output_chunk0001.md`.
@@ -245,6 +261,7 @@ IMPORTANT REQUIREMENTS:
    - 数学公式（行内 `$...$`、公式块 `$$...$$`）内的 LaTeX 原样保留，不要翻译、改写或删除其中任何字符
    - 表格（Markdown `| ... |` 表格或 HTML `<table>`）保持行列结构不变，只翻译单元格中的文字
    - 脚注：正文中的引用标记 `[^12]` 与行首的定义标记 `[^12]:` 原样保留，不要改编号、不要删除、不要移动位置，只翻译定义后面的注释文字；定义的续段保持行首四个空格的缩进
+   - 图内文字块：开头行 `::: {.figure-text image="..."}` 和单独成行的结尾 `:::` 原样保留（半角冒号，花括号里的内容一个字符都不要改），只逐条翻译两行之间 `- ` 条目的文字，不要合并、拆分或删除条目；条目里的反斜杠转义（如 `\*`、`\[`）保留
 3. 删除空链接、不必要的字符和如: 行末的'\\'。页码已由 convert.py 上游处理，不要再删除独立的数字行（可能是年份 1984、章节编号、引用编号等正文内容）。
 4. 保证格式和语义准确翻译内容自然流畅
 5. 只输出翻译后的正文内容，不要有任何说明、提示、注释或对话内容。
@@ -371,6 +388,28 @@ Also read `manifest.json` and verify:
 - Every chunk id has a corresponding output file
 - No output file is empty (0 bytes) or blank (whitespace-only)
 
+Check the heading structure of the whole book, since each chunk was translated
+in isolation and headings decide the EPUB/PDF table of contents. This lists
+every heading of the output chunks in book order, leaving out `#` lines inside
+code blocks:
+
+```bash
+python3 {baseDir}/scripts/merge_and_build.py --temp-dir "<temp_dir>" --headings
+```
+
+Look for chapters split into two headings (a bare number heading followed by
+the title heading), the same kind of unit at different levels (one chapter
+`#`, the next `##`), and back-matter sections nested under the index. Fix
+them in the `output_chunk*.md` files and record each edited chunk (see the
+**Edit** path in Step 9).
+
+Also look at front and back matter carried over from the source edition, which
+no longer fits the translated book: a printed contents list copied from the
+source (the reader builds its own TOC), a "page numbers follow the print
+edition" accessibility note, and an index whose page numbers refer to the
+print edition. Tell the user what you found and remove or annotate it only
+with their agreement.
+
 Then run the meta-merge observability snapshot:
 
 ```bash
@@ -401,18 +440,31 @@ Read `config.txt` from the temp directory to get the `original_title` field.
 If it is missing (e.g. Markdown input with neither front matter nor a leading
 `#` title), use the source file name instead.
 
-Translate the title to the target language. For Chinese, wrap in 书名号: `《translated_title》`.
+Translate the title to the target language. If the book has a published
+translation, use its title (ask the user, or search for it) rather than a
+literal translation. Pass the bare title, without 书名号 or quotes: it becomes
+the EPUB/DOCX/PDF metadata title, which readers show in page headers and the
+library (`merge_and_build.py` strips a wrapping `《》` anyway).
 
 ### 7. Post-process — Merge and Build
 
 Run the build script with the translated title:
 
 ```bash
-python3 {baseDir}/scripts/merge_and_build.py --temp-dir "<temp_dir>" --title "<translated_title>"
+python3 {baseDir}/scripts/merge_and_build.py --temp-dir "<temp_dir>" --title "<translated_title>" --export-name "<export_name>"
 ```
 
-If the user provided `epub_cover`, add `--cover "<epub_cover>"`. If the user
-provided `export_name`, add `--export-name "<export_name>"`.
+`--export-name` adds copies of every output named after the book
+(`<export_name>.epub`, ...) next to the canonical `book.*` files, which the
+pipeline keeps using internally. Use the user's `export_name` if given,
+otherwise the translated title with characters that are invalid in file names
+removed. If the user provided `epub_cover`, add `--cover "<epub_cover>"`.
+
+The build skips outputs that already exist. To rebuild after changing the
+title, author, language, or cover, first delete `book.html`, `book_doc.html`,
+`output.html`, `book.docx`, `book.epub`, `book.pdf` and the export copies
+from the temp dir; otherwise the old metadata stays inside the files even
+though the file names change.
 
 Keep the intermediate files. The chunks, `manifest.json`, and `run_state.json`
 are what make spot fixes and selective re-translation possible after the build

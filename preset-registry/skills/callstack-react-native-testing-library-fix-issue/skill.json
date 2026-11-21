@@ -1,0 +1,25 @@
+{
+  "id": "callstack-react-native-testing-library-fix-issue",
+  "name": "fix-issue",
+  "description": "Use when the user asks to verify a specific reported issue or review finding, then fix it if warranted. Also use when fix-issues delegates one item for verification and repair.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "callstack",
+  "install_path": ".claude/skills/fix-issue/SKILL.md",
+  "source": {
+    "repo": "callstack/react-native-testing-library",
+    "url": "https://github.com/callstack/react-native-testing-library/blob/main/.claude/skills/fix-issue/SKILL.md",
+    "path": ".claude/skills/fix-issue/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-21T17:46:50.626Z",
+    "stars": 3430,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-21T16:13:25Z",
+    "license": "MIT"
+  }
+}

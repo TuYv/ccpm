@@ -1,0 +1,25 @@
+{
+  "id": "callstack-react-native-testing-library-diagnose-issue",
+  "name": "diagnose-issue",
+  "description": "Use when the user asks to diagnose, reproduce, or triage a GitHub issue before deciding whether to fix it, or when factory sends an owner-labeled issue for diagnosis.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "callstack",
+  "install_path": ".claude/skills/diagnose-issue/SKILL.md",
+  "source": {
+    "repo": "callstack/react-native-testing-library",
+    "url": "https://github.com/callstack/react-native-testing-library/blob/main/.claude/skills/diagnose-issue/SKILL.md",
+    "path": ".claude/skills/diagnose-issue/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-21T17:46:50.361Z",
+    "stars": 3430,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-21T16:13:25Z",
+    "license": "MIT"
+  }
+}
