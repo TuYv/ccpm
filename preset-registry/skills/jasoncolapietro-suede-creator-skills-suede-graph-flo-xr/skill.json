@@ -1,8 +1,8 @@
 {
   "id": "jasoncolapietro-suede-creator-skills-suede-graph-flo-xr",
   "name": "suede-graph-flo-xr",
-  "description": "Use when asked \\\"compare implementation plans before building\\\" for one multi-file repository change. Suede AI runs Suede Thought Graph shipping search: it searches, scores, prunes and refutes plans, selects one winner, then builds in an isolated worktree with a sandboxed gate and handoff. Halts on hazards, collisions or exhausted budget. NOT FOR: bulk worker tasks, existing-diff review (use suede-code), CI wiring (use suede-ci-gate), or copy-only work (use suede-ship-copy).",
-  "category": "设计创意",
+  "description": "Use when a consequential multi-file task needs serious compute and independent testing. Run competing design, adversarial review, and QA lanes against one implementation; use Light, Standard, or Deep and return reproducible evidence. Try “Pressure-test two fixes for duplicate bookings.” Compare designs when there is more than one plausible fix; build only one in an isolated worktree. NOT FOR: bulk worker work, existing-diff review, CI setup, or copy-only work.",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/JasonColapietro/suede-creator-skills/blob/main/skills/suede-graph-flo-xr/SKILL.md",
     "path": "skills/suede-graph-flo-xr/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-21T01:48:31.916Z",
+    "discovered_at": "2026-11-21T10:03:03.872Z",
     "stars": 120,
     "language": "JavaScript",
-    "pushed_at": "2026-11-21T01:31:00Z",
+    "pushed_at": "2026-11-21T09:43:38Z",
     "license": "MIT"
   }
 }

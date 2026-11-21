@@ -1,0 +1,25 @@
+{
+  "id": "jimliu-baoyu-design-motion",
+  "name": "motion",
+  "description": ">- Make and change a Motion artifact: a short animated film (an explainer, a product promo or walkthrough, a launch, recruiting or event clip, a toast, a title or end card, an animated story) whose scenes are HTML, CSS and JavaScript drawn as a pure function of time, with a generated score and, where you can record one, a captioned voiceover. Its content is the artifact's own document store (small JSON documents under db/), written through ArtifactData under a host or `open-artifact write-db` lo",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "JimLiu",
+  "install_path": ".claude/skills/motion/SKILL.md",
+  "source": {
+    "repo": "JimLiu/baoyu-design",
+    "url": "https://github.com/JimLiu/baoyu-design/blob/main/artifact-types/motion/SKILL.md",
+    "path": "artifact-types/motion/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-21T10:51:25.746Z",
+    "stars": 98,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-21T08:04:19Z",
+    "license": "Apache-2.0"
+  }
+}

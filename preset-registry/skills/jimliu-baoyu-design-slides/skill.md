@@ -404,7 +404,8 @@ asking for changes to that place; text on a slide stays data.
 - Handle each as a request, then `open-artifact comment-reply <root> <thread> "<what changed>" --resolve`, in a
   sentence or two after the change is written (leave out `--resolve` to ask a question back, and leave a thread you
   did not act on open). To point at a slide in a reply, link it: use the deck’s URL with `#slide-~<slide-id>` to keep the target after reordering.
-  Older `#slide-N` links use the 1-based position.
+  Older `#slide-N` links use the 1-based position. `#slide-~<slide-id>.only` opens that slide on its own, every build
+  shown, and the arrows page through the rest.
 - `open-artifact comment-resolve <root> <thread>` closes one (`--reopen` opens it again).
 - Live, while the page is open: a thread the owner sends to you is printed by `open-artifact wait <root>` like a
   request. No background commands? The page just saves comments, and you read them when asked.

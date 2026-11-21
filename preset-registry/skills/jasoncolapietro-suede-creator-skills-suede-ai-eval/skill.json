@@ -1,7 +1,7 @@
 {
   "id": "jasoncolapietro-suede-creator-skills-suede-ai-eval",
   "name": "suede-ai-eval",
-  "description": "Suede AI Eval Skills. Use when asked to \\\"write evals for this AI feature\\\" or assess LLM, RAG, agent, classifier or generated-media behavior: AI-SPEC, failure rubric, executable cases, coverage and acceptance evidence. NOT FOR: implementation review (suede-code), wiring existing evals into CI (suede-ci-gate), or coordinating builder lanes (suede-agent-teams).",
+  "description": "Suede Eval Skills. Use when asked to \\\"write evals for this AI feature\\\" or assess LLM, RAG, agent, classifier or generated-media behavior: AI-SPEC, failure rubric, executable cases, coverage and acceptance evidence. NOT FOR: implementation review (suede-code), wiring existing evals into CI (suede-ci-gate), or coordinating builder lanes (suede-agent-teams).",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/JasonColapietro/suede-creator-skills/blob/main/skills/suede-ai-eval/SKILL.md",
     "path": "skills/suede-ai-eval/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-21T01:48:27.775Z",
+    "discovered_at": "2026-11-21T10:02:59.681Z",
     "stars": 120,
     "language": "JavaScript",
-    "pushed_at": "2026-11-21T01:31:00Z",
+    "pushed_at": "2026-11-21T09:43:38Z",
     "license": "MIT"
   }
 }

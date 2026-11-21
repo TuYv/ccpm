@@ -1,0 +1,25 @@
+{
+  "id": "muratcankoylan-agent-skills-for-context-engineering-instruction-surface-security",
+  "name": "instruction-surface-security",
+  "description": "Hardens agent runtimes against persistent prompt injection or unauthorized changes to instructions and permissions. Use to audit what agents auto-load, design reviewed activation for project rules, skills, memory, or tool configuration, and test whether trust boundaries hold after reload, restart, or delegation.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "muratcankoylan",
+  "install_path": ".claude/skills/instruction-surface-security/SKILL.md",
+  "source": {
+    "repo": "muratcankoylan/Agent-Skills-for-Context-Engineering",
+    "url": "https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering/blob/main/skills/instruction-surface-security/SKILL.md",
+    "path": "skills/instruction-surface-security/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-21T10:01:50.222Z",
+    "stars": 18387,
+    "language": "Python",
+    "pushed_at": "2026-11-21T07:36:17Z",
+    "license": "MIT"
+  }
+}
