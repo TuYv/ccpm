@@ -1,0 +1,25 @@
+{
+  "id": "pingdotgg-t3code-launch-video",
+  "name": "launch-video",
+  "description": "Make a short launch video (1920x1080 MP4 plus an outro PNG) that demos a T3 Code feature, built from the real app with added motion, for an X/Twitter announcement or release thread. Use when asked for a launch video, demo video, feature teaser or announcement clip, or to add a video to a release tweet.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "pingdotgg",
+  "install_path": ".claude/skills/launch-video/SKILL.md",
+  "source": {
+    "repo": "pingdotgg/t3code",
+    "url": "https://github.com/pingdotgg/t3code/blob/main/.agents/skills/launch-video/SKILL.md",
+    "path": ".agents/skills/launch-video/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-21T02:38:44.339Z",
+    "stars": 67977,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-21T02:37:29Z",
+    "license": "MIT"
+  }
+}

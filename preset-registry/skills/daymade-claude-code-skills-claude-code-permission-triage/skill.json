@@ -1,0 +1,25 @@
+{
+  "id": "daymade-claude-code-skills-claude-code-permission-triage",
+  "name": "claude-code-permission-triage",
+  "description": ">- Diagnose unexpected, missing, delayed, parked, or misdelivered Claude Code permission prompts and approval cards for subagents, background workers, and Agent Team teammates, including Plan Mode interactions. Use for evidence collection, known-issue matching, root-cause classification, and sanitized upstream feedback. Not for editing allow/deny rules, writing hooks, MCP OAuth, or reading conversation history.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "daymade",
+  "install_path": ".claude/skills/claude-code-permission-triage/SKILL.md",
+  "source": {
+    "repo": "daymade/claude-code-skills",
+    "url": "https://github.com/daymade/claude-code-skills/blob/main/daymade-claude-code/claude-code-permission-triage/SKILL.md",
+    "path": "daymade-claude-code/claude-code-permission-triage/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-21T02:35:27.433Z",
+    "stars": 1540,
+    "language": "Python",
+    "pushed_at": "2026-11-21T01:51:53Z",
+    "license": "MIT"
+  }
+}

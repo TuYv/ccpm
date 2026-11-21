@@ -1,0 +1,25 @@
+{
+  "id": "jeffallan-claude-skills-flask-expert",
+  "name": "flask-expert",
+  "description": "Builds, modernizes and audits Flask 3.x applications: application factories and blueprints, Flask-SQLAlchemy 3.1 with SQLAlchemy 2.x typed models and Flask-Migrate, JSON APIs validated with Pydantic or marshmallow and JSON errors, Jinja templates with Flask-WTF CSRF, Flask-Login and Flask-JWT-Extended auth, pytest fixtures over the factory, and gunicorn or waitress deployment with Celery, RQ or APScheduler jobs. Use when code imports from flask or flask_* extensions (create_app, Blueprint, app.r",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "jeffallan",
+  "install_path": ".claude/skills/flask-expert/SKILL.md",
+  "source": {
+    "repo": "jeffallan/claude-skills",
+    "url": "https://github.com/jeffallan/claude-skills/blob/main/skills/flask-expert/SKILL.md",
+    "path": "skills/flask-expert/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-21T03:29:51.753Z",
+    "stars": 12473,
+    "language": "JavaScript",
+    "pushed_at": "2026-11-20T23:17:14Z",
+    "license": "MIT"
+  }
+}
