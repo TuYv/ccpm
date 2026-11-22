@@ -1,0 +1,25 @@
+{
+  "id": "wondelai-skills-harness-audit",
+  "name": "harness-audit",
+  "description": "Audit and harden a repository''s AI coding agent harness across the 6 Software Factory Stations (Intent, Harness, Loop, Graph, Verification, Release) and place it on the Autonomy Ladder (Level 0–5). Use when you need to: (1) audit a repo''s readiness for Claude Code, Codex, or Cursor using `@wondelai/harness-audit` or manual inspection, (2) diagnose why agents drift, loop, break tests, or stall in PR review, (3) fix duplicated AGENTS.md/CLAUDE.md, broken MCP configs, retired Codex settings, ungu",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "wondelai",
+  "install_path": ".claude/skills/harness-audit/SKILL.md",
+  "source": {
+    "repo": "wondelai/skills",
+    "url": "https://github.com/wondelai/skills/blob/main/plugins/code-craftsmanship/skills/harness-audit/SKILL.md",
+    "path": "plugins/code-craftsmanship/skills/harness-audit/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-21T23:28:50.858Z",
+    "stars": 2758,
+    "language": "Shell",
+    "pushed_at": "2026-11-21T19:03:39Z",
+    "license": "MIT"
+  }
+}

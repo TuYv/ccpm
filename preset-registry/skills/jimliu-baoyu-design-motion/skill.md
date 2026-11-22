@@ -26,8 +26,9 @@ exists, and a `delete`, take `if_match`, the sha256 you read (or `"*"`). There, 
 {action: "call", url, name: "check"}`, `open-artifact upload` is `Artifact {action: "call", url, name: "upload", args:
 {file: "<absolute path>"}}`, `open-artifact context` is `Artifact {action: "call", url, name: "context"}`, and
 `open-artifact asking` is `Artifact {action: "call", url, name: "asking"}` (`args: {done: true}` for `--done`). The page
-is shown as the create result says (its `view_url` in your app's built-in browser when you have one, else `Artifact
-{action: "open", url}`). Comments are **ArtifactComments**. Never run `open-artifact open`, `serve`, `wait` or `stop`
+is shown right after the first playable batch (step 3 below), not at the end: if `publish` did not return
+`open: "after_first_write"`, open `view_url` in your app's built-in browser (or call `ShowArtifact {url}` when your app
+offers it; else `Artifact {action: "open", url}`). Comments are **ArtifactComments**. Never run `open-artifact open`, `serve`, `wait` or `stop`
 under a host.
 
 **Standalone**, the same documents through the CLI:
@@ -92,7 +93,7 @@ The commonest miss is the same film for every ask: a title, three cards and a lo
 journey, a before and after, one object changing, a day passing, one long camera move). If the person names a form,
 use theirs. If the film would fit anyone who typed the same words, it isn't done yet. Their names, numbers and facts
 reach the screen as they gave them; what you invent is how it's told. A film runs 10 to 30 seconds unless they ask
-for more, 300 at most.
+for more.
 
 A film that explains (how a thing works, why something happens, what a finding or a piece of news means) answers one
 question a viewer really has, with one familiar thing whose working is the explanation, and one set of facts behind
@@ -120,8 +121,8 @@ the player's: name no other module so.
 
 **Limits.** A document holds at most 200 KiB (as escaped JSON), `film/script` too. A module over that is split into
 parts, `<name>~1` … `<name>~99`, which the player joins in order (the page's six records are never split). The player
-reads 500 modules and 16 MiB of them, 96 assets, and 2 MiB each of `film` and `assets`. A film has 1 to 24 scenes
-and at most 300 seconds; a scene's `init` gets 5 seconds, all of them together 15. A batch holds at most 50 writes and
+reads 500 modules and 16 MiB of them, 96 assets, and 2 MiB each of `film` and `assets`. A film has 1 to 24 scenes;
+a scene's `init` gets 5 seconds, all of them together 15. A batch holds at most 50 writes and
 1 MB, and one refused write refuses all of it. `if_match` goes on a `set` or `delete` of a document that exists: the
 sha256 your last read or write of it gave; a new document takes none. Standalone it is a field of the write
 (`"if_match": "<sha256>"`): `write-db` refuses a stale one (`CONFLICT`) and checks nothing where there is none, so give
@@ -149,13 +150,21 @@ a host, the `publish` above, with the film's own name as `title` (never "Motion"
    `reference/history.md` with it if it tells history or a real person's story). Someone is watching the film arrive: from the answer to the last write is one turn, with no question.
 3. **The first batch, at once** (`rough-cut.md`): `film/meta`, `modules/scenes.json` with `"stage": "rough"`, a few
    lines of `modules/base.css` and, last, `film/script`. The film then plays, with a plain card for each scene to come.
-   With a voiceover (`voice.md`): record the lines first, create the film, upload the clips, and this batch also holds
-   their `assets` documents and `modules/narration.js`, ahead of `film/script`.
-   **Show the page now,** so the person watches the scenes arrive. Under a host it opens by itself on this write.
-   Standalone, open the `url` that `open-artifact open` printed in your app's built-in browser or preview pane, if
-   you have one; if you have none, give the person the `url` in one line and go on in the same turn. Never show it
-   before this batch (the page would be empty), and never open or reload it again: it updates by itself at every
-   write. That pane is the person's view, so look at the film through stills, not by driving their page.
+   With a voiceover (`voice.md`): for a short film (up to ~4 spoken lines), record and upload the clips first so this
+   batch also holds their `assets` documents and `modules/narration.js` ahead of `film/script`; for a longer voiceover
+   or when fetching external clips, send this rough-cut batch and open the page FIRST so the motion editor opens right
+   away, then record/fetch/upload the clips and write `assets/*`, `modules/narration.js` and the retimed
+   `modules/scenes.json` before drawing the world and scenes.
+   **Show the page now — before drawing the world, scenes, score, or running `check` —** so the person watches the
+   rough cut play and sees each scene arrive live. Under a host: if the `publish` result returned
+   `open: "after_first_write"`, the page opens by itself on this write; **otherwise (when `publish` has no `open` or
+   says nothing opens by itself), show it right now:** open `view_url` in your app's built-in browser or preview pane
+   if you have one (or call `ShowArtifact {url}` when your app offers it), and only when you have neither, call
+   `Artifact {action: "open", url}` once. Standalone, open the `url` that `open-artifact open` printed in your app's
+   built-in browser or preview pane, if you have one; if you have none, give the person the `url` in one line and go on
+   in the same turn. Never show it before this batch (the page would be empty), and never open or reload it again: it
+   updates by itself at every write. That pane is the person's view, so look at the film through stills, not by driving
+   their page.
 4. **The world** (`finalize.md`): uploads first, each with its `assets` document; then one batch with the whole
    `base.css` and `shared.js`, which starts `window.W`.
 5. **The scenes**, in film order, one write per scene (`modules/scene-<id>.js`), finished the first time. A scene
