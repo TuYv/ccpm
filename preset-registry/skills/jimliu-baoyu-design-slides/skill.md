@@ -202,6 +202,11 @@ any one `<div>`. `hidden` on the section skips the slide when presenting. `refer
 drops on read and its caps; `reference/source-decks.md` how a slide with classes is read (the cascade, values,
 generated content, tags, the stylesheet): read both before your first slide.
 
+For angular panels and images, write `clip-path:polygon(...)` on a `<div>`, `<x-shape>` or `<img>`.
+Use px, percentages and `calc(N% ± Npx)` for triangles, hexagons, concave outlines and fixed corner
+cuts. Put a picture's polygon on the `<img>` to keep its crop editable in PowerPoint.
+See `reference/images.md` for examples and export behavior.
+
 One content slide's file, `project/slides/plan.html`, with `.cards`, `.card`, `.cards img` and `.source` in
 `project/deck.css`:
 
