@@ -1,0 +1,25 @@
+{
+  "id": "unbrowse-ai-unbrowse-modern-web-guidance",
+  "name": "modern-web-guidance",
+  "description": "Apply Chrome's Modern Web Guidance to frontend code, then verify the built page in a real browser with agent-browser. Use when asked to build or modernize UI with web platform best practices, follow Modern Web Guidance or Baseline guidance, or check that a change fixed layout shift, respects reduced motion or the color scheme, or gives a dialog correct focus and inert behavior. Triggers include \"use modern web guidance\", \"modern web best practices\", \"fix layout shift\", \"respect reduced motion\", ",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "unbrowse-ai",
+  "install_path": ".claude/skills/modern-web-guidance/SKILL.md",
+  "source": {
+    "repo": "unbrowse-ai/unbrowse",
+    "url": "https://github.com/unbrowse-ai/unbrowse/blob/main/unbrowse-browser/skill-data/modern-web-guidance/SKILL.md",
+    "path": "unbrowse-browser/skill-data/modern-web-guidance/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-23T18:54:29.006Z",
+    "stars": 940,
+    "language": "Rust",
+    "pushed_at": "2026-11-23T14:34:33Z",
+    "license": "Apache-2.0"
+  }
+}

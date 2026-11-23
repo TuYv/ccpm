@@ -1,0 +1,25 @@
+{
+  "id": "garrytan-gstack-build-check",
+  "name": "build-check",
+  "description": "Use when coding: run the checks and tests /ship picks until green. Use for: run the checks, make the tests pass, make it green. (gstack)",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "0.1.0",
+  "author": "garrytan",
+  "install_path": ".claude/skills/build-check/SKILL.md",
+  "source": {
+    "repo": "garrytan/gstack",
+    "url": "https://github.com/garrytan/gstack/blob/main/build-check/SKILL.md",
+    "path": "build-check/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-23T18:55:59.519Z",
+    "stars": 142461,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-23T18:54:41Z",
+    "license": "MIT"
+  }
+}

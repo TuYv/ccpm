@@ -1,7 +1,7 @@
 {
   "id": "unbrowse-ai-unbrowse-unbrowse",
   "name": "unbrowse",
-  "description": "Use websites through the Unbrowse node on this machine instead of a browser. Say what you want with unbrowse_do and the url of a page that does it - the node calls the route that does it, or its browser walks the page once, keeps the call that answers your goal and calls that - and get the site's JSON back. When a page needs clicks or typing, drive the node's browser with unbrowse_browse and it learns from every step. Use whenever a task needs data from, or an action on, a website.",
+  "description": "Use websites through the Unbrowse node on this machine instead of a browser. Say what you want with unbrowse_do and the url of a page that does it - the node calls the route that does it, or its browser walks the page once, keeps the call that answers your goal and calls that - and get the site's JSON back. When a page needs clicks or typing, drive the node's browser with unbrowse_browse and it learns from every step. Use whenever a task needs data from, or an action on, a website, and before We",
   "category": "浏览器自动化",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/unbrowse-ai/unbrowse/blob/main/skills/unbrowse/SKILL.md",
     "path": "skills/unbrowse/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-22T11:32:20.638Z",
-    "stars": 941,
+    "discovered_at": "2026-11-23T18:54:27.552Z",
+    "stars": 940,
     "language": "Rust",
-    "pushed_at": "2026-11-22T09:20:04Z",
+    "pushed_at": "2026-11-23T14:34:33Z",
     "license": "Apache-2.0"
   }
 }

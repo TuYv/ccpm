@@ -387,6 +387,21 @@ even when they open a link.
   working after a restart while the server gets its port back; otherwise `share` prints new ones to give out again.
 - The links and the people who joined are in `<root>/.sharing.json`: leave it, and keep it out of git.
 
+**Published to a cloud host** (the Share panel's publish section, or `open-artifact publish`), the page there has no
+connectors either. Publishing a dashboard publishes its data: once the person confirms it, which they do on publishing
+it themselves, the owner's linked computer runs the live queries at the stored filters and saves what they answered
+beside the dashboard, so every reader sees real figures under "Data as of <time>, from <owner>'s computer". Until they
+confirm, it is published without its rows. It refreshes on publish, when the owner (or an editor the owner lets ask
+the agent) presses Refresh on the page, and on a timer while linked: `cloud.dataRefresh` in the settings, in minutes,
+360 when unset, 0 for never. A refresh asked while the computer is off waits for it. A failed refresh keeps the rows it
+had and only the owner sees why. The saved answers are `data/live` (when, whose computer, the last failure) and
+`data/live/answers/<dataset id>`: read them, never write them. Each query's answer must fit in one document (256 KB);
+a larger one fails by name and is never cut, so aggregate it in the query. A dataset with `"snapshot": false` beside
+`source` never leaves the owner's computer: readers of the published page see "Live data isn't available in this
+view." for it. Tell the person before they publish which queries' answers will be shared, and offer the opt-out for
+any they would rather keep. Only the answers to the stored filters are saved, so a reader who picks another filter
+value, or a loader's further call, sees no data there.
+
 To show the dashboard read-only inside another page, put its address with `#view-inline` at the end in an
 `<iframe>`. In a frame that address has no toolbar, comments or requests, saves nothing (a page script's writes are
 refused) and keeps its own address when the page sets a link; data still loads and filters still work. Opened on its

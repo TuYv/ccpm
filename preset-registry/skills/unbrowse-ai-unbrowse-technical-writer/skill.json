@@ -1,0 +1,25 @@
+{
+  "id": "unbrowse-ai-unbrowse-technical-writer",
+  "name": "technical-writer",
+  "description": "Write, review, and edit developer documentation for SDKs, libraries, and frameworks, including sites such as agent-browser.dev and portless.sh. Use for getting-started guides, tutorials, API references, conceptual explanations, integration guides, migration guides, troubleshooting, and code examples.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "unbrowse-ai",
+  "install_path": ".claude/skills/technical-writer/SKILL.md",
+  "source": {
+    "repo": "unbrowse-ai/unbrowse",
+    "url": "https://github.com/unbrowse-ai/unbrowse/blob/main/unbrowse-browser/.agents/skills/technical-writer/SKILL.md",
+    "path": "unbrowse-browser/.agents/skills/technical-writer/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-23T18:54:27.897Z",
+    "stars": 940,
+    "language": "Rust",
+    "pushed_at": "2026-11-23T14:34:33Z",
+    "license": "Apache-2.0"
+  }
+}

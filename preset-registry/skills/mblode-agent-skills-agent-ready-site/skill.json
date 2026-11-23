@@ -1,0 +1,25 @@
+{
+  "id": "mblode-agent-skills-agent-ready-site",
+  "name": "agent-ready-site",
+  "description": ">- For a public website or docs site: implements agent-readiness from Mintlify Agent Score, AFDocs, Is Agentic, Is It Agent Ready, or url-discovery-bench reports, or from server logs of agents 404ing on guessed URLs. Use when asked to \"make our site agent-ready\", \"improve Agent Score\", \"fix llms.txt coverage\", \"agents keep 404ing on our docs\", or when a pasted scorecard is the brief. For a codebase's guardrails, AGENTS.md and verification use agent-ready-repo.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mblode",
+  "install_path": ".claude/skills/agent-ready-site/SKILL.md",
+  "source": {
+    "repo": "mblode/agent-skills",
+    "url": "https://github.com/mblode/agent-skills/blob/main/skills/agent-ready-site/SKILL.md",
+    "path": "skills/agent-ready-site/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-23T20:32:05.964Z",
+    "stars": 220,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-23T10:10:48Z",
+    "license": "MIT"
+  }
+}

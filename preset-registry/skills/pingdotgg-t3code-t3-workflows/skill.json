@@ -1,0 +1,25 @@
+{
+  "id": "pingdotgg-t3code-t3-workflows",
+  "name": "t3-workflows",
+  "description": "Author, edit, run, and debug durable T3 Code workflows (`~/.t3/workflows/*.ts`). Use when asked to build or change a multi-step T3 Code automation tying together agent threads, code steps, schedules, webhooks, issue/PR trackers, or human approvals, or to inspect, resume, signal, or cancel workflow runs.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "pingdotgg",
+  "install_path": ".claude/skills/t3-workflows/SKILL.md",
+  "source": {
+    "repo": "pingdotgg/t3code",
+    "url": "https://github.com/pingdotgg/t3code/blob/main/skills/t3-workflows/SKILL.md",
+    "path": "skills/t3-workflows/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-23T19:42:18.054Z",
+    "stars": 74412,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-23T19:41:40Z",
+    "license": "MIT"
+  }
+}

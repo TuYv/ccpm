@@ -1,0 +1,25 @@
+{
+  "id": "unbrowse-ai-unbrowse-verify-unbrowse",
+  "name": "verify-unbrowse",
+  "description": "Prove a change to the Unbrowse node (unbrowse-core) works by running it. Builds the node from this checkout, starts a scratch node on its own port and home that never touches the owner's node on 7788, checks it with a doctor, asks it for a goal on a real page the way an agent does (unbrowse_do, the agent API, MCP tools, unb, owner commands), shows its logs, and cleans up while keeping the evidence. Use before saying an Unbrowse change works, when a reviewer asks for proof, or when a site's answe",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "unbrowse-ai",
+  "install_path": ".claude/skills/verify-unbrowse/SKILL.md",
+  "source": {
+    "repo": "unbrowse-ai/unbrowse",
+    "url": "https://github.com/unbrowse-ai/unbrowse/blob/main/skills/verify-unbrowse/SKILL.md",
+    "path": "skills/verify-unbrowse/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-23T18:54:27.725Z",
+    "stars": 940,
+    "language": "Rust",
+    "pushed_at": "2026-11-23T14:34:33Z",
+    "license": "Apache-2.0"
+  }
+}

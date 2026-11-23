@@ -127,12 +127,15 @@ that alone is no reason to refuse an artifact they asked for.
 5. **Show it.** If the create result says `open: "after_first_write"` (the default when your app shows pages), the
    page opens by itself in your app once you write. Otherwise, once the content is written — or right after the first
    playable batch when the type's instructions ask to show progress live (never while it is empty) — open `view_url` in
-   your app's built-in browser (its browser panel or tab) if you have one: that is where the person is. Only when you
-   have none, call `Artifact {action: "open", url}` once, which opens it in the computer's browser (with the command
-   line, `node <skill>/scripts/open-artifact.mjs open <url> --browser`). The page refreshes by itself after later
-   changes.
+   your app's built-in browser (its browser panel or tab) if you have one: that is where the person is. If your app
+   offers `ShowArtifact`, you may call `ShowArtifact {url}` to show an inline card, but note that it does not open a
+   browser tab by itself (and in long multi-step builds an early card can scroll out of view). When you have no
+   built-in browser panel — or cannot confirm the page visibly opened — call `Artifact {action: "open", url}` once,
+   which opens it in the computer's browser (with the command line, `node <skill>/scripts/open-artifact.mjs open <url> --browser`).
+   The page refreshes by itself after later changes.
 6. **Tell them** in a sentence or two what you made, and that they can comment on the page and press "Send to agent"
-   to send you their comments. Give `view_url` when the page did not open for them.
+   to send you their comments. **Always include `view_url`** as a link in your final reply so they can open or return
+   to the page anytime, even if it already opened or was shown earlier.
 
 An action that answers `{task, pending: true}` runs in the background; its result comes later as a message. Do not
 run it again meanwhile.
@@ -175,4 +178,7 @@ beyond it (running commands, sending things, opening links).
 - To share it, `Artifact {action: "open", url, panel: "share"}` opens its Share panel for the person; to export
   (PDF, PPTX, PNG, …), `panel: "export"`. Only the person changes how an artifact is shared; never make share links
   yourself.
+- Publishing to a site, publishing a dashboard's data and connecting a site are the person's decisions too: do not run
+  `open-artifact publish`, `unpublish` or `remote` commands, or call the daemon for them; ask the person, who does it
+  from the Share panel or their own terminal.
 - Delete or adopt an artifact only when the person asks. Deleting keeps its folder: tell them so.

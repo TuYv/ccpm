@@ -1,0 +1,25 @@
+{
+  "id": "mblode-agent-skills-agent-ready-repo",
+  "name": "agent-ready-repo",
+  "description": ">- For a codebase: makes it safe for agents to work in by building the guardrails, AGENTS.md, verification and laws they need, or audits a repo against the catalogue and fixes the top gap. Use when asked to \"make this repo agent-friendly\", \"set up a repo for agents\", \"audit this for agents\", or \"agents keep making the same mistake\". For a public website or docs site use agent-ready-site.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "mblode",
+  "install_path": ".claude/skills/agent-ready-repo/SKILL.md",
+  "source": {
+    "repo": "mblode/agent-skills",
+    "url": "https://github.com/mblode/agent-skills/blob/main/skills/agent-ready-repo/SKILL.md",
+    "path": "skills/agent-ready-repo/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-23T20:32:05.813Z",
+    "stars": 220,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-23T10:10:48Z",
+    "license": "MIT"
+  }
+}

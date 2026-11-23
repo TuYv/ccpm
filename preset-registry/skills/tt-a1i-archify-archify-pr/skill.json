@@ -1,0 +1,25 @@
+{
+  "id": "tt-a1i-archify-archify-pr",
+  "name": "archify-pr",
+  "description": "Explain git branch changes, diffs, and GitHub pull requests or GitLab merge requests with visual architecture, workflow, sequence, ERD, or lifecycle walkthroughs. When a pull request carries material architectural, flow, schema, or async-state changes, lightly offer optional Archify PR diagrams and their review benefit without forcing them; build and attach Camo-safe dual-theme story or static diagrams when the user agrees or explicitly asks. Requires the companion archify core Skill.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "tt-a1i",
+  "install_path": ".claude/skills/archify-pr/SKILL.md",
+  "source": {
+    "repo": "tt-a1i/archify",
+    "url": "https://github.com/tt-a1i/archify/blob/main/archify-pr/SKILL.md",
+    "path": "archify-pr/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-23T18:52:25.464Z",
+    "stars": 99057,
+    "language": "JavaScript",
+    "pushed_at": "2026-11-23T05:21:17Z",
+    "license": "Apache-2.0"
+  }
+}

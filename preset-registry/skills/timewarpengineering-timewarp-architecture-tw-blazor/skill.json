@@ -1,7 +1,7 @@
 {
   "id": "timewarpengineering-timewarp-architecture-tw-blazor",
   "name": "tw-blazor",
-  "description": "Razor file authoring — one @code at the top, markup, optional <style> last. Use when creating or editing .razor files, @code blocks, component event handlers (they only dispatch TimeWarp.State actions), or in-file <style> tags. CSS placement: tw-blazor-css-strategy. App shell: tw-blazor-layout.",
+  "description": "Razor file authoring — one @code at the top, markup, optional <style> last. Use when creating or editing .razor files, @code blocks, component event handlers (they only dispatch TimeWarp.State actions), contract-bound action sets ([ContractState] and its hooks), or in-file <style> tags. CSS placement: tw-blazor-css-strategy. App shell: tw-blazor-layout.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/TimeWarpEngineering/timewarp-architecture/blob/master/skills/tw-blazor/SKILL.md",
     "path": "skills/tw-blazor/SKILL.md",
     "branch": "master",
-    "discovered_at": "2026-11-22T11:33:22.022Z",
+    "discovered_at": "2026-11-23T18:55:48.982Z",
     "stars": 55,
     "language": "C#",
-    "pushed_at": "2026-11-22T11:18:19Z",
+    "pushed_at": "2026-11-23T18:46:35Z",
     "license": "Unlicense"
   }
 }
