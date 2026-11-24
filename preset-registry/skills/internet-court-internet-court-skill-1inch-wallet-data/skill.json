@@ -1,0 +1,25 @@
+{
+  "id": "internet-court-internet-court-skill-1inch-wallet-data",
+  "name": "1inch-wallet-data",
+  "description": ">- Query portfolio value/P&L, wallet balances, transaction history, NFTs, and token metadata via the 1inch MCP `product_api` tool. Use when the user asks about holdings, balances, history, token search, or NFT inventory.",
+  "category": "数据分析",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "internet-court",
+  "install_path": ".claude/skills/1inch-wallet-data/SKILL.md",
+  "source": {
+    "repo": "internet-court/internet-court-skill",
+    "url": "https://github.com/internet-court/internet-court-skill/blob/main/vendored/1inch/1inch-wallet-data/SKILL.md",
+    "path": "vendored/1inch/1inch-wallet-data/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-24T16:53:31.424Z",
+    "stars": 7193,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-24T13:40:11Z",
+    "license": null
+  }
+}

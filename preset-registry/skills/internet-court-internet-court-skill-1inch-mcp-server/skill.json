@@ -1,0 +1,25 @@
+{
+  "id": "internet-court-internet-court-skill-1inch-mcp-server",
+  "name": "1inch-mcp-server",
+  "description": ">- Connect to the 1inch MCP server for documentation search, SDK examples, token swaps, limit orders, authenticated product API access, WalletConnect, Aqua analytics, and (when registered) org-scoped log lookup. Use when the user asks about 1inch integration, DeFi swaps, classic or Fusion or cross-chain flows, orderbook, portfolio, gas or spot price APIs, API keys, MCP or IDE setup, or blockchain development with 1inch.",
+  "category": "数据分析",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "internet-court",
+  "install_path": ".claude/skills/1inch-mcp-server/SKILL.md",
+  "source": {
+    "repo": "internet-court/internet-court-skill",
+    "url": "https://github.com/internet-court/internet-court-skill/blob/main/vendored/1inch/1inch-mcp-server/SKILL.md",
+    "path": "vendored/1inch/1inch-mcp-server/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-24T16:53:30.971Z",
+    "stars": 7193,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-24T13:40:11Z",
+    "license": null
+  }
+}

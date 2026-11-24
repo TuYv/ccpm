@@ -1,0 +1,25 @@
+{
+  "id": "internet-court-internet-court-skill-1inch-debug",
+  "name": "1inch-debug",
+  "description": ">- Look up organization-scoped 1inch API request logs by request-id or time window via the MCP `debug` tool. Use when troubleshooting failed or unexpected API responses for the authenticated org.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "internet-court",
+  "install_path": ".claude/skills/1inch-debug/SKILL.md",
+  "source": {
+    "repo": "internet-court/internet-court-skill",
+    "url": "https://github.com/internet-court/internet-court-skill/blob/main/vendored/1inch/1inch-debug/SKILL.md",
+    "path": "vendored/1inch/1inch-debug/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-24T16:53:30.539Z",
+    "stars": 7193,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-24T13:40:11Z",
+    "license": null
+  }
+}

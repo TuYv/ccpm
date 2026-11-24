@@ -1,0 +1,25 @@
+{
+  "id": "composiohq-composio-docs-page-rewrite",
+  "name": "docs-page-rewrite",
+  "description": "Restructure a docs page around the reader's primary purpose, preserving technical meaning. Use for page rewrites, section pacing, diagram placement, and progressive disclosure. For prose-only edits use good-docs-writing. For writing reviews use good-docs-audit.",
+  "category": "自动化集成",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "ComposioHQ",
+  "install_path": ".claude/skills/docs-page-rewrite/SKILL.md",
+  "source": {
+    "repo": "ComposioHQ/composio",
+    "url": "https://github.com/ComposioHQ/composio/blob/next/.agents/skills/docs-page-rewrite/SKILL.md",
+    "path": ".agents/skills/docs-page-rewrite/SKILL.md",
+    "branch": "next",
+    "discovered_at": "2026-11-24T16:13:59.542Z",
+    "stars": 31283,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-24T15:55:18Z",
+    "license": "MIT"
+  }
+}

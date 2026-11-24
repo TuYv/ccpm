@@ -1,0 +1,25 @@
+{
+  "id": "internet-court-internet-court-skill-1inch-walletconnect",
+  "name": "1inch-walletconnect",
+  "description": ">- Pair an EVM or Solana wallet via WalletConnect (non-custodial) using the 1inch MCP `walletconnect` tool, then sign messages or send transactions. Use when the user wants to connect a wallet, scan a QR, or execute with WalletConnect.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "internet-court",
+  "install_path": ".claude/skills/1inch-walletconnect/SKILL.md",
+  "source": {
+    "repo": "internet-court/internet-court-skill",
+    "url": "https://github.com/internet-court/internet-court-skill/blob/main/vendored/1inch/1inch-walletconnect/SKILL.md",
+    "path": "vendored/1inch/1inch-walletconnect/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-24T16:53:31.583Z",
+    "stars": 7193,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-24T13:40:11Z",
+    "license": null
+  }
+}

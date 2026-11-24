@@ -1,0 +1,25 @@
+{
+  "id": "internet-court-internet-court-skill-1inch-swap",
+  "name": "1inch-swap",
+  "description": ">- Quote and execute token swaps via the 1inch MCP `swap` tool: Classic (DEX aggregation), Fusion (gasless intent), and Fusion+/cross-chain. Use when the user wants best rate, gasless swap, bridge-less cross-chain, or quote comparison.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "internet-court",
+  "install_path": ".claude/skills/1inch-swap/SKILL.md",
+  "source": {
+    "repo": "internet-court/internet-court-skill",
+    "url": "https://github.com/internet-court/internet-court-skill/blob/main/vendored/1inch/1inch-swap/SKILL.md",
+    "path": "vendored/1inch/1inch-swap/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-24T16:53:31.266Z",
+    "stars": 7193,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-24T13:40:11Z",
+    "license": null
+  }
+}

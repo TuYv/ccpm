@@ -1,7 +1,7 @@
 {
   "id": "composiohq-composio-good-docs-writing",
   "name": "good-docs-writing",
-  "description": "Writing style guide derived from Modal's documentation voice. Apply when writing or editing docs, guides, tutorials, or technical prose that should read direct, second-person, confident, low-jargon, and example-first. Use to draft new docs in this voice or to revise existing prose toward it.",
+  "description": "Shared writing style guide for Composio documentation. Apply when writing or editing docs, guides, tutorials, or technical prose that should read direct, second-person, confident, and low-jargon. Choose the page's purpose before its structure. Use to draft new docs in the house documentation voice or revise existing prose toward it.",
   "category": "自动化集成",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/ComposioHQ/composio/blob/next/.agents/skills/good-docs-writing/SKILL.md",
     "path": ".agents/skills/good-docs-writing/SKILL.md",
     "branch": "next",
-    "discovered_at": "2026-11-24T05:05:55.293Z",
-    "stars": 31274,
+    "discovered_at": "2026-11-24T16:14:00.263Z",
+    "stars": 31283,
     "language": "TypeScript",
-    "pushed_at": "2026-11-24T00:36:35Z",
+    "pushed_at": "2026-11-24T15:55:18Z",
     "license": "MIT"
-  },
-  "summary_zh": "一套技术文档写作风格指南，适合撰写或润色直接易懂、少术语且以示例为先的文档、教程和指南。"
+  }
 }

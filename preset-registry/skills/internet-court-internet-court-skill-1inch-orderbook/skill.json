@@ -1,0 +1,25 @@
+{
+  "id": "internet-court-internet-court-skill-1inch-orderbook",
+  "name": "1inch-orderbook",
+  "description": ">- Build, sign, create, list, and cancel limit orders via the 1inch MCP `orderbook` tool (Limit Order Protocol v4.1). Use when the user wants buy/sell at a target price, maker orders, or partial fills.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "internet-court",
+  "install_path": ".claude/skills/1inch-orderbook/SKILL.md",
+  "source": {
+    "repo": "internet-court/internet-court-skill",
+    "url": "https://github.com/internet-court/internet-court-skill/blob/main/vendored/1inch/1inch-orderbook/SKILL.md",
+    "path": "vendored/1inch/1inch-orderbook/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-24T16:53:31.115Z",
+    "stars": 7193,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-24T13:40:11Z",
+    "license": null
+  }
+}

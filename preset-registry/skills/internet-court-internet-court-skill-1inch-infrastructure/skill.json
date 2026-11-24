@@ -1,0 +1,25 @@
+{
+  "id": "internet-court-internet-court-skill-1inch-infrastructure",
+  "name": "1inch-infrastructure",
+  "description": ">- Call Web3 JSON-RPC, broadcast transactions via the Transaction Gateway, and resolve ENS/domains through the 1inch MCP `product_api` tool.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "internet-court",
+  "install_path": ".claude/skills/1inch-infrastructure/SKILL.md",
+  "source": {
+    "repo": "internet-court/internet-court-skill",
+    "url": "https://github.com/internet-court/internet-court-skill/blob/main/vendored/1inch/1inch-infrastructure/SKILL.md",
+    "path": "vendored/1inch/1inch-infrastructure/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-24T16:53:30.687Z",
+    "stars": 7193,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-24T13:40:11Z",
+    "license": null
+  }
+}
