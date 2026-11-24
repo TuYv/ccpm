@@ -284,7 +284,10 @@ screen.
 ## Requests from the page
 
 While the page is open, people select artboards or elements and press **Send to agent**; **Ask agent to fix** on a
-canvas whose `project/canvas.json` can't be read, or on artboards with errors, sends its request to you too.
+canvas whose `project/canvas.json` can't be read, or on artboards with errors, sends its request to you too. A request
+about artboard errors names the files under `project/` and fences the messages the artboards wrote: find the cause, fix
+it, and save; the canvas runs the artboard again and the errors clear. `open-artifact check` does not run artboards, so
+a clean check does not show they are gone.
 
 **Under a host**, each request reaches your session by itself, as a message that starts
 `[Artifact edit request sent to agent]` and names the canvas by its `url`; what was selected comes as

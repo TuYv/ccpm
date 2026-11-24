@@ -204,8 +204,8 @@ generated content, tags, the stylesheet): read both before your first slide.
 
 For angular panels and images, write `clip-path:polygon(...)` on a `<div>`, `<x-shape>` or `<img>`.
 Use px, percentages and `calc(N% ± Npx)` for triangles, hexagons, concave outlines and fixed corner
-cuts. Put a picture's polygon on the `<img>` to keep its crop editable in PowerPoint.
-See `reference/images.md` for examples and export behavior.
+cuts. Put a picture's polygon on the `<img>` to keep its crop editable in PowerPoint. Only `polygon()` is
+read: for rounded or round frames use `border-radius`. See `reference/images.md` for examples and export behavior.
 
 One content slide's file, `project/slides/plan.html`, with `.cards`, `.card`, `.cards img` and `.source` in
 `project/deck.css`:
