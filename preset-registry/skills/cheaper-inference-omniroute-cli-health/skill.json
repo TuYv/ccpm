@@ -1,0 +1,25 @@
+{
+  "id": "cheaper-inference-omniroute-cli-health",
+  "name": "cli-health",
+  "description": "Check server health, component status, and live metrics from the CLI. Run `health`, `health components`, and `health watch` for a real-time dashboard of circuit breakers and provider status.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "cheaper-inference",
+  "install_path": ".claude/skills/cli-health/SKILL.md",
+  "source": {
+    "repo": "cheaper-inference/OmniRoute",
+    "url": "https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.55/skills/cli-health/SKILL.md",
+    "path": "skills/cli-health/SKILL.md",
+    "branch": "release/v3.8.55",
+    "discovered_at": "2026-11-25T01:48:30.420Z",
+    "stars": 90139,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-25T01:45:42Z",
+    "license": "MIT"
+  }
+}

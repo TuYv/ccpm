@@ -1,0 +1,25 @@
+{
+  "id": "cheaper-inference-omniroute-cli-contexts",
+  "name": "cli-contexts",
+  "description": "Manage context engineering configurations, RTK filter sets, and conversation sessions from the CLI. Apply context-relay settings and inspect active context pipelines.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "cheaper-inference",
+  "install_path": ".claude/skills/cli-contexts/SKILL.md",
+  "source": {
+    "repo": "cheaper-inference/OmniRoute",
+    "url": "https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.55/skills/cli-contexts/SKILL.md",
+    "path": "skills/cli-contexts/SKILL.md",
+    "branch": "release/v3.8.55",
+    "discovered_at": "2026-11-25T01:48:29.933Z",
+    "stars": 90139,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-25T01:45:42Z",
+    "license": "MIT"
+  }
+}

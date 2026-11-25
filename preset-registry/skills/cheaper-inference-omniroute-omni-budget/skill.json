@@ -1,0 +1,25 @@
+{
+  "id": "cheaper-inference-omniroute-omni-budget",
+  "name": "omni-budget",
+  "description": "Configure spending limits, token quotas, and rate-limit policies per API key or globally. Inspect current consumption and enforce cost controls across providers.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "cheaper-inference",
+  "install_path": ".claude/skills/omni-budget/SKILL.md",
+  "source": {
+    "repo": "cheaper-inference/OmniRoute",
+    "url": "https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.55/skills/omni-budget/SKILL.md",
+    "path": "skills/omni-budget/SKILL.md",
+    "branch": "release/v3.8.55",
+    "discovered_at": "2026-11-25T01:48:32.875Z",
+    "stars": 90139,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-25T01:45:42Z",
+    "license": "MIT"
+  }
+}

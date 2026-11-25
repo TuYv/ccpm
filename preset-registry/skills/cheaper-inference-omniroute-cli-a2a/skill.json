@@ -1,0 +1,25 @@
+{
+  "id": "cheaper-inference-omniroute-cli-a2a",
+  "name": "cli-a2a",
+  "description": "Interact with the OmniRoute A2A server from the CLI. Send tasks, inspect skill execution history, and test the JSON-RPC 2.0 agent-to-agent protocol interactively.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "cheaper-inference",
+  "install_path": ".claude/skills/cli-a2a/SKILL.md",
+  "source": {
+    "repo": "cheaper-inference/OmniRoute",
+    "url": "https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.55/skills/cli-a2a/SKILL.md",
+    "path": "skills/cli-a2a/SKILL.md",
+    "branch": "release/v3.8.55",
+    "discovered_at": "2026-11-25T01:48:29.215Z",
+    "stars": 90139,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-25T01:45:42Z",
+    "license": "MIT"
+  }
+}

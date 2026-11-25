@@ -1,0 +1,25 @@
+{
+  "id": "timewarpengineering-timewarp-architecture-tw-dotnet-diagnostics",
+  "name": "tw-dotnet-diagnostics",
+  "description": "Find where CPU, allocations, or memory go in a running .NET service with Microsoft's diagnostics CLIs (dotnet-counters, dotnet-trace, dotnet-gcdump), pinned as local tools. Use when a service is slow, CPU-heavy, allocating or growing memory, contended, or when asked to profile an endpoint. Dev only: never add these as package references.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "TimeWarpEngineering",
+  "install_path": ".claude/skills/tw-dotnet-diagnostics/SKILL.md",
+  "source": {
+    "repo": "TimeWarpEngineering/timewarp-architecture",
+    "url": "https://github.com/TimeWarpEngineering/timewarp-architecture/blob/master/skills/tw-dotnet-diagnostics/SKILL.md",
+    "path": "skills/tw-dotnet-diagnostics/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-11-25T00:59:37.588Z",
+    "stars": 55,
+    "language": "C#",
+    "pushed_at": "2026-11-25T00:17:34Z",
+    "license": "Unlicense"
+  }
+}

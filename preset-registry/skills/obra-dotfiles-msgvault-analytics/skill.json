@@ -1,0 +1,25 @@
+{
+  "id": "obra-dotfiles-msgvault-analytics",
+  "name": "msgvault-analytics",
+  "description": "Aggregate statistics and SQL analytics over a msgvault message archive. Use when asked who emails most, message volume over time, largest senders or domains or labels, storage usage, or any counting/grouping question about archived email and messages.",
+  "category": "数据分析",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "obra",
+  "install_path": ".claude/skills/msgvault-analytics/SKILL.md",
+  "source": {
+    "repo": "obra/dotfiles",
+    "url": "https://github.com/obra/dotfiles/blob/main/.config/evener/skills/msgvault-analytics/SKILL.md",
+    "path": ".config/evener/skills/msgvault-analytics/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-25T00:59:43.897Z",
+    "stars": 119,
+    "language": "Shell",
+    "pushed_at": "2026-11-24T21:34:27Z",
+    "license": null
+  }
+}

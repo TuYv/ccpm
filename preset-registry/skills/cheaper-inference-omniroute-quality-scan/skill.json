@@ -1,0 +1,25 @@
+{
+  "id": "cheaper-inference-omniroute-quality-scan",
+  "name": "quality-scan",
+  "description": "Run a scoped, read-only quality scan and report exact-candidate evidence, failures and frozen debt. Use for an ad-hoc gate sweep or release preparation; a static scan is not full release acceptance.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "cheaper-inference",
+  "install_path": ".claude/skills/quality-scan/SKILL.md",
+  "source": {
+    "repo": "cheaper-inference/OmniRoute",
+    "url": "https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.55/config/quality/skill-templates/quality-scan/SKILL.md",
+    "path": "config/quality/skill-templates/quality-scan/SKILL.md",
+    "branch": "release/v3.8.55",
+    "discovered_at": "2026-11-25T01:48:28.610Z",
+    "stars": 90139,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-25T01:45:42Z",
+    "license": "MIT"
+  }
+}

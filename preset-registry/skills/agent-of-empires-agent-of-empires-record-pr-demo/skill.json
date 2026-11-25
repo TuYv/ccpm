@@ -1,0 +1,25 @@
+{
+  "id": "agent-of-empires-agent-of-empires-record-pr-demo",
+  "name": "record-pr-demo",
+  "description": "Record a demo video of a PR's change by driving real Chromium against a real `aoe serve` with real tmux sessions, then publish MP4 + inline GIF to the PR. Use when asked for a demo, video, GIF or recording of a PR or branch, or to show a dashboard change working.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "agent-of-empires",
+  "install_path": ".claude/skills/record-pr-demo/SKILL.md",
+  "source": {
+    "repo": "agent-of-empires/agent-of-empires",
+    "url": "https://github.com/agent-of-empires/agent-of-empires/blob/main/.claude/skills/record-pr-demo/SKILL.md",
+    "path": ".claude/skills/record-pr-demo/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-25T01:47:38.264Z",
+    "stars": 4848,
+    "language": "Rust",
+    "pushed_at": "2026-11-25T01:44:46Z",
+    "license": "MIT"
+  }
+}

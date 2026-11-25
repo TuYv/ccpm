@@ -1,7 +1,7 @@
 {
   "id": "google-agents-cli-google-agents-cli-scaffold",
   "name": "google-agents-cli-scaffold",
-  "description": "> This skill should be used when the user wants to \"create an agent project\", \"start a new ADK project\", \"build me a new agent\", \"add CI/CD to my project\", \"add deployment\", \"enhance my project\", or \"upgrade my project\". Part of the agents-cli skills suite. Covers `agents-cli scaffold create`, `scaffold enhance`, and `scaffold upgrade` commands, template options, deployment targets, and the prototype-first workflow. Do NOT use for writing agent code (ADK projects: use google-agents-cli-adk-code)",
+  "description": "> This skill should be used when the user wants to \"create an agent project\", \"start a new ADK project\", \"build me a new agent\", \"add CI/CD to my project\", \"add deployment\", \"enhance my project\", \"upgrade my project\", or \"migrate my Claude Agent SDK agent to GCP\". Part of the agents-cli skills suite. Covers `agents-cli scaffold create`, `scaffold enhance`, and `scaffold upgrade` commands, template options, deployment targets, and the prototype-first workflow. Do NOT use for writing agent code (A",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/google/agents-cli/blob/main/src/google/agents/cli/skills/data/google-agents-cli-scaffold/SKILL.md",
     "path": "src/google/agents/cli/skills/data/google-agents-cli-scaffold/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-24T16:53:46.484Z",
-    "stars": 6397,
+    "discovered_at": "2026-11-25T01:42:52.970Z",
+    "stars": 6399,
     "language": "Python",
-    "pushed_at": "2026-11-17T18:14:03Z",
+    "pushed_at": "2026-11-24T18:35:07Z",
     "license": "Apache-2.0"
   }
 }

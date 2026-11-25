@@ -1,0 +1,25 @@
+{
+  "id": "timewarpengineering-timewarp-architecture-tw-brand",
+  "name": "tw-brand",
+  "description": "Rebrand a generated TimeWarp.Architecture app. The visual brand (product name, logo, icons, manifest colors, Fluent seed, role colors and their dark variants) is one BrandOptions section in web-server configuration plus image files; the assistant name is the only runtime (admin) brand setting; no shell code is edited. Use when changing an app's name, logo, colors, favicon, PWA icons, or link-preview image, when adding component CSS that needs a brand color, or when /brand.css, /manifest.json, or",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "TimeWarpEngineering",
+  "install_path": ".claude/skills/tw-brand/SKILL.md",
+  "source": {
+    "repo": "TimeWarpEngineering/timewarp-architecture",
+    "url": "https://github.com/TimeWarpEngineering/timewarp-architecture/blob/master/skills/tw-brand/SKILL.md",
+    "path": "skills/tw-brand/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-11-25T00:59:37.316Z",
+    "stars": 55,
+    "language": "C#",
+    "pushed_at": "2026-11-25T00:17:34Z",
+    "license": "Unlicense"
+  }
+}

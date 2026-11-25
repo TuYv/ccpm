@@ -1,0 +1,25 @@
+{
+  "id": "cheaper-inference-omniroute-omni-models",
+  "name": "omni-models",
+  "description": "Query available AI models across all configured providers. List models, resolve model aliases, and browse the full model catalog including provider-specific variants.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "cheaper-inference",
+  "install_path": ".claude/skills/omni-models/SKILL.md",
+  "source": {
+    "repo": "cheaper-inference/OmniRoute",
+    "url": "https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.55/skills/omni-models/SKILL.md",
+    "path": "skills/omni-models/SKILL.md",
+    "branch": "release/v3.8.55",
+    "discovered_at": "2026-11-25T01:48:34.312Z",
+    "stars": 90139,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-25T01:45:42Z",
+    "license": "MIT"
+  }
+}

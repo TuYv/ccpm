@@ -1,0 +1,25 @@
+{
+  "id": "tryatlas-atlas-remember",
+  "name": "remember",
+  "description": "Save the decisions, facts, dead ends and architecture this conversation established to Atlas's shared memory, so other agents and future sessions can build on them.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "tryatlas",
+  "install_path": ".claude/skills/remember/SKILL.md",
+  "source": {
+    "repo": "tryatlas/atlas",
+    "url": "https://github.com/tryatlas/atlas/blob/main/src-tauri/resources/skills/remember/SKILL.md",
+    "path": "src-tauri/resources/skills/remember/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-25T01:48:20.783Z",
+    "stars": 9173,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-24T10:52:52Z",
+    "license": "Apache-2.0"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "tryatlas-atlas-atlas-self-configure",
+  "name": "atlas-self-configure",
+  "description": "Inspect and safely update Atlas user preferences through Atlas's config.toml.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "tryatlas",
+  "install_path": ".claude/skills/atlas-self-configure/SKILL.md",
+  "source": {
+    "repo": "tryatlas/atlas",
+    "url": "https://github.com/tryatlas/atlas/blob/main/src-tauri/resources/skills/atlas-self-configure/SKILL.md",
+    "path": "src-tauri/resources/skills/atlas-self-configure/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-25T01:48:20.647Z",
+    "stars": 9173,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-24T10:52:52Z",
+    "license": "Apache-2.0"
+  }
+}

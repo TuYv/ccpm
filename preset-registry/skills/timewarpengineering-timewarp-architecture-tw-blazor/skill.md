@@ -72,6 +72,29 @@ that is where the work goes. A genuinely presentational JS call (focus, scroll, 
 registration) opts out with `[DirectComponentSideEffect("reason")]` on the component (`@attribute`
 in the `.razor`) or member; an empty reason does not opt out and is reported as TWA0027.
 
+**Compiler-checked — TWA0050 (error).** TWA0026 reads method calls; TWA0050 reads markup. Inside a
+`ComponentBase` type it reports a link written in markup: a component parameter or attribute
+`Href` / `href` / `To` with a non-null value (`FluentAnchorButton`, `FluentAnchor`, `FluentLink`,
+`FluentButton Href`, `FluentNavItem`, `NavLink href`) and an `<a href>`, static markup included.
+A plain link navigates outside the store, so the palette, the action catalog, and Ask AI never see
+it. Instead:
+
+- a command-like control (New Role, All) is a `FluentButton` whose `OnClick` dispatches
+  `RouteState.ChangeRoute` or a catalogued navigate action (`RoleState.OpenNewRole`), so Ctrl-K and
+  the agent can run it too;
+- a text link (a table row, a breadcrumb, a permalink) is the shared `RouteLink`
+  (`components/RouteLink.razor`): `<RouteLink Route="@RoleDetailPage.GetPageUrl(id)">`. One
+  `Route` drives the href and the dispatched `RouteState.ChangeRoute`, so middle-click and open in
+  new tab still work and a left click is the action. Its anchor is rendered by `RouteLink`, so the
+  caller styles it with `::deep` under one of its own native elements.
+
+Not reported: an `http:` / `https:` / `mailto:` / `tel:` link that opens a new tab
+(`target="_blank"`, `Target="LinkTarget.Blank"`) or says `rel="external"`; a computed href counts
+as external only with `rel="external"`. The opt-out is the same
+`[DirectComponentSideEffect("reason")]`; the menu (`NavMenu`, `FluentNavItem Href` for active-item
+matching and middle-click), markdown content links, and file downloads the client router cannot
+route are the expected cases. Record the reason in the component's Design region.
+
 JavaScript can dispatch too: a plain-markup button whose JavaScript `onclick` calls
 `timeWarpState.DispatchRequest("<alias>", { … })` reaches the store with no C# handler (see the
 Counter demo, `source/features/counter.ts`). JavaScript dispatch is opt-in: allow the action in
@@ -245,7 +268,13 @@ A server-bound action set that only sends one contract is generated, not written
 contracts on the state:
 
 ```csharp
-[ContractState(typeof(GetRoles), typeof(SetRolePermissions), DraftRequests = [typeof(SetRolePermissions)])]
+[ContractState
+(
+  typeof(GetRoles),
+  typeof(GetRole),
+  typeof(SetRolePermissions),
+  typeof(SetRoleAgentScopes)
+)]
 public sealed partial class RoleState : State<RoleState>
 ```
 
@@ -256,13 +285,21 @@ state:
 
 | Hook | When | Kind |
 |------|------|------|
-| `private partial void On<C>Loaded(Response)` | every Query | required: store the snapshot and seed any draft |
-| `private partial void Build<C>Request(TRequest)` | a contract in `DraftRequests` | required: fill the request from the draft |
+| `private partial void On<C>Loaded(Response)` | every Query | required: store what the page reads |
+| `private partial void Build<C>Request(TRequest)` | a contract in `DraftRequests` | required: fill the request from state |
 | `private partial Task<bool> Confirm<C>Async(TRequest, IConfirmationService, CancellationToken)` | a `[Destructive]` request | required: ask before sending |
 | `partial void On<C>Succeeded(Response)` | every Command | optional |
 | `partial void OnBuilding<C>Request(TRequest)` | a contract not in `DraftRequests` | optional |
 
-A missing required hook is CS8795, so a fetch that forgets to seed its draft does not compile.
+A missing required hook is CS8795, so a fetch that forgets to store its Response does not compile.
+For the query an edit form loads, the hook stores the whole Response (`OnGetRoleLoaded` sets
+`RoleSnapshot = response`), not flattened fields. A list query's hook may store the rows the page
+renders (`OnGetRolesLoaded` sets `RoleRows` from `response.Items`). The store holds no unsaved
+form edits. An edit
+form or editing page keeps its working copy (an `Update*` Command from the generated `From`, or
+a page-owned set) and sends the request it built (`tw-web-api-contracts`,
+`references/mutability.md`). `DraftRequests` is only for a request the state itself builds from
+data it already holds.
 Keep a hand-written action set when the action is an agent tool with typed parameters
 (`[CatalogAction(Visibility = Agent)]`), takes input that is not the contract request, or is local
 state only. A state property named after a `Get<X>` contract trips CA1721 beside the generated
@@ -365,7 +402,9 @@ Reference: `source/container-apps/web/projects/web-spa/components/MessageBars.ra
 # Actions, navigation, and forms
 
 Actions are `FluentButton` with a design system appearance (Primary / Outline / Subtle /
-Transparent; danger via `--twe-danger`). Navigation is `FluentAnchor`; the menu is `NavMenu` over the page registry.
+Transparent; danger via `--twe-danger`). Navigation is an action too: a `FluentButton` that
+dispatches `RouteState.ChangeRoute` or a navigate action, or a `RouteLink` for a text link, never a
+`FluentAnchor` / `Href` (TWA0050). The menu is `NavMenu` over the page registry.
 Persisting a model is `EditForm` + `FluentButton` submit (RoleForm). Never raw `<button>` or
 page-local button/link classes; reuse `components/elements` and existing feature components
 before writing markup. Multi-line text is the shared `TextArea` (`components/forms/TextArea.razor`),
@@ -387,6 +426,30 @@ short fields such as City / State / ZIP). Spacing via the `--twe-space-*` tokens
 
 Reference: `source/container-apps/web/projects/web-spa/features/design-system/samples/FormsSample.razor`
 (Forms card). Applied on ProfilePage, RoleForm, and AuthenticationPage.
+
+# Visual controls come from the design system
+
+A visual control that a product page renders is one of two things:
+
+- a FluentUI component used at its defaults, or
+- a component under `components/` with a catalogue entry on `/DesignSystem`
+  (`features/design-system/design-system-parts.cs`: slug, title, group, usage snippet, and a
+  sample under `features/design-system/samples/`).
+
+A feature folder does not define reusable chrome. When a page needs a control the catalogue
+lacks, add it under `components/elements/` (or `components/composites/`), give it a sample and a
+catalogue entry, and use it from the page. Spacing inside it is `--twe-space-*` tokens, not
+literal px.
+
+Grouped checkboxes, trees, and radio groups (`FluentCheckbox`, `FluentTreeView`,
+`FluentRadioGroup`) never sit in `features/*/components/`; a feature component renders a
+catalogued element instead. Example: role permissions and agent scopes render `PermissionTree`
+(`components/elements/PermissionTree.razor`), which owns the parent three-state, locked rows, row
+density, and arrow-key focus.
+
+**Test-checked.** `DesignSystemCatalog_Should_` in `web-spa-integration-tests` fails when a
+`.razor` under `components/elements/` is not named in `design-system-parts.cs`, or when a
+`.razor` under `features/*/components/` renders one of those three controls directly.
 
 # Browser console logs in the Aspire dashboard
 

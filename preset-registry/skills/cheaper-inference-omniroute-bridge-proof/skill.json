@@ -1,0 +1,25 @@
+{
+  "id": "cheaper-inference-omniroute-bridge-proof",
+  "name": "bridge-proof",
+  "description": "This skill should be used when the user invokes the bridge-check command or asks to verify the isolated Devin bridge.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "1.0.0",
+  "author": "cheaper-inference",
+  "install_path": ".claude/skills/bridge-proof/SKILL.md",
+  "source": {
+    "repo": "cheaper-inference/OmniRoute",
+    "url": "https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.55/tests/fixtures/devin-bridge/e2e-workspace/.claude/skills/bridge-proof/SKILL.md",
+    "path": "tests/fixtures/devin-bridge/e2e-workspace/.claude/skills/bridge-proof/SKILL.md",
+    "branch": "release/v3.8.55",
+    "discovered_at": "2026-11-25T01:48:35.829Z",
+    "stars": 90139,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-25T01:45:42Z",
+    "license": "MIT"
+  }
+}

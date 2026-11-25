@@ -1,0 +1,25 @@
+{
+  "id": "omnigent-ai-omnigent-import-memory",
+  "name": "import-memory",
+  "description": "Import the notes Claude Code's or Codex's own memory kept on this machine into Omnigent memory, after the user agrees to a plan. Use when the user asks to import them, or accepts the offer made at the start of the session.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "omnigent-ai",
+  "install_path": ".claude/skills/import-memory/SKILL.md",
+  "source": {
+    "repo": "omnigent-ai/omnigent",
+    "url": "https://github.com/omnigent-ai/omnigent/blob/main/omnigent/resources/skills/import-memory/SKILL.md",
+    "path": "omnigent/resources/skills/import-memory/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-25T01:39:37.135Z",
+    "stars": 11535,
+    "language": "Python",
+    "pushed_at": "2026-11-25T01:34:39Z",
+    "license": "Apache-2.0"
+  }
+}

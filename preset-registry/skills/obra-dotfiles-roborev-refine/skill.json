@@ -1,7 +1,7 @@
 {
   "id": "obra-dotfiles-roborev-refine",
   "name": "roborev-refine",
-  "description": "Iterative review-fix loop for the current branch — reviews via daemon, fixes inline, re-reviews until passing or max iterations reached",
+  "description": "Use only when the user explicitly invokes $roborev-refine",
   "category": "开发编程",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/obra/dotfiles/blob/main/.codex/skills/roborev-refine/SKILL.md",
     "path": ".codex/skills/roborev-refine/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-24T16:14:24.968Z",
+    "discovered_at": "2026-11-25T00:59:43.388Z",
     "stars": 119,
     "language": "Shell",
-    "pushed_at": "2026-11-10T01:41:33Z",
+    "pushed_at": "2026-11-24T21:34:27Z",
     "license": null
-  },
-  "summary_zh": "在当前分支上自动循环执行代码审查与修复，直到通过检查或达到最大迭代次数，省去手动反复改代码的麻烦，适合提交前的质量把关。"
+  }
 }

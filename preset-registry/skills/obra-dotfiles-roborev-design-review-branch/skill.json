@@ -1,7 +1,7 @@
 {
   "id": "obra-dotfiles-roborev-design-review-branch",
   "name": "roborev-design-review-branch",
-  "description": "Request a design review for all commits on the current branch and present the results",
+  "description": "Use only when the user explicitly invokes $roborev-design-review-branch",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/obra/dotfiles/blob/main/.codex/skills/roborev-design-review-branch/SKILL.md",
     "path": ".codex/skills/roborev-design-review-branch/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-24T16:14:24.340Z",
+    "discovered_at": "2026-11-25T00:59:43.017Z",
     "stars": 119,
     "language": "Shell",
-    "pushed_at": "2026-11-10T01:41:33Z",
+    "pushed_at": "2026-11-24T21:34:27Z",
     "license": null
-  },
-  "summary_zh": "一键对当前分支上的所有提交发起设计评审，并把结果汇总呈现，方便在合并前快速发现设计层面的问题。"
+  }
 }

@@ -1,0 +1,25 @@
+{
+  "id": "timewarpengineering-timewarp-architecture-host-discovery",
+  "name": "host-discovery",
+  "description": "Locate agent-facing discovery surfaces on a TimeWarp.Architecture template host (llms.txt, auth.md, OpenAPI, MCP/A2A cards, Agent Skills index, markdown negotiation). Use when scanning or onboarding against this host.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "TimeWarpEngineering",
+  "install_path": ".claude/skills/host-discovery/SKILL.md",
+  "source": {
+    "repo": "TimeWarpEngineering/timewarp-architecture",
+    "url": "https://github.com/TimeWarpEngineering/timewarp-architecture/blob/master/source/container-apps/web/projects/web-spa/wwwroot/.well-known/agent-skills/host-discovery/SKILL.md",
+    "path": "source/container-apps/web/projects/web-spa/wwwroot/.well-known/agent-skills/host-discovery/SKILL.md",
+    "branch": "master",
+    "discovered_at": "2026-11-25T00:59:38.415Z",
+    "stars": 55,
+    "language": "C#",
+    "pushed_at": "2026-11-25T00:17:34Z",
+    "license": "Unlicense"
+  }
+}

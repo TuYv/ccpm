@@ -1,0 +1,25 @@
+{
+  "id": "agent-of-empires-agent-of-empires-openclaw-skill",
+  "name": "aoe",
+  "description": "Manage AI coding agent sessions via Agent of Empires (aoe)",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "agent-of-empires",
+  "install_path": ".claude/skills/openclaw-skill/SKILL.md",
+  "source": {
+    "repo": "agent-of-empires/agent-of-empires",
+    "url": "https://github.com/agent-of-empires/agent-of-empires/blob/main/contrib/openclaw-skill/SKILL.md",
+    "path": "contrib/openclaw-skill/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-25T01:47:38.539Z",
+    "stars": 4848,
+    "language": "Rust",
+    "pushed_at": "2026-11-25T01:44:46Z",
+    "license": "MIT"
+  }
+}

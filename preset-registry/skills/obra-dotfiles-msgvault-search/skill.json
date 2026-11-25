@@ -1,0 +1,25 @@
+{
+  "id": "obra-dotfiles-msgvault-search",
+  "name": "msgvault-search",
+  "description": "Search and read messages in a msgvault archive (email, SMS, WhatsApp, iMessage, Teams). Use when asked to find, read, count, or export messages or email conversations from a personal message archive using the msgvault CLI.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "obra",
+  "install_path": ".claude/skills/msgvault-search/SKILL.md",
+  "source": {
+    "repo": "obra/dotfiles",
+    "url": "https://github.com/obra/dotfiles/blob/main/.config/evener/skills/msgvault-search/SKILL.md",
+    "path": ".config/evener/skills/msgvault-search/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-25T00:59:44.275Z",
+    "stars": 119,
+    "language": "Shell",
+    "pushed_at": "2026-11-24T21:34:27Z",
+    "license": null
+  }
+}

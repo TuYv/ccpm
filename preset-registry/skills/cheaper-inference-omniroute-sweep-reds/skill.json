@@ -1,0 +1,25 @@
+{
+  "id": "cheaper-inference-omniroute-sweep-reds",
+  "name": "sweep-reds",
+  "description": "Repair confirmed CI failures base-first, then prepare affected PRs one at a time with exact-candidate evidence. Use when asked to sweep reds or restore the queue. Never merges, closes PRs, weakens tests, or changes CI under ordinary sweep authority.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "cheaper-inference",
+  "install_path": ".claude/skills/sweep-reds/SKILL.md",
+  "source": {
+    "repo": "cheaper-inference/OmniRoute",
+    "url": "https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.55/config/quality/skill-templates/sweep-reds/SKILL.md",
+    "path": "config/quality/skill-templates/sweep-reds/SKILL.md",
+    "branch": "release/v3.8.55",
+    "discovered_at": "2026-11-25T01:48:28.783Z",
+    "stars": 90139,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-25T01:45:42Z",
+    "license": "MIT"
+  }
+}

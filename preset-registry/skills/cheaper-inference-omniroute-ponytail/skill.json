@@ -1,0 +1,25 @@
+{
+  "id": "cheaper-inference-omniroute-ponytail",
+  "name": "ponytail",
+  "description": "External agent skill (MIT, github.com/DietrichGebert/ponytail). Forces the laziest solution that actually works: question whether the task needs to exist at all (YAGNI), reuse what is already in the codebase, reach for the standard library before custom code, native platform features before dependencies, one line before fifty. Climb the ladder on every coding task — writing, adding, refactoring, fixing, reviewing, or designing code, and choosing libraries or dependencies. Supports intensity leve",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "cheaper-inference",
+  "install_path": ".claude/skills/ponytail/SKILL.md",
+  "source": {
+    "repo": "cheaper-inference/OmniRoute",
+    "url": "https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.55/skills/ponytail/SKILL.md",
+    "path": "skills/ponytail/SKILL.md",
+    "branch": "release/v3.8.55",
+    "discovered_at": "2026-11-25T01:48:35.681Z",
+    "stars": 90139,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-25T01:45:42Z",
+    "license": "MIT"
+  }
+}

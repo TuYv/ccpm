@@ -1,0 +1,25 @@
+{
+  "id": "obra-dotfiles-msgvault-attachments",
+  "name": "msgvault-attachments",
+  "description": "Find and export email attachments from a msgvault archive. Use when asked to locate, list, filter, or save attachments (PDFs, images, invoices, documents) from archived email or messages using the msgvault CLI.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "obra",
+  "install_path": ".claude/skills/msgvault-attachments/SKILL.md",
+  "source": {
+    "repo": "obra/dotfiles",
+    "url": "https://github.com/obra/dotfiles/blob/main/.config/evener/skills/msgvault-attachments/SKILL.md",
+    "path": ".config/evener/skills/msgvault-attachments/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-25T00:59:44.164Z",
+    "stars": 119,
+    "language": "Shell",
+    "pushed_at": "2026-11-24T21:34:27Z",
+    "license": null
+  }
+}
