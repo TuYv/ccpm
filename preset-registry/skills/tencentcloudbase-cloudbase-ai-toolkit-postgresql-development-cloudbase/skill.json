@@ -1,7 +1,7 @@
 {
   "id": "tencentcloudbase-cloudbase-ai-toolkit-postgresql-development-cloudbase",
   "name": "postgresql-development-cloudbase",
-  "description": "Use when building, debugging, or evaluating CloudBase PostgreSQL / CloudBase PG / PG mode apps, including Postgres schema setup, queryPgDatabase/managePgDatabase, JS SDK v3 app.rdb() CRUD/RPC, PG HTTP API fallback, RLS-style permissions, username-password auth, and Web CMS/admin CRUD flows backed by CloudBase PG.",
+  "description": "Use when building, debugging, or evaluating CloudBase PostgreSQL / CloudBase PG / PG mode apps, including Postgres schema setup, queryPgDatabase/managePgDatabase, JS SDK v3 app.rdb() CRUD/RPC, PG HTTP API fallback, RLS-style permissions, username-password auth, and Web CMS/admin CRUD flows backed by CloudBase PG. Also use when an existing document-database app (app.database() / db.collection() / wx.cloud.database() / wx-server-sdk cloud functions) must run on a PostgreSQL environment without rew",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/TencentCloudBase/CloudBase-AI-Toolkit/blob/main/config/.claude/skills/postgresql-development-cloudbase/SKILL.md",
     "path": "config/.claude/skills/postgresql-development-cloudbase/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-25T10:59:12.695Z",
+    "discovered_at": "2026-11-25T21:03:37.356Z",
     "stars": 1169,
     "language": "TypeScript",
-    "pushed_at": "2026-11-25T07:34:17Z",
+    "pushed_at": "2026-11-25T12:54:30Z",
     "license": "MIT"
-  },
-  "summary_zh": "一套面向云开发 PostgreSQL 应用的开发调试方案，适合处理建表、数据读写、权限认证和后台管理。"
+  }
 }

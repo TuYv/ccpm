@@ -1,7 +1,7 @@
 {
   "id": "mvanhorn-last30days-skill-last30days",
   "name": "last30days",
-  "description": "Research what people actually say about any topic in the last 30 days. Pulls posts and engagement from Reddit, X, YouTube, TikTok, Hacker News, Polymarket, GitHub, and the web. Includes a doctor health check to diagnose broken or missing sources.",
+  "description": "Research the last 30 days; doctor diagnoses broken sources.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/mvanhorn/last30days-skill/blob/main/skills/last30days/SKILL.md",
     "path": "skills/last30days/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-25T10:09:55.165Z",
-    "stars": 74652,
+    "discovered_at": "2026-11-25T20:15:39.516Z",
+    "stars": 75001,
     "language": "Python",
-    "pushed_at": "2026-11-25T06:31:14Z",
+    "pushed_at": "2026-11-25T17:59:27Z",
     "license": "MIT"
-  },
-  "summary_zh": "一款聚合近30天多平台真实讨论与互动数据的调研工具，适合快速了解话题热度、观点和信息源状态。"
+  }
 }

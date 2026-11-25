@@ -1,7 +1,7 @@
 {
   "id": "getpaseo-paseo-paseo-plugin",
   "name": "paseo-plugin",
-  "description": "Build and manage trusted local Paseo plugins. Use when the user asks to create, edit, install, reload, enable, disable, remove, or troubleshoot a Paseo plugin; add lifecycle hooks; transform agent configuration, environment, MCP servers, or workspace creation; automate permissions or turn follow-ups; add a screen, sidebar header or footer item, workspace panel, or file panel; add Command Center items or slash commands; add composer pills or attachment sources; transform, render, or append agent ",
+  "description": "Build and manage trusted Paseo plugins. Use when the user asks to create, edit, install, reload, enable, disable, remove, publish, or troubleshoot a Paseo plugin, or to add a plugin contribution such as a screen, sidebar item, sidebar view, workspace row badge, workspace, agent, or file panel, Command Center item, slash command, header button, composer pill, composer control, attachment source, New workspace field, settings screen, theme, timeline item, lifecycle hook, system prompt instructions",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/getpaseo/paseo/blob/main/skills/paseo-plugin/SKILL.md",
     "path": "skills/paseo-plugin/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-25T10:14:26.672Z",
-    "stars": 25216,
+    "discovered_at": "2026-11-25T20:19:46.625Z",
+    "stars": 25410,
     "language": "TypeScript",
-    "pushed_at": "2026-11-25T10:10:09Z",
+    "pushed_at": "2026-11-25T20:11:50Z",
     "license": null
   }
 }

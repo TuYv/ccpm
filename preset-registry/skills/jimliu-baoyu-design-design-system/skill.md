@@ -256,7 +256,8 @@ name a design installs it under).
 
 People ask for changes on the page: **Send to agent** with something selected (a token, type style, component,
 asset, section, file or the cover), **Change cover**, **Ask agent to fix** on a failing contrast pair or a preview
-that threw, **Finish setting up** on a system with `editing: "off"`, and the welcome page of an empty system (**Sync from GitHub**, **Build from connectors**, and **Upload brand files**).
+that threw, **Finish setting up** on a system with `editing: "off"`, and the welcome page of an empty system (**Sync from GitHub**, **Build from connectors**, and **Upload brand files**;
+its **Start by hand** only takes the person to the sections to add tokens themselves, and sends you nothing).
 
 **Under a host**, each request reaches your session by itself, as a message that starts
 `[Artifact edit request sent to agent]` and names the system by its `url`, with what was selected; a comment comes as
