@@ -1,0 +1,25 @@
+{
+  "id": "agent-of-empires-agent-of-empires-red-main",
+  "name": "red-main",
+  "description": "Classify a failed GitHub Actions check suite on main in agent-of-empires as a flake, a regression, or an infrastructure failure, name the failing tests and the likely culprit commit, and record one Tessl finding. Read-only: never writes to GitHub. Use when a check suite on main completes with a failure, or when asked why main is red.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "agent-of-empires",
+  "install_path": ".claude/skills/red-main/SKILL.md",
+  "source": {
+    "repo": "agent-of-empires/agent-of-empires",
+    "url": "https://github.com/agent-of-empires/agent-of-empires/blob/main/tessl-plugins/aoe-maintainer/skills/red-main/SKILL.md",
+    "path": "tessl-plugins/aoe-maintainer/skills/red-main/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-25T11:00:04.550Z",
+    "stars": 4861,
+    "language": "Rust",
+    "pushed_at": "2026-11-25T10:40:58Z",
+    "license": "MIT"
+  }
+}

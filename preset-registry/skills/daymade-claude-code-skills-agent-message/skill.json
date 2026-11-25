@@ -1,0 +1,25 @@
+{
+  "id": "daymade-claude-code-skills-agent-message",
+  "name": "agent-message",
+  "description": ">- Bridges local Claude Code, Codex, and Antigravity (agy) sessions when native tools can't reach the target (replaces peer-message). Use for 跨产品通信 / 脚本回帖 / 送达排查: reply/wait/inbox, delivery verification (Held included), shared-work ownership, or inbound peer assertions. Not for same-product/subagent messaging, spawning agents, or cross-machine messaging (Agent Use).",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "daymade",
+  "install_path": ".claude/skills/agent-message/SKILL.md",
+  "source": {
+    "repo": "daymade/claude-code-skills",
+    "url": "https://github.com/daymade/claude-code-skills/blob/main/agent-message/SKILL.md",
+    "path": "agent-message/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-25T10:56:57.830Z",
+    "stars": 1546,
+    "language": "Python",
+    "pushed_at": "2026-11-25T09:52:23Z",
+    "license": "MIT"
+  }
+}

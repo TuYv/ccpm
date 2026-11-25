@@ -410,9 +410,11 @@ own, the same address is the full dashboard.
 ## Exports
 
 From the page's Export menu (`Artifact {action: "open", url, panel: "export"}` under a host) the person saves a
-copy: a PDF of the page, JSON with every source's call, and a static HTML copy of the page whose numbers no longer
-change. The PDF, and the browser's own Print, end with a line under the page saying when its data was loaded and
-whether some of it is missing, so nothing on the page needs to say it for print. From Sources
+copy: a PDF file of the page (made in the page, on paper-size sheets, with text that can be selected), JSON with
+every source's call, and a static HTML copy of the page whose numbers no longer change. Print… in the same menu
+opens the browser's print dialog instead. The PDF, Print… and the browser's own Print all use the page's print
+styles ("Printing" in `reference/design-defaults.md`) and end with a line under the page saying when its data was
+loaded and whether some of it is missing, so nothing on the page needs to say it for print. From Sources
 they download a source's rows as CSV. To rebuild it in another product, read `reference/exporting.md`.
 
 ## History

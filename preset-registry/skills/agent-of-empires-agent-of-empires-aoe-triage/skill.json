@@ -1,0 +1,25 @@
+{
+  "id": "agent-of-empires-agent-of-empires-aoe-triage",
+  "name": "aoe-triage",
+  "description": "Triage open GitHub issues in agent-of-empires/agent-of-empires without a person in the loop: set one priority label, one type label and one area:* label, fill the Agent of Empires board's Status, Priority, Size and Roadmap state when the run's token can reach the board, remove needs-triage, and post at most one fixed-text comment for a clear duplicate or a bug report with no way to reproduce it. Runs on one issue (MODE=issue) or sweeps every open issue still missing a field (MODE=sweep, at most ",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "agent-of-empires",
+  "install_path": ".claude/skills/aoe-triage/SKILL.md",
+  "source": {
+    "repo": "agent-of-empires/agent-of-empires",
+    "url": "https://github.com/agent-of-empires/agent-of-empires/blob/main/tessl-plugins/aoe-maintainer/skills/aoe-triage/SKILL.md",
+    "path": "tessl-plugins/aoe-maintainer/skills/aoe-triage/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-25T11:00:03.837Z",
+    "stars": 4861,
+    "language": "Rust",
+    "pushed_at": "2026-11-25T10:40:58Z",
+    "license": "MIT"
+  }
+}

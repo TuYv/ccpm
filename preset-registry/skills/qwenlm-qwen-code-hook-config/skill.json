@@ -1,0 +1,25 @@
+{
+  "id": "qwenlm-qwen-code-hook-config",
+  "name": "hook-config",
+  "description": "Guide for creating and configuring hooks. Use when users want to add automated behaviors triggered by tool execution, session lifecycle, or other events in the CLI hook system.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "QwenLM",
+  "install_path": ".claude/skills/hook-config/SKILL.md",
+  "source": {
+    "repo": "QwenLM/qwen-code",
+    "url": "https://github.com/QwenLM/qwen-code/blob/main/packages/harness/core/src/skills/builtin/hook-config/SKILL.md",
+    "path": "packages/harness/core/src/skills/builtin/hook-config/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-25T11:02:29.177Z",
+    "stars": 30932,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-25T10:59:47Z",
+    "license": "Apache-2.0"
+  }
+}

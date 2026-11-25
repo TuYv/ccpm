@@ -1,0 +1,25 @@
+{
+  "id": "agent-of-empires-agent-of-empires-aoe-sandbox-boundary",
+  "name": "aoe-sandbox-boundary",
+  "description": "Review an Agent of Empires change for ways a sandboxed agent or plugin worker can influence the host, such as host code that reads, follows or mounts paths the sandbox can write, credentials forwarded across the boundary, and worker replies accepted without binding to the authorized worker, and for owner-only host files that can end up readable by others. Use as one lens in a code review run.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "agent-of-empires",
+  "install_path": ".claude/skills/aoe-sandbox-boundary/SKILL.md",
+  "source": {
+    "repo": "agent-of-empires/agent-of-empires",
+    "url": "https://github.com/agent-of-empires/agent-of-empires/blob/main/tessl-plugins/aoe-maintainer/lenses/aoe-sandbox-boundary/SKILL.md",
+    "path": "tessl-plugins/aoe-maintainer/lenses/aoe-sandbox-boundary/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-25T11:00:03.392Z",
+    "stars": 4861,
+    "language": "Rust",
+    "pushed_at": "2026-11-25T10:40:58Z",
+    "license": "MIT"
+  }
+}

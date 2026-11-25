@@ -1,0 +1,25 @@
+{
+  "id": "qwenlm-qwen-code-agent-creator",
+  "name": "agent-creator",
+  "description": "Guide for creating custom agents. Use when users want to create a new agent that runs in an isolated context with custom system prompts and specific tool access.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "QwenLM",
+  "install_path": ".claude/skills/agent-creator/SKILL.md",
+  "source": {
+    "repo": "QwenLM/qwen-code",
+    "url": "https://github.com/QwenLM/qwen-code/blob/main/packages/harness/core/src/skills/builtin/agent-creator/SKILL.md",
+    "path": "packages/harness/core/src/skills/builtin/agent-creator/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-25T11:02:29.010Z",
+    "stars": 30932,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-25T10:59:47Z",
+    "license": "Apache-2.0"
+  }
+}

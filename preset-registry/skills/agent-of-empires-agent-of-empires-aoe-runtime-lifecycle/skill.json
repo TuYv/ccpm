@@ -1,0 +1,25 @@
+{
+  "id": "agent-of-empires-agent-of-empires-aoe-runtime-lifecycle",
+  "name": "aoe-runtime-lifecycle",
+  "description": "Review an Agent of Empires change for state that goes wrong when a long-lived runtime object changes state while work is pending, such as a Session turn, agent or plugin worker, tmux pane, WebSocket, TUI view or image pull being cancelled, refused, replaced, restarted or ended. Use as one lens in a code review run.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "agent-of-empires",
+  "install_path": ".claude/skills/aoe-runtime-lifecycle/SKILL.md",
+  "source": {
+    "repo": "agent-of-empires/agent-of-empires",
+    "url": "https://github.com/agent-of-empires/agent-of-empires/blob/main/tessl-plugins/aoe-maintainer/lenses/aoe-runtime-lifecycle/SKILL.md",
+    "path": "tessl-plugins/aoe-maintainer/lenses/aoe-runtime-lifecycle/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-25T11:00:03.170Z",
+    "stars": 4861,
+    "language": "Rust",
+    "pushed_at": "2026-11-25T10:40:58Z",
+    "license": "MIT"
+  }
+}

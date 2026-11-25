@@ -1,0 +1,25 @@
+{
+  "id": "ar9av-obsidian-wiki-wiki-decisions",
+  "name": "wiki-decisions",
+  "description": "> Optional decision layer: hand small closed judgments (is this page relevant, does this source update or duplicate that page, do these two sections conflict) to a System One decision model (TypeSafe Jev) instead of reading pages to decide. Off by default. Use when the user says \"/wiki-decisions\", \"enable the decision layer\", \"use Jev\", \"gate my search results\", \"triage this ingest\", \"screen for contradictions\", or asks how the decision layer works or what it sends. Not a writer: it never answer",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "Ar9av",
+  "install_path": ".claude/skills/wiki-decisions/SKILL.md",
+  "source": {
+    "repo": "Ar9av/obsidian-wiki",
+    "url": "https://github.com/Ar9av/obsidian-wiki/blob/main/skills/wiki-decisions/SKILL.md",
+    "path": "skills/wiki-decisions/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-25T10:54:36.336Z",
+    "stars": 3814,
+    "language": "Python",
+    "pushed_at": "2026-11-25T08:44:08Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "agent-of-empires-agent-of-empires-aoe-test-evidence",
+  "name": "aoe-test-evidence",
+  "description": "Review an Agent of Empires change for whether its tests prove the behavior they claim, that a regression test reaches the changed branch and would fail without the fix, that its outcome does not depend on scheduling or on state shared with other tests, and that it never touches the developer's real environment. Use as one lens in a code review run.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "agent-of-empires",
+  "install_path": ".claude/skills/aoe-test-evidence/SKILL.md",
+  "source": {
+    "repo": "agent-of-empires/agent-of-empires",
+    "url": "https://github.com/agent-of-empires/agent-of-empires/blob/main/tessl-plugins/aoe-maintainer/lenses/aoe-test-evidence/SKILL.md",
+    "path": "tessl-plugins/aoe-maintainer/lenses/aoe-test-evidence/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-25T11:00:03.622Z",
+    "stars": 4861,
+    "language": "Rust",
+    "pushed_at": "2026-11-25T10:40:58Z",
+    "license": "MIT"
+  }
+}

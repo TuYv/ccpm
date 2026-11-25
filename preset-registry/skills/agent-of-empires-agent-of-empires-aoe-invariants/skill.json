@@ -1,0 +1,25 @@
+{
+  "id": "agent-of-empires-agent-of-empires-aoe-invariants",
+  "name": "aoe-invariants",
+  "description": "Review an Agent of Empires change for cross-file invariants that a diff hunk alone does not show, such as persisted data that needs a registered migration that survives every on-disk shape, settings that must stay single-source, Session writes that must go through the Daemon, plugin API versions, debug and release namespacing, tracing targets, and docs the change makes stale. Use as one lens in a code review run.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "agent-of-empires",
+  "install_path": ".claude/skills/aoe-invariants/SKILL.md",
+  "source": {
+    "repo": "agent-of-empires/agent-of-empires",
+    "url": "https://github.com/agent-of-empires/agent-of-empires/blob/main/tessl-plugins/aoe-maintainer/lenses/aoe-invariants/SKILL.md",
+    "path": "tessl-plugins/aoe-maintainer/lenses/aoe-invariants/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-25T11:00:02.784Z",
+    "stars": 4861,
+    "language": "Rust",
+    "pushed_at": "2026-11-25T10:40:58Z",
+    "license": "MIT"
+  }
+}

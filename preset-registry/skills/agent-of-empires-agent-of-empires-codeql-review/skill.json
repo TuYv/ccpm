@@ -1,0 +1,25 @@
+{
+  "id": "agent-of-empires-agent-of-empires-codeql-review",
+  "name": "codeql-review",
+  "description": "Triage the open CodeQL code scanning alerts of agent-of-empires as true or false positives with file:line reasoning, and record a Tessl finding with a fix recommendation for each true positive. Read-only: never writes to GitHub. Use when the weekly CodeQL review runs, or when asked which code scanning alerts are real.",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "agent-of-empires",
+  "install_path": ".claude/skills/codeql-review/SKILL.md",
+  "source": {
+    "repo": "agent-of-empires/agent-of-empires",
+    "url": "https://github.com/agent-of-empires/agent-of-empires/blob/main/tessl-plugins/aoe-maintainer/skills/codeql-review/SKILL.md",
+    "path": "tessl-plugins/aoe-maintainer/skills/codeql-review/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-25T11:00:04.066Z",
+    "stars": 4861,
+    "language": "Rust",
+    "pushed_at": "2026-11-25T10:40:58Z",
+    "license": "MIT"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "qwenlm-qwen-code-skill-creator",
+  "name": "skill-creator",
+  "description": "Guide for creating effective skills. This skill should be used when users want to create a new skill (or update an existing skill) that extends the CLI's capabilities with specialized knowledge, workflows, or tool integrations.",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "QwenLM",
+  "install_path": ".claude/skills/skill-creator/SKILL.md",
+  "source": {
+    "repo": "QwenLM/qwen-code",
+    "url": "https://github.com/QwenLM/qwen-code/blob/main/packages/harness/core/src/skills/builtin/skill-creator/SKILL.md",
+    "path": "packages/harness/core/src/skills/builtin/skill-creator/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-25T11:02:29.404Z",
+    "stars": 30932,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-25T10:59:47Z",
+    "license": "Apache-2.0"
+  }
+}
