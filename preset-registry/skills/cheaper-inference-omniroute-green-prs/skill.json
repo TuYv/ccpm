@@ -1,7 +1,7 @@
 {
   "id": "cheaper-inference-omniroute-green-prs",
   "name": "green-prs",
-  "description": "Inspect and prepare the selected PR queue against its exact current base, repair authorized defects with contributor credit, and report full versus partial validation. Use for maintainer pre-greening; merging requires separate owner authorization and the shared merge gates.",
+  "description": "Use when the owner wants several chosen PRs (a pasted list, or the analyzed plan-files) made green against today's base before merging: 'deixa essas PRs verdes', 'pre-green'. Repairs proven PR defects with contributor credit and reports PASS/PARTIAL/BASE-RED per PR. One PR with review threads: /babysit. Red base, 'varre os reds': /sweep-reds. Review's mandatory items: /fix-prs. Never merges.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.55/config/quality/skill-templates/green-prs/SKILL.md",
     "path": "config/quality/skill-templates/green-prs/SKILL.md",
     "branch": "release/v3.8.55",
-    "discovered_at": "2026-11-26T03:59:29.822Z",
-    "stars": 90359,
+    "discovered_at": "2026-11-26T13:32:45.322Z",
+    "stars": 90452,
     "language": "TypeScript",
-    "pushed_at": "2026-11-26T03:53:56Z",
+    "pushed_at": "2026-11-26T13:32:29Z",
     "license": "MIT"
   }
 }

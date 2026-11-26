@@ -120,8 +120,10 @@ that alone is no reason to refuse an artifact they asked for.
    the request needs things only the person has (the topic, the content, the brand) and the message gives none, ask
    in one short question. Otherwise go ahead.
 3. **Create it:** `Artifact {action: "publish", type_url: "open-artifact://type/<type id>", title: "<a short title>", open: "after_first_write"}`.
-   Do not call `quickstart` first when the type is chosen. The folder is `<current folder>/artifacts/<title>` unless
-   you pass `folder`.
+   Do not call `quickstart` first when the type is chosen.
+   Open Artifact chooses the folder and names it from the title: do not make up a path. When the person asks
+   for it in the project, add `location: "workspace"`; in their Open Artifact folder, `location: "home"`; and
+   `folder` only when they name an exact path.
 4. **Fill it.** The result carries the artifact's `url`, its `root` folder, its `view_url` and the type's own
    `instructions`. Follow those instructions exactly: they say which files to write into `root` (with your own file
    tools) and how to check them (`Artifact {action: "call", url, name: "check"}`); fix what the check reports. To see
@@ -139,7 +141,8 @@ that alone is no reason to refuse an artifact they asked for.
    The page refreshes by itself after later changes.
 6. **Tell them** in a sentence or two what you made, and that they can comment on the page and press "Send to agent"
    to send you their comments. **Always include `view_url`** as a link in your final reply so they can open or return
-   to the page anytime, even if it already opened or was shown earlier.
+   to the page anytime, even if it already opened or was shown earlier. When the artifact's `root` is outside your
+   working folder, say where its files are.
 
 An action that answers `{task, pending: true}` runs in the background; its result comes later as a message. Do not
 run it again meanwhile.

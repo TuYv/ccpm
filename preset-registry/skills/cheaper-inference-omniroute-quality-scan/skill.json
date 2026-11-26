@@ -1,8 +1,8 @@
 {
   "id": "cheaper-inference-omniroute-quality-scan",
   "name": "quality-scan",
-  "description": "Run a scoped, read-only quality scan and report exact-candidate evidence, failures and frozen debt. Use for an ad-hoc gate sweep or release preparation; a static scan is not full release acceptance.",
-  "category": "设计创意",
+  "description": "Use when the owner asks for an ad-hoc sweep of the static quality gates ('roda os gates', 'quality scan', 'como estão os ratchets?'). Runs `npm run quality:scan` (or `--fast`) on a pinned SHA and reports failed, not-run and frozen debt. Read-only, static gates only. For tests and build on a release candidate use /validate-release-green. For a code review use /harden-branch.",
+  "category": "测试调试",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.55/config/quality/skill-templates/quality-scan/SKILL.md",
     "path": "config/quality/skill-templates/quality-scan/SKILL.md",
     "branch": "release/v3.8.55",
-    "discovered_at": "2026-11-26T03:59:30.363Z",
-    "stars": 90359,
+    "discovered_at": "2026-11-26T13:32:45.788Z",
+    "stars": 90452,
     "language": "TypeScript",
-    "pushed_at": "2026-11-26T03:53:56Z",
+    "pushed_at": "2026-11-26T13:32:29Z",
     "license": "MIT"
   }
 }

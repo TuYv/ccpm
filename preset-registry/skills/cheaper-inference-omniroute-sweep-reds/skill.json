@@ -1,8 +1,8 @@
 {
   "id": "cheaper-inference-omniroute-sweep-reds",
   "name": "sweep-reds",
-  "description": "Repair confirmed CI failures base-first, then prepare affected PRs one at a time with exact-candidate evidence. Use when asked to sweep reds or restore the queue. Never merges, closes PRs, weakens tests, or changes CI under ordinary sweep authority.",
-  "category": "测试调试",
+  "description": "Use when CI is red across the queue or the 'Release branch not green' issue is open: 'varre os reds', 'a base está vermelha', 'destrava a fila'. Repairs the base first, in its own PR, then takes the red PRs one at a time, separating inherited failures from PR defects. A chosen PR list on a healthy base: /green-prs. One PR: /babysit. Never merges, closes PRs or edits CI.",
+  "category": "设计创意",
   "compatible_tools": [
     "claude",
     "codex",
@@ -16,10 +16,10 @@
     "url": "https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.55/config/quality/skill-templates/sweep-reds/SKILL.md",
     "path": "config/quality/skill-templates/sweep-reds/SKILL.md",
     "branch": "release/v3.8.55",
-    "discovered_at": "2026-11-26T03:59:30.542Z",
-    "stars": 90359,
+    "discovered_at": "2026-11-26T13:32:45.933Z",
+    "stars": 90452,
     "language": "TypeScript",
-    "pushed_at": "2026-11-26T03:53:56Z",
+    "pushed_at": "2026-11-26T13:32:29Z",
     "license": "MIT"
   }
 }

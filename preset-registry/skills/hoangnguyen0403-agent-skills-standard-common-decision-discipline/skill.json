@@ -1,7 +1,7 @@
 {
   "id": "hoangnguyen0403-agent-skills-standard-common-decision-discipline",
   "name": "common-decision-discipline",
-  "description": "Right-size, ground, gate, and continue SDLC work — SNC-sized depth, said-vs-assumed write-back, evidence ledger, honest option cards, recorded approval, self-review, and once-per-run workflow handoff. Use in any SDLC workflow, including brainstorm-feature, plan-feature, design-solution, system-design-session, and at every handoff.",
+  "description": "Right-size, ground, gate, and continue SDLC work — SNC-sized depth, said-vs-assumed write-back, evidence ledger, honest option cards, recorded approval, self-review, and once-per-run workflow handoff. Use in any SDLC workflow, including sdlc-intake, plan-feature, design-solution, system-design-session, and at every handoff. Standalone `brainstorm` uses only `references/explore-facilitation.md` from this skill.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/HoangNguyen0403/agent-skills-standard/blob/develop/.agents/skills/common/common-decision-discipline/SKILL.md",
     "path": ".agents/skills/common/common-decision-discipline/SKILL.md",
     "branch": "develop",
-    "discovered_at": "2026-11-26T03:56:56.471Z",
+    "discovered_at": "2026-11-26T13:30:07.637Z",
     "stars": 584,
     "language": "TypeScript",
-    "pushed_at": "2026-11-26T03:54:22Z",
+    "pushed_at": "2026-11-26T13:21:54Z",
     "license": "MIT"
   }
 }

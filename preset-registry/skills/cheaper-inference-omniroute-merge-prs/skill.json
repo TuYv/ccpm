@@ -1,7 +1,7 @@
 {
   "id": "cheaper-inference-omniroute-merge-prs",
   "name": "merge-prs",
-  "description": "Consume analyzed PR plans, implement authorized fixes with contributor credit, validate exact candidates, and merge only owner-selected and explicitly authorized groups through the shared gates. Requires prior review evidence; unknown or failing required checks remain HOLD.",
+  "description": "Use when analyzed plan-files exist in `_tasks/pipeline/prs/1-analyzed/` and the owner asks to merge the reviewed queue: 'roda o merge-prs', 'mergeia o que foi revisado'. Shows the readiness report, takes the owner's choice and dossier OK, then lands each PR through merge-gates §9. Pasted list, no plans: /merge-batch. One combined PR: /merge-train. Queue census to close the version: /merge-waves.",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/cheaper-inference/OmniRoute/blob/release/v3.8.55/config/quality/skill-templates/merge-prs/SKILL.md",
     "path": "config/quality/skill-templates/merge-prs/SKILL.md",
     "branch": "release/v3.8.55",
-    "discovered_at": "2026-11-26T03:59:30.157Z",
-    "stars": 90359,
+    "discovered_at": "2026-11-26T13:32:45.621Z",
+    "stars": 90452,
     "language": "TypeScript",
-    "pushed_at": "2026-11-26T03:53:56Z",
+    "pushed_at": "2026-11-26T13:32:29Z",
     "license": "MIT"
   }
 }
