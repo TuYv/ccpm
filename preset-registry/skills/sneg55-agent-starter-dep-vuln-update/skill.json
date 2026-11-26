@@ -1,0 +1,25 @@
+{
+  "id": "sneg55-agent-starter-dep-vuln-update",
+  "name": "dep-vuln-update",
+  "description": "Use when dependencies in a repo have known vulnerabilities and need updating, including when the dep-vuln hook reports advisories at commit or merge request time, when the user asks to fix vulns, patch CVEs or GHSAs, run an audit fix, or bump vulnerable packages. Covers scanning tracked lockfiles with osv-scanner, choosing the smallest version that clears each advisory, overrides for transitive deps, verifying with the repo's own tests, and committing per repo.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "sneg55",
+  "install_path": ".claude/skills/dep-vuln-update/SKILL.md",
+  "source": {
+    "repo": "sneg55/agent-starter",
+    "url": "https://github.com/sneg55/agent-starter/blob/main/skills/dep-vuln-update/SKILL.md",
+    "path": "skills/dep-vuln-update/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-26T04:53:40.094Z",
+    "stars": 76,
+    "language": "Shell",
+    "pushed_at": "2026-11-25T23:01:46Z",
+    "license": "MIT"
+  }
+}

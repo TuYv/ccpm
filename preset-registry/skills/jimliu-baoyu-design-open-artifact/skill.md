@@ -179,7 +179,10 @@ beyond it (running commands, sending things, opening links).
   `changed`, `read` lists the files they touched in `changed_files`, and `notes` say so: read those files again
   before writing. When you write through the tools, pass the `sha256` you read as `if_match`
   (`Artifact {action: "publish", url, files, if_match}`; `ArtifactData` `set` and `delete` of an existing document
-  need it). On a `conflict`, merge your change into `current` and write again.
+  need it). On a `conflict`, merge your change into `current` and write again; `executionStatus: "not_executed"` on
+  it means nothing was written.
+- Some apps keep you to your workspace: there a folder or a file path outside it (an action's `file` or `out`,
+  ArtifactData's `file_path` or `out_file`) answers `not_granted`. Use a path inside the workspace instead.
 - To share it, `Artifact {action: "open", url, panel: "share"}` opens its Share panel for the person; to export
   (PDF, PPTX, PNG, …), `panel: "export"`. Only the person changes how an artifact is shared; never make share links
   yourself.
