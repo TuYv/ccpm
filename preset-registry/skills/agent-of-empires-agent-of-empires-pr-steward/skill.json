@@ -1,0 +1,25 @@
+{
+  "id": "agent-of-empires-agent-of-empires-pr-steward",
+  "name": "pr-steward",
+  "description": "Sweep open non-draft pull requests in agent-of-empires once a day: list the ones ready for a maintainer to merge, ask authors of conflicted PRs once to rebase, rerun the failed jobs of a first CI attempt once when every failing test is a known flaky test, list stale contributor PRs a maintainer could take over, and keep one daily report comment on the Maintainer digest issue. Never approves, merges, enqueues, pushes, labels or closes. Use when the daily PR steward runs, or when asked which PRs a",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "agent-of-empires",
+  "install_path": ".claude/skills/pr-steward/SKILL.md",
+  "source": {
+    "repo": "agent-of-empires/agent-of-empires",
+    "url": "https://github.com/agent-of-empires/agent-of-empires/blob/main/tessl-plugins/aoe-maintainer/skills/pr-steward/SKILL.md",
+    "path": "tessl-plugins/aoe-maintainer/skills/pr-steward/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-27T16:08:59.618Z",
+    "stars": 5000,
+    "language": "Rust",
+    "pushed_at": "2026-11-27T15:18:17Z",
+    "license": "MIT"
+  }
+}

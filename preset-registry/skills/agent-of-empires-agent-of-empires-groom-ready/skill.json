@@ -1,7 +1,7 @@
 {
   "id": "agent-of-empires-agent-of-empires-groom-ready",
   "name": "groom-ready",
-  "description": "Scan open agent-of-empires issues that lack the ready-for-agent label, pick up to 10 that are well specified, and record a Tessl finding per candidate recommending that a maintainer add ready-for-agent or tessl, listing any missing information. Read-only: never writes to GitHub. Use when the weekly grooming runs, or when asked which issues are ready for an agent.",
+  "description": "Scan open agent-of-empires issues that lack the ready-for-agent label, pick up to 10 that are well specified, and record a Tessl finding per candidate recommending that a maintainer add ready-for-agent or tessl, listing any missing information, then post one weekly digest comment that mentions the maintainers in the Maintainer digest issue. On GitHub it writes only that issue and its comment; it never labels, assigns, or comments on the issues it assesses. Use when the weekly grooming runs, or w",
   "category": "设计创意",
   "compatible_tools": [
     "claude",
@@ -16,10 +16,10 @@
     "url": "https://github.com/agent-of-empires/agent-of-empires/blob/main/tessl-plugins/aoe-maintainer/skills/groom-ready/SKILL.md",
     "path": "tessl-plugins/aoe-maintainer/skills/groom-ready/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-27T06:08:36.507Z",
-    "stars": 4964,
+    "discovered_at": "2026-11-27T16:08:59.467Z",
+    "stars": 5000,
     "language": "Rust",
-    "pushed_at": "2026-11-27T04:38:28Z",
+    "pushed_at": "2026-11-27T15:18:17Z",
     "license": "MIT"
   }
 }

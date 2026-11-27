@@ -1,0 +1,25 @@
+{
+  "id": "composiohq-composio-cli-binary-size",
+  "name": "cli-binary-size",
+  "description": "Measure and reduce what the Composio CLI executable and its release downloads weigh, against the Bun runtime floor - size reports per target, Bun --trim and --aot builds and their blockers, archive formats, distribution options, and alternative runtimes or compilers such as Perry. Use when asked why the CLI binary is large, to shrink its download or install, or to judge a build flag, Bun upgrade, bundle change, or runtime swap by size or startup time. Do not use for publishing binaries (cli-rele",
+  "category": "自动化集成",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "ComposioHQ",
+  "install_path": ".claude/skills/cli-binary-size/SKILL.md",
+  "source": {
+    "repo": "ComposioHQ/composio",
+    "url": "https://github.com/ComposioHQ/composio/blob/next/.agents/skills/cli-binary-size/SKILL.md",
+    "path": ".agents/skills/cli-binary-size/SKILL.md",
+    "branch": "next",
+    "discovered_at": "2026-11-27T15:21:30.975Z",
+    "stars": 31324,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-27T15:21:02Z",
+    "license": "MIT"
+  }
+}
