@@ -281,8 +281,9 @@ the whole-folder archive.
 
 ## Exporting
 
-In the editor, the owner opens **Share → Export** to save the current tab or the whole document. PDF offers
-A4 and US Letter. The same panel includes the whole-folder archive.
+In the editor, the owner opens **Share → Export** to save a file. In a doc of several tabs, Word and PDF then
+ask whether to take the open tab or all of them, and Markdown and HTML take the open tab; the page's own Export
+menu asks for every format. PDF offers A4 and US Letter. The same panel includes the whole-folder archive.
 
 `export` writes a copy to send or print. Several tabs are one file, each tab on its own page; `--tab` takes one.
 `--out`'s extension also says which format; with no `--out` a Word, PDF or HTML file goes into the folder's

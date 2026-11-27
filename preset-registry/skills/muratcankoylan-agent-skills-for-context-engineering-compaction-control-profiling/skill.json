@@ -1,0 +1,25 @@
+{
+  "id": "muratcankoylan-agent-skills-for-context-engineering-compaction-control-profiling",
+  "name": "compaction-control-profiling",
+  "description": "This skill should be used when deciding, for a specific model and workload, whether the harness or the model should control compaction, and when qualifying or calibrating that choice with measurements: context-budget sweeps that compare harness-driven and model-driven compaction on one harness, the context-pressure regime where delegation pays, a per-model compaction behavior profile (interface uptake, compression factor per call, reopen rate of archived content, context fill at first compaction",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "muratcankoylan",
+  "install_path": ".claude/skills/compaction-control-profiling/SKILL.md",
+  "source": {
+    "repo": "muratcankoylan/Agent-Skills-for-Context-Engineering",
+    "url": "https://github.com/muratcankoylan/Agent-Skills-for-Context-Engineering/blob/main/skills/compaction-control-profiling/SKILL.md",
+    "path": "skills/compaction-control-profiling/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-27T05:17:29.321Z",
+    "stars": 18437,
+    "language": "Python",
+    "pushed_at": "2026-11-27T00:05:25Z",
+    "license": "MIT"
+  }
+}

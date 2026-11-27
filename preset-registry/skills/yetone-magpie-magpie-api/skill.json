@@ -1,0 +1,25 @@
+{
+  "id": "yetone-magpie-magpie-api",
+  "name": "magpie-api",
+  "description": "Read magpie's (usemagpie.ai) own HTTP API from an agent — what is left of every subscription, coding plan and key balance (GET /v1/magpie/quotas), the models available now (GET /v1/models), and which model a routing group picked for a session and what it fell back from (GET /v1/magpie/route). Use when orchestrating work across models or agents through magpie: choosing a model whose provider still has allowance, listing what can be asked for, or following where a turn went.",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "yetone",
+  "install_path": ".claude/skills/magpie-api/SKILL.md",
+  "source": {
+    "repo": "yetone/magpie",
+    "url": "https://github.com/yetone/magpie/blob/main/internal/gateway/testdata/magpie-api/SKILL.md",
+    "path": "internal/gateway/testdata/magpie-api/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-27T06:09:36.044Z",
+    "stars": 42181,
+    "language": "Go",
+    "pushed_at": "2026-11-27T04:42:02Z",
+    "license": "MIT"
+  }
+}
