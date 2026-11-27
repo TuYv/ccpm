@@ -1,0 +1,25 @@
+{
+  "id": "ollygarden-opentelemetry-agent-skills-otel-cicd",
+  "name": "otel-cicd",
+  "description": "Observe CI/CD pipelines with OpenTelemetry. Use when turning GitHub Actions or GitLab CI/CD runs, jobs and steps into traces with the Collector `github` or `gitlab` receiver (workflow_run and pipeline webhooks, the GitHub scraper), or keeping raw webhook payloads as logs with `webhook_event`; collecting pull-request, branch and repository (VCS) or DORA metrics such as lead time for changes; joining build or test processes to the pipeline trace through `TRACEPARENT` or otel-cli; exporting OTLP fr",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "ollygarden",
+  "install_path": ".claude/skills/otel-cicd/SKILL.md",
+  "source": {
+    "repo": "ollygarden/opentelemetry-agent-skills",
+    "url": "https://github.com/ollygarden/opentelemetry-agent-skills/blob/main/skills/otel-cicd/SKILL.md",
+    "path": "skills/otel-cicd/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-26T23:33:40.508Z",
+    "stars": 126,
+    "language": "Go",
+    "pushed_at": "2026-11-26T17:22:20Z",
+    "license": "Apache-2.0"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "id": "obra-dotfiles-archival-document-hunting",
+  "name": "archival-document-hunting",
+  "description": "Use when hunting a historical document whose publisher is gone or gated (vendor PDF style guides, manuals, specs, SDK docs), when a known file URL 404s, redirects, or needs a login, when the document may survive only inside an SDK installer, disc image, or web archive, and when packing the results for a researcher with provenance.",
+  "category": "开发编程",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "obra",
+  "install_path": ".claude/skills/archival-document-hunting/SKILL.md",
+  "source": {
+    "repo": "obra/dotfiles",
+    "url": "https://github.com/obra/dotfiles/blob/main/.config/evener/skills/archival-document-hunting/SKILL.md",
+    "path": ".config/evener/skills/archival-document-hunting/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-26T22:41:36.983Z",
+    "stars": 119,
+    "language": "Shell",
+    "pushed_at": "2026-11-26T18:54:42Z",
+    "license": null
+  }
+}
