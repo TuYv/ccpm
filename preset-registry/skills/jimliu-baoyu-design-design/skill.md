@@ -50,9 +50,13 @@ Asked to bring it into Figma: in the shell's **Share → Export** tab, choose **
 artboard or all artboards on the page. The person opens that file in Chrome and captures it with Figma's Chrome
 extension (Capture page, or Select element for one artboard). The canvas and the Standalone web page draw artboards
 in frames and come into Figma empty.
-Asked for the whole design as files to open elsewhere: **Share → Export → HTML → The whole canvas** saves one zip
-with every artboard, the project's files and uploads, the runtime each folder needs, an index and a README. The
-person unzips it into one folder and follows the README.
+Asked for the whole design as files to open elsewhere: **Share → Export → HTML → Entire project (.zip)** saves the
+project's files (`canvas.json` included, hidden dot-files never), its uploads under `assets/`, the runtime each folder
+needs, an index and a README. A large project comes as several zips (`<name>-1-of-3.zip`, …) to unpack into one folder;
+past 1 GB in all, files are left out, and the README of the last zip lists every file left out and why. The person
+unzips and follows the README. A one-file HTML export inlines the stylesheets an artboard `@import`s and the files
+their `url()`s name; an import it can't embed is named in a notice. A PNG, JPEG or PDF of a PAGE whose frame runs far
+below its content says how much blank space the file ends with: shorten the frame (`h`) when asked to fix that.
 Asked to see a page at another screen width, or for a full-page screenshot of it at one: the person opens the
 artboard full window (the toolbar's Play button, then the artboard) in Fill, picks the width beside Fill/Fit (the
 window's, or Phone 390, Tablet 768, 1024, 1280, 1440, 1920), and chooses **Share → Export → PNG** in the shell. The preview-width option at 1× or 2× saves the
@@ -67,7 +71,7 @@ whole page at that width, as tall as its content. Point them there; you take no 
     the canvas in CSS px (`w`,`h` 40–8000; 80 px between frames in a row, 120 between rows), plus optional
     `title`, `page` (none = the first), `expand` (`"fill"`: a PAGE), `print` (`"flow"`: PDF paginates), `paper`
     (`"letter"`|`"a4"`), `is_interactive` (`true`: working controls; it gets a Play button), `frameless`
-    (editor-set, keep it), `guides` (`reference/format.md`), `radius` (corner px).
+    (editor-set, keep it: a piece, see `reference/canvas.md`), `guides` (`reference/format.md`), `radius` (corner px).
   - `order` = the same paths, back to front (later ones paint on top; the focused view steps through them in this order); name the first artboard `Main.dc.html`
     (the entry).
   - EVERY `.dc.html` outside `project/ds/` shows, listed or not, `<dc-import>`ed ones too: list each (`w`,`h` =
@@ -82,7 +86,9 @@ whole page at that width, as tall as its content. Point them there; you take no 
     longer text shrinks. ≥223 px above its row, off name strips, nothing over it. No `kind` = a sticky: set `w`; up
     to 4/3 `w` tall (keep that clear), taller in empty canvas, then scrolls. Both take `size` px|s|m|l|xl|xxl,
     `bold`, `italic`, `page`, `color`/sticky `fill` gray|red|orange|green|teal|blue|purple|pink. `kind`
-    rect|oval|pen|line|arrow|image is the person's; leave it. The rest: `reference/canvas.md`.
+    rect|oval|pen|line|arrow|image is the person's; leave it (its `css` holds only the style keys a note takes). An
+    `image` note may carry `crop`, `video`, `videoStart`, `videoLoop`, `videoSound` and `videoCover`: set in the editor,
+    never by you; its `src` and `video` are only `/_blob/<id>` addresses from an upload. The rest: `reference/canvas.md`.
   - `designSystems`, and the files under `project/ds/<folder>/`: only step 4's install writes them.
   - An index that exists: keep every key and entry you are not changing, ones not named here too.
   - A `boards` or `notes` entry with `locked: true`, like an element with `data-locked="true"` in an artboard file, is
@@ -239,7 +245,9 @@ Rules that bite (each fails silently):
   toolbars wrap, wide tables scroll in a box. `$preview` = `w`×`h`; a PAGE's `h` = its height at `w` (estimate it
   from the content, erring taller: taller beats clipped).
 - Inline `style="…"` is what the properties panel edits; `<helmet><style>` is for page basics and the
-  `a`/`a:hover` colors. Lay out sibling groups with flex or grid plus `gap`.
+  `a`/`a:hover` colors. An element's hover, focus and pressed looks go in `style-hover`, `style-focus`,
+  `style-focus-visible`, `style-active` (declarations, like `style`; `reference/format.md`). Lay out sibling
+  groups with flex or grid plus `gap`.
 - `{{hole}}` is a dotted lookup into `renderVals()` only, never an expression; copy the viewer retypes stays literal
   markup.
 - Always include the `<script type="text/x-dc" data-dc-script>` block, classic JS (`class Component extends
@@ -272,6 +280,17 @@ Rules that bite (each fails silently):
   `aria-hidden="true"`, else `role="img" aria-label`. Text 4.5:1, even 11px grey labels (3:1 at 24px+); 4.3:1 still
   fails: pick shades that pass. Colors that must be told apart also differ in lightness, not hue alone; prefer
   blue/orange to red/green.
+- Running on a Gemini model (in Antigravity or elsewhere)? Google's `gemini-frontend-design` skill pairs well with
+  this one for the look: visual direction, color, type, layout, motion. It is not shipped here. Loaded in your
+  session: read it with this section and design by both; where the two differ on how an artboard is written, how an
+  image gets in (an image you generate is an upload, Creating step 3) or on checking (skip any render or screenshot
+  step it asks for: Creating's NEVER VERIFY rule), these pages win. Not loaded: BEFORE you design (a new canvas, or
+  a change to the look), say once per conversation, in a line, that it is recommended with Gemini models and that
+  installing it first gives a better result, with its link:
+  https://github.com/google-gemini/demolab/blob/main/skills/gemini-frontend-design/SKILL.md. Asking Creating step
+  1's round anyway? Make it one of its questions (install it first, or go on without it). No round, or it is over:
+  say the line and build by this section; never wait on it, and don't repeat it at hand-over. Never fetch or
+  install it yourself unless the person asks. Not a Gemini model: nothing to do or say.
 
 ## Revising a canvas
 

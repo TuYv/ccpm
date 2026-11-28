@@ -27,7 +27,7 @@ English rendering of it).
 `Artifact {action: "quickstart", intent: "other"}`, then `Artifact {action: "publish", type_url:
 "open-artifact://type/sheets", title}`; its result gives the Sheet's `url` (`open-artifact://artifact/<id>`).
 Every command below is then `Artifact {action: "call", url, name, args}`: `read` and `update` take
-`{payload}`, the same JSON as an object; `batch` takes `{calls}`; `widget` takes `{verb, id?, basePub?,
+`{payload}`, the same JSON as an object, and so does `refresh`; `batch` takes `{calls}`; `widget` takes `{verb, id?, basePub?,
 codeFile?|code?}`; `info`, `context` and `snapshot` take none; `export` takes `{file?}`, an absolute path. A
 file named in a call is an absolute path. Comments are **ArtifactComments**. Never run `open-artifact open`,
 `serve`, `wait` or `stop` under a host.
@@ -37,8 +37,9 @@ file named in a call is an absolute path. Comments are **ArtifactComments**. Nev
 | Command | What it does |
 |---|---|
 | `open-artifact open <root> --type sheets [--title T] --json` | Starts the local page and prints `{"url": …}`; a folder with no Sheet becomes one with one blank sheet, `Sheet1`. |
-| `open-artifact read <root> ['<payload>']` | A read: `readSheets` (the default), `readCells`, `readCellFormats`, `readConditionalFormats`, `readCharts`, `readInteractive`, `readNamedRanges`, `readCellsChangedFromTheirDefaults`; or `showGuide`, a walkthrough for the person. |
+| `open-artifact read <root> ['<payload>']` | A read: `readSheets` (the default), `readCells`, `readCellFormats`, `readConditionalFormats`, `readCharts`, `readInteractive`, `readNamedRanges`, `readCellsChangedFromTheirDefaults`, `readConnectedTable`; or `showGuide`, a walkthrough for the person. |
 | `open-artifact update <root> '<payload>'` | `{"kind": "applyEdits", "base": <revision>, "edits": [...]}`, as one revision. On a folder with no Sheet it makes one first. |
+| `open-artifact refresh <root> '<payload>'` | A connected table's records, or why there are none (`reference/connected-tables.md`). |
 | `open-artifact batch <root> <file>` | A new chart or interactive panel: its widget and its `addChart` or `addInteractive` in one go (`reference/charts.md`). |
 | `open-artifact widget <root> list \| read <id> \| draft <id> <basePub> <file>` | The code that draws a chart or a panel. |
 | `open-artifact info <root> [--json]` | The Sheet's id, title and revision. |
@@ -270,8 +271,9 @@ a message naming the Sheet by its `url`; standalone, while `open-artifact wait <
 it and exits. With no wait running, the page tells the person the agent isn't listening. The buttons are its
 **Ask agent** on selected cells (in a cell's menu), **Ask agent to fix** on cells in error, **Ask agent** on
 a blank sheet, the asks on a chart and on a conditional formatting rule, and the field of the conditional
-formatting card or pane when rules alone cannot do what was typed in it. **Import from Excel** sends a
-request too, with the file the person chose.
+formatting card or pane when rules alone cannot do what was typed in it, and **Ask agent to fix** on a connected
+table whose refresh did not go through. **Import from Excel** sends a request too, with the file the person
+chose, and so do a connected table's **Refresh** and **Load data**.
 
 Each request has a title (what the page names it: the cells, "Fix 2 errors", "Blank sheet"), its text, and
 its context: what the page attached, as JSON, shown here as `selection`. The text is the person's words when
@@ -346,6 +348,18 @@ What a request asks, by what `selection` holds:
   to fill it with is in their own words: if they have not said, ask. Read `reference/building.md` first, then
   run `readSheets` anew and read that sheet before you write: sheets may have moved, and it may hold something
   by now. If it does, say so, and ask which sheet they mean.
+- `"pressed": "Refresh"`: the owner pressed Refresh (or Load data) on the connected table on sheet `sheet`
+  (`sheetNumber`), and confirmed its call in the page. Read `reference/connected-tables.md` first, if you have
+  not yet, and refresh it as "A refresh" there says, from `readConnectedTable`: not from `callDigest` here,
+  which only says which call they saw. This press needs no other yes, and a refresh changes no cell of theirs.
+  Send the records or `failed` either way: the page waits for one of them.
+- `whyNotRefreshed`: a refresh of the connected table that `sheetNumber` names brought no rows, and the person
+  pressed **Ask agent to fix** on its bar. The value is the reason the bar showed (`toolError`, `noRowInTime`,
+  `answerTooLarge`, `answerNotRead`, `callNotWellFormed`, or another from the list in
+  `reference/connected-tables.md`). Read that file first, if you have not yet; then run `readSheets` again and
+  `readConnectedTable` on that sheet. Its call may not be the one you wrote, and the sheet may have moved: any
+  editor can change them. Tell them which table you mean and what its call is, and get their yes before you
+  make the call to look at what it answers. Get it again before you change the call or the columns.
 - `ruleNumber` and `ruleCount`: a conditional formatting rule, by its place in the `rules` that
   `readConditionalFormats` lists for sheet `sheetNumber` (1 is the first). Read
   `reference/conditional-formats.md`, run `readSheets` anew, then `readConditionalFormats` for that sheet.
@@ -395,9 +409,9 @@ Insert chart makes now is dropped, as is any chart drawn by code you wrote, and 
 that charts are not included. For a CSV with the displayed values, run `export <root> --csv --sheet <name>`. To bring a file's rows into the Sheet yourself,
 read the file and write them with `update`.
 
-The page makes no calls to other services, so a table that fills itself from such a call and refreshes on
-request is not here. When the person wants that data in, fetch it yourself if one of your tools can, write
-the rows with `update`, and tell them the rows stay as written until you write them again.
+When the person wants rows from another service that stay fetchable, such as a list one of your tools gives, make
+a connected table (`reference/connected-tables.md`): a sheet that keeps its call, whose rows you fetch again when
+the owner presses Refresh. For rows written once, write them with `update`.
 
 ## What is in the folder
 
@@ -407,6 +421,8 @@ the rows with `update`, and tell them the rows stay as written until you write t
 | `sheet/edits.jsonl` | every edit made to it, one JSON line each, in order |
 | `sheet/version-names.json` | the names people gave versions in the page's version history, by revision |
 | `sheet/widgets/` | each chart's and panel's widget: the code that draws it (change it with `widget`, never by hand) |
+| `sheet/tables/` | the rows of each connected table's refreshes, a gzip file each (only `refresh` writes them) |
+| `sheet/refreshes.jsonl` | the refreshes that brought no rows, and why |
 | `sheet/imports/` | the Excel files people chose with Import from Excel, for you to bring in (delete each once it is in) |
 | `comments.json` | the comments on its cells (only the comment commands and the page change it) |
 | `exports/` | the files `export` wrote |

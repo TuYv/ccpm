@@ -1,0 +1,25 @@
+{
+  "id": "salemalem-npmscan-mcp-plugin-npm-supply-chain-check",
+  "name": "npm-supply-chain-check",
+  "description": "Check whether an npm package is safe to install before adding or upgrading it — known malware, vulnerabilities for the exact version, recent publisher or maintainer changes (the account-takeover pattern behind ua-parser-js, event-stream and the 2025 chalk/debug compromise), missing or mismatched publish provenance, install scripts, and typosquat names. Use when the user or the agent is about to run npm/pnpm/yarn/bun install or add a dependency, asks \"is X safe,\" \"was X compromised,\" \"can I trust",
+  "category": "测试调试",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "salemalem",
+  "install_path": ".claude/skills/npm-supply-chain-check/SKILL.md",
+  "source": {
+    "repo": "salemalem/npmscan-mcp-plugin",
+    "url": "https://github.com/salemalem/npmscan-mcp-plugin/blob/main/outreach/skill-contrib/npm-supply-chain-check/SKILL.md",
+    "path": "outreach/skill-contrib/npm-supply-chain-check/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-28T00:38:10.670Z",
+    "stars": 163,
+    "language": "TypeScript",
+    "pushed_at": "2026-11-27T16:55:35Z",
+    "license": "MIT"
+  }
+}

@@ -69,7 +69,8 @@ A live query's connector is an MCP server the owner set up for open artifacts, i
 `~/.agents/open-artifact/connectors.json` (`{"mcpServers": {"<name>": {"command", "args", "env"} | {"url",
 "headers"}}}`). The page calls it through the host on the owner's computer, so every query runs with the access the
 owner gave that server. Only the owner's own page reaches the connectors: anyone they share the dashboard with sees
-"Live data isn't available in this view." where a live query's numbers would be, and still sees attached files. The
+"Live data isn't available in this view." where a live query's numbers would be, and still sees attached files,
+unless the owner shares that connector's access (Sharing, below). The
 owner waits for a query unless a recent enough answer stands ("How fresh" in `reference/sources.md`). A tool that only
 your session has can't be reached from the page. A call goes out as stored, and nothing reads it first. So a call that
 changes something changes it every time the page opens. You may write queries that only read. Any other call is the
@@ -96,7 +97,8 @@ stored. An object comes back with its keys in no promised order (keys that look 
 merge adds goes last), and so do columns taken from one: when order matters, keep it in a list, or in the columns the
 page names. In `args` it is sent, and inside `rules` it makes all the rules unreadable. `dash/settings` holds `updates`,
 how old a result may be when someone opens the page, which the page's Refresh data menu also writes: `update` it,
-and use `set` only to create it. `edit` on a dataset or file is the page's own record of the person who last changed
+and use `set` only to create it. It also holds `autoPublish`: `false` keeps changes in the shared draft until someone
+presses Publish (see `reference/remix.md`). `edit` on a dataset or file is the page's own record of the person who last changed
 it there. Don't write it yourself: History tells your changes apart without it.
 
 You may also write `db/<path>.json` with your file tool: an open page picks the change up within a moment. Prefer
@@ -359,8 +361,8 @@ The view context (`open-artifact context`, or the block the host adds to the mes
 browser shows: `mode`, `place`, `selected`, `at`, `field`, `filters`, `failed`, `failures`, `form`, `showing`,
 `writeTo` and `draft`, described in "The view context" in `reference/features.md`. If it holds `form`, the dashboard
 has no page yet and they picked that format for it: `reference/design-defaults.md` says what each one is. `showing`
-is there only when the page shows something other than the dashboard itself: a remix draft, `drafts/<id>`, or an
-earlier version, `history/<n>`. `writeTo`
+is there only when the page shows something other than the dashboard itself: a remix draft or the shared draft,
+`drafts/<id>`, or an earlier version, `history/<n>`. `writeTo`
 names the draft their changes go into (`drafts/<id>`); without it, what they ask for is a change to the dashboard
 itself. When either is there, read `reference/remix.md` first. With no context and no way to tell what "this" is, ask which they mean.
 
@@ -390,6 +392,17 @@ runs in the owner's page, with the owner's access. Say so before it is shared. O
 computer, sends requests to you, saves downloads here and changes the sharing; on this computer they stay the owner
 even when they open a link.
 
+**A connector's access.** Each connector's group in Sources has *Load data using*: *Each viewer*, the default, where
+only the owner's page loads its queries, or *Your access*, which only the owner can pick, on their own page. With Your
+access their computer approves the exact calls the dashboard's datasets on that connector make, as written, and runs
+them for anyone who opens the dashboard; a filter's `{{blank}}` stays open to the values its `rules` allow. An answer
+is kept and handed out again for at least five minutes. A loader's further `call(...)` is not approved, so its reader
+sees no data there. The pick is `shared.<connector>` in `dash/settings` (who shared, and when): read it, never write
+it, since the approval itself lives on the owner's computer, beside `connectors.json`. When a query on a shared
+connector changes, the owner's page says the connector has queries not shared yet and offers Share, and until they
+press it the query fails for them as it does for everyone. Before you add or change a query on a shared connector,
+tell the person that everyone with a link will see its answers once they share it.
+
 - **Under a host**, sharing is the person's: `Artifact {action: "open", url, panel: "share"}` opens the Share panel
   for them, `Artifact {action: "share", url}` tells you how it is shared. Never turn it on yourself.
 - **Standalone**, when the person asks: `open-artifact share <root>` shares it and prints a link per role
@@ -404,7 +417,7 @@ even when they open a link.
 - The links and the people who joined are in `<root>/.sharing.json`: leave it, and keep it out of git.
 
 **Published to a cloud host** (the Share panel's publish section, or `open-artifact publish`), the page there has no
-connectors either. Publishing a dashboard publishes its data: once the person confirms it, which they do on publishing
+connectors either, shared or not. Publishing a dashboard publishes its data: once the person confirms it, which they do on publishing
 it themselves, the owner's linked computer runs the live queries at the stored filters and saves what they answered
 beside the dashboard, so every reader sees real figures under "Data as of <time>, from <owner>'s computer". Until they
 confirm, it is published without its rows. It refreshes on publish, when the owner (or an editor the owner lets ask

@@ -1,0 +1,25 @@
+{
+  "id": "omnigent-ai-omnigent-gadget",
+  "name": "gadget",
+  "description": "Build, change and run gadgets, the small web apps Omnigent shows beside sessions. Use before any sys_gadget_* work, in a gadget session, and whenever a message starts with \"Gadget action\".",
+  "category": "浏览器自动化",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "omnigent-ai",
+  "install_path": ".claude/skills/gadget/SKILL.md",
+  "source": {
+    "repo": "omnigent-ai/omnigent",
+    "url": "https://github.com/omnigent-ai/omnigent/blob/main/omnigent/resources/skills/gadget/SKILL.md",
+    "path": "omnigent/resources/skills/gadget/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-28T00:25:39.199Z",
+    "stars": 11584,
+    "language": "Python",
+    "pushed_at": "2026-11-28T00:16:16Z",
+    "license": "Apache-2.0"
+  }
+}

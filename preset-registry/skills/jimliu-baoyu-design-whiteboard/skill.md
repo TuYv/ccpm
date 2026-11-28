@@ -104,7 +104,8 @@ together as one item. Give a box each to whatever people will drag around, sort,
 brainstorm, say), and put what they will only read top to bottom in one `text`. Anything that looks the same is taken
 for the same kind of thing, so let a colour or an outline mark a single kind, named by a title, label or key. No more
 than four such marks on a board unless asked, since about four is what people hold in mind; with five kinds or more,
-keep them plain under titles. Spend one strong colour, on what matters most.
+keep them plain under titles. Spend one strong colour, on what matters most. Make an arrow flow (its dashes move)
+only when something travelling along it is the point: flowing is one of those marks, and a key or label says what moves.
 
 **Placing things.** The page puts each item exactly where you say, lets items overlap, and you never see them land. So
 place one thing first and work out each next position from it. Steps that don't fit on one row carry on from the left
@@ -250,6 +251,15 @@ item: never a second one for an artifact that has a card. A link card is wider t
 room for its 320×56, never resize them. What you make with no such address (a file, another folder) gets no card:
 give its path in your reply instead. If you can't write to the board, say so and give the link in your reply.
 
+**Links on the board.** A link can point at an element of the same board: `#element=<id>`. A card
+`{"type": "link", "x", "y", "href": "#element=<id>"}` (320×56, no `kind`; `title` only as a fallback) shows that
+element's words and kind as they are now, and clicking it takes the view there; a picture's `href` and a text link
+`[label](#element=<id>)` do the same. Use them for an index, a "see also" or a path through a large board, never for
+something already in view next to it. `open-artifact://artifact/<id>#element=<eid>` points at an element of another
+board. When you remove an element, fix or remove the links to it: `open-artifact check` warns about a link to an
+element that is not on the board. A board's `view_url` with `#element=<id>` opens the page at that element: give
+that when you point the person at one thing on a big board.
+
 ## The element format
 
 - `board/meta` is `{v: 1, title, order: [elementId, …]}`, ids back to front.
@@ -266,7 +276,7 @@ At most 800 elements, 200 KB each, 2 MB in all. Never put other files in a board
 Colours, never more than four marks on a board: a block or section takes yellow | peach | pink | green | blue |
 purple | white (left out, a block is green); text, pen lines, arrows and a block's `stroke` take ink | terracotta |
 blue | green | purple; either takes any `#rrggbb`. `text` is plain, up to 4,000 characters: `\n` breaks a line, and
-`**bold**`, `*italic*`, `***bold italic***`, code in backticks and `[label](https://…)` are the only inline marks,
+`**bold**`, `*italic*`, `***bold italic***`, code in backticks and `[label](https://…)` (or `[label](#element=<id>)`, Links on the board) are the only inline marks,
 never nested; a line that starts `- ` or `1. ` is a list item; headings and HTML show as typed. A block too small for
 its words is drawn larger, over its neighbours, so fit the box to them generously. Kinds other than rect, rounded and
 pill fit fewer words, so make them larger.
@@ -291,13 +301,14 @@ pill fit fewer words, so make them larger.
 { "type": "arrow", "from": "e1", "to": "e2", "fromSide": "right", "toSide": "left", "label": "writes" }
   // joins e1 to e2 in right-angle legs, or one straight line when facing sides are under 44 apart; never end one on a pen
   // line, a sticker, an embed or another arrow. A free end is a point: "to": [640, 200]
-  // sides: top | right | bottom | left; "head": end | both | none; "dash": true; left out: head end, color ink.
+  // sides: top | right | bottom | left; "head": end | both | none; "dash": true, with "flow": true its dashes move
+  // towards the head ("flow" is dropped without "dash"); left out: head end, color ink.
   // "heads": [from, to], each none | arrow | circle, wins over "head" (people's arrows carry it); [arrow, none|circle] points
   // to→from. To reverse an arrow, swap from/to and their sides, not its heads, and drop its "bends". "bends" plans its
   // route (below)
 { "type": "image", "x": 0, "y": 0, "w": 320, "h": 200, "src": "/_blob/<id>" }
   // a picture: an upload's url as returned, or a data:image/(webp|jpeg|png);base64 URI up to 100 KB.
-  // "crop": {zoom (1+), x, y (0 to 1; 0.5: the middle)}. "href": an http(s) page it opens
+  // "crop": {zoom (1+), x, y (0 to 1; 0.5: the middle)}. "href": an http(s) page it opens, or an element (Links on the board)
 { "type": "image", "x": 0, "y": 0, "w": 440, "h": 300, "by": "agent", "style": "marker", "src": "data:image/svg+xml,…" }
   // a drawing of yours, painted in its "style": see Drawing
 { "type": "html", "x": 0, "y": 0, "w": 400, "h": 300, "html": "<title>Tip calculator</title><p>…</p>" }
@@ -405,6 +416,17 @@ every number a single time, while writing, and never revisit it; people will dra
 a drawing another style, change its `style` and draw the SVG again for that style. If a drawing's `src` comes back as
 `;base64,`, someone copied it on the board: you can move or resize it, or replace it with a fresh drawing.
 
+## Shape libraries
+
+People can add shape libraries to a board (sets of icons such as servers, databases or users). `context` lists them
+under `shapeLibraries`: each library's `name`, its `file` (`<root>/_blobs/<id>.json`) and its shape names. When a
+board has libraries and one of their shapes fits, use it rather than drawing your own. Read the file for the shape's
+`svg`, `w` and `h`, and place it as `{"type": "image", "style": "plain", "src": "data:image/svg+xml,<svg>", "w", "h"}`
+(no `by`), with `w` and `h` in the shape's ratio (about 80 on the longer side), and put its name in a `text` right
+under it. The `svg` is already cleaned, so only escape it as in Drawing (`#` as `%23`, `%` as `%25`). A placed shape is
+an ordinary picture: arrows attach to it, and it stays when its library is removed. Never write `board/shapes` or a
+library file yourself; people add and remove libraries in the page.
+
 ## An arrow's route
 
 The route the page picks for an arrow won't steer around anything, so where it would cross a block or
@@ -455,7 +477,7 @@ changing the board; what guests comment stays on the page, and only the owner se
 owner, the person at this computer, sends requests to you, saves downloads here and changes the sharing; on this
 computer they stay the owner even when they open a link.
 
-- **Under a host**, the shell’s **Share → Export** tab offers the PNG image and portable board file. Sharing is the person's: `Artifact {action: "open", url, panel: "share"}` opens the Share panel for
+- **Under a host**, the shell’s **Share → Export** tab offers the PNG image, an animated GIF and an MP4 video while the board has flowing arrows, and the portable board file. Sharing is the person's: `Artifact {action: "open", url, panel: "share"}` opens the Share panel for
   them, `Artifact {action: "share", url}` tells you how it is shared. Never turn it on yourself.
 - **Standalone**, when the person asks: `open-artifact share <root>` shares it and prints a link per role
   (`open-artifact open <root> --lan` shares as it opens); `--off` stops. `--disable <role>` / `--enable <role>` turn
