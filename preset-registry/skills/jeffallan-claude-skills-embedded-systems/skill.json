@@ -1,7 +1,7 @@
 {
   "id": "jeffallan-claude-skills-embedded-systems",
   "name": "embedded-systems",
-  "description": "Use when developing firmware for microcontrollers, implementing RTOS applications, or optimizing power consumption. Invoke for STM32, ESP32, FreeRTOS, bare-metal, power optimization, real-time systems, configure peripherals, write interrupt handlers, implement DMA transfers, debug timing issues.",
+  "description": "Use when developing firmware for microcontrollers, implementing RTOS applications, or optimizing power consumption. Invoke for STM32, FreeRTOS, bare-metal, power optimization, real-time systems, configure peripherals, write interrupt handlers, implement DMA transfers, debug timing issues.",
   "category": "测试调试",
   "compatible_tools": [
     "claude",
@@ -16,11 +16,10 @@
     "url": "https://github.com/jeffallan/claude-skills/blob/main/plugin/skills/embedded-systems/SKILL.md",
     "path": "plugin/skills/embedded-systems/SKILL.md",
     "branch": "main",
-    "discovered_at": "2026-11-28T09:43:02.867Z",
-    "stars": 12545,
+    "discovered_at": "2026-11-28T18:51:41.121Z",
+    "stars": 12548,
     "language": "Python",
-    "pushed_at": "2026-11-26T18:55:31Z",
+    "pushed_at": "2026-11-28T18:46:18Z",
     "license": "MIT"
-  },
-  "summary_zh": "这是一个嵌入式开发助手，适合单片机固件、RTOS及裸机开发场景，能帮你搞定底层硬件交互，解决外设配置、功耗优化和时序调试等开发难题。"
+  }
 }

@@ -64,6 +64,22 @@ Load detailed guidance based on context:
 
 Use these as starting points for every implementation.
 
+### Backed Enum
+
+```php
+<?php
+
+declare(strict_types=1);
+
+namespace App\Enums;
+
+enum PostStatus: string
+{
+    case Draft = 'draft';
+    case Published = 'published';
+}
+```
+
 ### Eloquent Model
 
 ```php
@@ -73,6 +89,8 @@ declare(strict_types=1);
 
 namespace App\Models;
 
+use App\Enums\PostStatus;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
@@ -113,6 +131,8 @@ final class Post extends Model
 
 ```php
 <?php
+
+declare(strict_types=1);
 
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
@@ -179,6 +199,7 @@ declare(strict_types=1);
 
 namespace App\Jobs;
 
+use App\Enums\PostStatus;
 use App\Models\Post;
 use Illuminate\Bus\Queueable;
 use Illuminate\Contracts\Queue\ShouldQueue;
@@ -194,7 +215,7 @@ final class PublishPost implements ShouldQueue
     public int $backoff = 60;
 
     public function __construct(
-        private readonly Post $post,
+        public readonly Post $post,
     ) {}
 
     public function handle(): void
@@ -218,8 +239,12 @@ final class PublishPost implements ShouldQueue
 ```php
 <?php
 
+declare(strict_types=1);
+
+use App\Jobs\PublishPost;
 use App\Models\Post;
 use App\Models\User;
+use Illuminate\Support\Facades\Queue;
 
 it('returns a published post for authenticated users', function (): void {
     $user = User::factory()->create();
@@ -242,7 +267,7 @@ it('queues a publish job when a draft is submitted', function (): void {
         ->postJson("/api/posts/{$post->id}/publish")
         ->assertAccepted();
 
-    Queue::assertPushed(PublishPost::class, fn ($job) => $job->post->is($post));
+    Queue::assertPushed(PublishPost::class, fn (PublishPost $job) => $job->post->is($post));
 });
 ```
 

@@ -71,57 +71,58 @@ When implementing game features, provide:
 
 ### Object Pooling (Unity C#)
 ```csharp
-public class ObjectPool<T> where T : Component
+// UnityEngine.Pool.ObjectPool<T> is built in since Unity 2021.1
+// Bullet is your own MonoBehaviour on the prefab
+using UnityEngine;
+using UnityEngine.Pool;
+
+public class BulletSpawner : MonoBehaviour
 {
-    private readonly Queue<T> _pool = new();
-    private readonly T _prefab;
-    private readonly Transform _parent;
+    [SerializeField] private Bullet _prefab;
+    private ObjectPool<Bullet> _pool;
 
-    public ObjectPool(T prefab, int initialSize, Transform parent = null)
+    private void Awake()
     {
-        _prefab = prefab;
-        _parent = parent;
-        for (int i = 0; i < initialSize; i++)
-            Release(Create());
+        _pool = new ObjectPool<Bullet>(
+            createFunc: () => Instantiate(_prefab),
+            actionOnGet: bullet => bullet.gameObject.SetActive(true),
+            actionOnRelease: bullet => bullet.gameObject.SetActive(false),
+            actionOnDestroy: bullet => Destroy(bullet.gameObject),
+            collectionCheck: true,
+            defaultCapacity: 20,
+            maxSize: 100
+        );
     }
 
-    public T Get()
-    {
-        T obj = _pool.Count > 0 ? _pool.Dequeue() : Create();
-        obj.gameObject.SetActive(true);
-        return obj;
-    }
-
-    public void Release(T obj)
-    {
-        obj.gameObject.SetActive(false);
-        _pool.Enqueue(obj);
-    }
-
-    private T Create() => Object.Instantiate(_prefab, _parent);
+    public Bullet Spawn() => _pool.Get();
+    public void Despawn(Bullet bullet) => _pool.Release(bullet);
 }
 ```
 
 ### Component Caching (Unity C#)
 ```csharp
+using UnityEngine;
+using UnityEngine.InputSystem;
+
 public class PlayerController : MonoBehaviour
 {
+    [SerializeField] private float _speed = 5f;
+
     // Cache all component references in Awake — never call GetComponent in Update
     private Rigidbody _rb;
-    private Animator _animator;
-    private PlayerInput _input;
+    private InputAction _move;
 
     private void Awake()
     {
         _rb = GetComponent<Rigidbody>();
-        _animator = GetComponent<Animator>();
-        _input = GetComponent<PlayerInput>();
+        _move = GetComponent<PlayerInput>().actions["Move"];
     }
 
     private void FixedUpdate()
     {
-        // Use cached references; use deltaTime for frame-independence
-        Vector3 move = _input.MoveDirection * (speed * Time.fixedDeltaTime);
+        // Use cached references; scale by fixedDeltaTime in FixedUpdate
+        Vector2 input = _move.ReadValue<Vector2>();
+        Vector3 move = new Vector3(input.x, 0f, input.y) * (_speed * Time.fixedDeltaTime);
         _rb.MovePosition(_rb.position + move);
     }
 }
@@ -129,6 +130,8 @@ public class PlayerController : MonoBehaviour
 
 ### State Machine (Unity C#)
 ```csharp
+using UnityEngine;
+
 public abstract class State
 {
     public abstract void Enter();

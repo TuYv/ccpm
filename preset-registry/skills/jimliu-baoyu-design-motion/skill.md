@@ -27,9 +27,10 @@ exists, and a `delete`, take `if_match`, the sha256 you read (or `"*"`). There, 
 {file: "<absolute path>"}}`, `open-artifact context` is `Artifact {action: "call", url, name: "context"}`, and
 `open-artifact asking` is `Artifact {action: "call", url, name: "asking"}` (`args: {done: true}` for `--done`). The page
 is shown right after the first playable batch (step 3 below), not at the end: if `publish` did not return
-`open: "after_first_write"`, open `view_url` in your app's built-in browser (or call `ShowArtifact {url}` when your app
-renders MCP Apps inline; if you have no built-in browser or cannot confirm the page visibly opened, call
-`Artifact {action: "open", url}` once), and always include `view_url` in your final close. Comments are **ArtifactComments**. Never run `open-artifact open`, `serve`, `wait` or `stop`
+`open: "after_first_write"`, open `view_url` in your app's built-in browser (its browser panel, tab, or browser
+subagent) by default whenever you have one — never use `ShowArtifact` in place of it; only when you have no built-in
+browser, call `ShowArtifact {url}` (when your app visibly renders MCP Apps inline) or `Artifact {action: "open", url}`
+once if no preview opened visibly, and always include `view_url` in your final close. Comments are **ArtifactComments**. Never run `open-artifact open`, `serve`, `wait` or `stop`
 under a host.
 
 **Standalone**, the same documents through the CLI:
@@ -164,10 +165,11 @@ a host, the `publish` above, with the film's own name as `title` (never "Motion"
    **Show the page now — before drawing the world, scenes, score, or running `check` —** so the person watches the
    rough cut play and sees each scene arrive live. Under a host: if the `publish` result returned
    `open: "after_first_write"`, the page opens by itself on this write; **otherwise (when `publish` has no `open` or
-   says nothing opens by itself), show it right now:** open `view_url` in your app's built-in browser or preview pane
-   if you have one; if your app renders MCP Apps inline you may call `ShowArtifact {url}` (note: `ShowArtifact` alone
-   does not open a browser tab and an early card can get buried in a long build), and when you have no built-in browser
-   or cannot confirm the page visibly opened, call `Artifact {action: "open", url}` once. Standalone, open the `url`
+   says nothing opens by itself), show it right now:** if you have a built-in browser (browser panel, tab, or browser
+   subagent), **always open `view_url` there by default** — do not use `ShowArtifact` in place of it (`ShowArtifact`
+   only shows an inline card that can collapse or scroll out of view in a long build and does not open a browser tab).
+   Only when you have no built-in browser, call `ShowArtifact {url}` if your app visibly renders MCP Apps inline, or
+   call `Artifact {action: "open", url}` once if no preview opened visibly. Standalone, open the `url`
    that `open-artifact open` printed in your app's built-in browser or preview pane, if you have one; if you have none,
    give the person the `url` in one line and go on in the same turn. Never show it before this batch (the page would be
    empty), and never open or reload a browser tab again: it updates by itself at every write. That pane is the person's

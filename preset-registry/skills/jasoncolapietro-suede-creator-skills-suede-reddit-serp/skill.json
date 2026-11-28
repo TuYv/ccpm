@@ -1,0 +1,25 @@
+{
+  "id": "jasoncolapietro-suede-creator-skills-suede-reddit-serp",
+  "name": "suede-reddit-serp",
+  "description": "Identify Reddit discussions that appear in search or AI citations for a real buyer question. Use when asked \\\"Can we contribute to threads buyers actually read?\\\" Return a sourced review, reasons to skip, and optional disclosed practitioner replies. NOT FOR: operating a community (use suede-community-marketing) or publishing replies (use suede-social).",
+  "category": "设计创意",
+  "compatible_tools": [
+    "claude",
+    "codex",
+    "gemini"
+  ],
+  "version": "",
+  "author": "JasonColapietro",
+  "install_path": ".claude/skills/suede-reddit-serp/SKILL.md",
+  "source": {
+    "repo": "JasonColapietro/suede-creator-skills",
+    "url": "https://github.com/JasonColapietro/suede-creator-skills/blob/main/skills/suede-reddit-serp/SKILL.md",
+    "path": "skills/suede-reddit-serp/SKILL.md",
+    "branch": "main",
+    "discovered_at": "2026-11-28T17:08:12.400Z",
+    "stars": 119,
+    "language": "JavaScript",
+    "pushed_at": "2026-11-28T08:44:51Z",
+    "license": "MIT"
+  }
+}

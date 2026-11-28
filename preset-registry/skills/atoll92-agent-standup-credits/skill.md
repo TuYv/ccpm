@@ -10,10 +10,10 @@ The user asked to credit the agents of this session in a pull request (or a comm
 Run this from the session that did the work. It reads local session files only, starts no server, sends nothing, and needs Node.js 18 or later.
 
 ```bash
-npx -y @double_geste/agent-standup@1.49.2 credits --json
+npx -y @double_geste/agent-standup@1.50.1 credits --json
 ```
 
-- It credits the Claude Code session it runs in (`$CLAUDE_CODE_SESSION_ID`). If it says `No session to credit` (an older Claude Code that does not set it), run it again with `--here`: the latest session of the current folder.
+- It credits the Claude Code session it runs in (`$CLAUDE_CODE_SESSION_ID`). If it says `No session to credit` (an older Claude Code that does not set it), run it again with `--here`: the latest Claude Code session of the current folder.
 - If it says `Unknown command "credits"`, the app version this plugin runs is older than the command: tell the user the credits need a newer version of Agent Standup (update the plugin, or wait for the next version if it is already up to date), and stop.
 - The result has `markdown` (the line for GitHub: a small picture of the cast, linked to agent-standup.com, then "Built on an Agent Standup call by Margot, Remy and Iris · 1h12 of work · 48 commands · 12 edits in 9 files"), `text` (the same without HTML, for a commit message or a site that shows no HTML), and the parts: `lead`, `subAgents`, `workMin`, `commands`, `edits`, `filesChanged`.
 
@@ -26,7 +26,7 @@ The names are the ones the user sees in the call, from their own settings. Use t
 - **A commit message:** add `text` as the last paragraph, before any `Co-Authored-By` lines.
 - If the description is in another language, you may translate the words of the line ("Built on an Agent Standup call by", "of work", "commands", "edits", "files"); keep the names, numbers, picture and link as they are.
 
-If the user wants it on every pull request from now on, offer to add one line to their `CLAUDE.md` (the project's, or `~/.claude/CLAUDE.md` for all): "When you open a pull request, end its description with the line from `npx -y @double_geste/agent-standup@1.49.2 credits`." Add it only if they say yes.
+If the user wants it on every pull request from now on, offer to add one line to their `CLAUDE.md` (the project's, or `~/.claude/CLAUDE.md` for all): "When you open a pull request, end its description with the line from `npx -y @double_geste/agent-standup@1.50.1 credits`." Add it only if they say yes.
 
 ## 3. Tell the user
 

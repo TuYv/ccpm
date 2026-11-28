@@ -11,6 +11,8 @@ metadata:
   role: specialist
   scope: implementation
   output-format: code
+  upstream-docs: https://angular.dev/
+  baseline: "Angular 17"
   related-skills: typescript-pro, test-master
 ---
 
@@ -33,6 +35,7 @@ Load detailed guidance based on context:
 
 | Topic | Reference | Load When |
 |-------|-----------|-----------|
+| Official docs | https://angular.dev/ | An API or behaviour not covered here; read the docs for the version the project pins |
 | Components | `references/components.md` | Standalone components, signals, input/output |
 | RxJS | `references/rxjs.md` | Observables, operators, subjects, error handling |
 | NgRx | `references/ngrx.md` | Store, effects, selectors, entity adapter |
@@ -75,7 +78,7 @@ export class UserCardComponent {
 ### RxJS Subscription Management with `takeUntilDestroyed`
 
 ```typescript
-import { Component, OnInit, inject } from '@angular/core';
+import { Component, DestroyRef, OnInit, inject } from '@angular/core';
 import { takeUntilDestroyed } from '@angular/core/rxjs-interop';
 import { UserService } from './user.service';
 
@@ -129,7 +132,7 @@ export const selectUsersLoading = createSelector(selectUsersState, (s) => s.load
 - Use OnPush change detection strategy
 - Use strict TypeScript configuration
 - Implement proper error handling in RxJS streams
-- Use `trackBy` functions in `*ngFor` loops
+- Use `@for` with a `track` expression for every loop; for legacy `*ngFor` code you are keeping, use a `trackBy` function
 - Write tests with >85% coverage
 - Follow Angular style guide
 
