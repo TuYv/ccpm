@@ -416,17 +416,6 @@ every number a single time, while writing, and never revisit it; people will dra
 a drawing another style, change its `style` and draw the SVG again for that style. If a drawing's `src` comes back as
 `;base64,`, someone copied it on the board: you can move or resize it, or replace it with a fresh drawing.
 
-## Shape libraries
-
-People can add shape libraries to a board (sets of icons such as servers, databases or users). `context` lists them
-under `shapeLibraries`: each library's `name`, its `file` (`<root>/_blobs/<id>.json`) and its shape names. When a
-board has libraries and one of their shapes fits, use it rather than drawing your own. Read the file for the shape's
-`svg`, `w` and `h`, and place it as `{"type": "image", "style": "plain", "src": "data:image/svg+xml,<svg>", "w", "h"}`
-(no `by`), with `w` and `h` in the shape's ratio (about 80 on the longer side), and put its name in a `text` right
-under it. The `svg` is already cleaned, so only escape it as in Drawing (`#` as `%23`, `%` as `%25`). A placed shape is
-an ordinary picture: arrows attach to it, and it stays when its library is removed. Never write `board/shapes` or a
-library file yourself; people add and remove libraries in the page.
-
 ## An arrow's route
 
 The route the page picks for an arrow won't steer around anything, so where it would cross a block or

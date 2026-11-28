@@ -85,7 +85,8 @@ whole page at that width, as tall as its content. Point them there; you take no 
     SEVERAL artboards, never for one (a frame's name strip shows its `title` or filename): one bold 72 px line; set `maxW` (its row's width; `maxH` if tight):
     longer text shrinks. ≥223 px above its row, off name strips, nothing over it. No `kind` = a sticky: set `w`; up
     to 4/3 `w` tall (keep that clear), taller in empty canvas, then scrolls. Both take `size` px|s|m|l|xl|xxl,
-    `bold`, `italic`, `page`, `color`/sticky `fill` gray|red|orange|green|teal|blue|purple|pink. `kind`
+    `bold`, `italic`, `page`, `color` (the words' ink) and sticky `fill` (its paper; default yellow), each
+    gray|red|orange|green|teal|blue|purple|pink. `kind`
     rect|oval|pen|line|arrow|image is the person's; leave it (its `css` holds only the style keys a note takes). An
     `image` note may carry `crop`, `video`, `videoStart`, `videoLoop`, `videoSound` and `videoCover`: set in the editor,
     never by you; its `src` and `video` are only `/_blob/<id>` addresses from an upload. The rest: `reference/canvas.md`.
@@ -95,7 +96,8 @@ whole page at that width, as tall as its content. Point them there; you take no 
     a lock the person set in the editor: there the thing can't be moved, resized or deleted until they unlock it
     (which removes the key or attribute); its words and colors can still change. Don't move, resize or delete a locked
     frame, note or element yourself, even to make room, and never add or remove the mark unless asked; copies made in
-    the editor come unlocked. In the index it is `true` or `false`: `open-artifact check` reports anything else.
+    the editor come unlocked, and an element moved to another file (a piece, another artboard) keeps the locks in it.
+    In the index it is `true` or `false`: `open-artifact check` reports anything else.
 - **`project/<path>`**, one file per artboard: the WHOLE `.dc.html` source. `<path>` ends `.dc.html`; segments
   start with a letter, digit or `_`, then only those and `.` `-`, no spaces; stems unique.
 - A support file you name goes under `project/` too, linked relatively; an unnamed image or a font stays an upload

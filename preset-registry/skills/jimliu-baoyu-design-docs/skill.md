@@ -128,6 +128,12 @@ diagram, and fill it with a fenced `mermaid` block, which the page draws. Five o
 table; steps that happen in a set order go in a numbered list; a couple of figures stay in the sentence that needs
 them.
 
+A long tab that a reader will jump around in can take a table of contents: an empty fenced `toc` block
+(`` ```toc `` and `` ``` `` on the next line) where the list should go, usually right after the title. The page and
+every export draw it as links to the tab's headings down to level 3 (the tab's opening heading, its title, is left
+out), and it follows them as they change, so never write the list of headings yourself. Read back, it stays an
+empty `toc` block.
+
 `batch` in the birth runs its members too. Dropdown lists and new tabs (`reference/tabs.md`) run before the
 markdown is read, so a chip can name them by their `$lid`:
 
